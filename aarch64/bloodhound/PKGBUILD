@@ -1,0 +1,25 @@
+pkgname=bloodhound
+pkgver=4.3.1
+pkgrel=1
+pkgdesc="Six Degrees of Domain Admin"
+arch=('aarch64')
+url="https://github.com/BloodHoundAD/BloodHound"
+license=('GPL3')
+depends=("nodejs" "neo4j-community" "alsa-lib" "gtk3" "libxss" "gconf" "nss" "libxtst" "jre11-openjdk-headless")
+source=("https://github.com/BloodHoundAD/BloodHound/releases/download/v${pkgver}/BloodHound-linux-arm64.zip")
+sha256sums=("1276dd8636403e98d7c3611dc652d53d92db77255414be4ddd5e572051249019")
+
+package() {
+    mkdir -p "$pkgdir/usr/share/${pkgname}" "$pkgdir/usr/bin"
+
+    cp -a BloodHound-linux-arm64  "$pkgdir/usr/share/${pkgname}"
+
+    cat > "$pkgdir/usr/bin/$pkgname" <<EOF
+#!/bin/sh
+cd /usr/share/bloodhound/BloodHound-linux-arm64
+echo "To start neo4j: systemctl start neo4j"
+exec ./BloodHound --no-sandbox "$@"
+EOF
+
+    chmod +x "$pkgdir/usr/bin/$pkgname"
+}
