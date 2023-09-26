@@ -1,0 +1,50 @@
+# Maintainer: Paul Taylor <bao7uo at gmail dot com>
+# Contributer: GI_Jack <GI_Jack@hackermail.com>
+# Contributer: ArchStrike <team@archstrike.org>
+
+pkgname=crackmapexec
+_pkgname=CrackMapExec
+pkgver=6.1.0
+_pkgver=6.1.0
+pkgrel=2
+pkgdesc='A swiss army knife for pentesting Windows/Active Directory environments'
+arch=('any')
+url='https://github.com/byt3bl33d3r/CrackMapExec'
+license=('GPL3')
+makedepends=("python-poetry" "rust")
+source=("git+https://github.com/byt3bl33d3r/CrackMapExec")
+sha256sums=("SKIP")
+
+build() {
+    cd $_pkgname
+
+    sudo poetry config virtualenvs.create true
+    sudo poetry config virtualenvs.in-project false
+    sudo poetry config virtualenvs.path "/opt"
+    sudo poetry install --only main
+}
+
+package() {
+    mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/bin"
+
+    ln -s /opt/${pkgname}*/bin/cme "${pkgdir}/usr/bin/cme"
+    ln -s /opt/${pkgname}*/bin/cmedb "${pkgdir}/usr/bin/cmedb"
+
+    impacket=("addcomputer" "atexec" "dcomexec" "dpapi" "esentutl" "exchanger" "findDelegation"
+    "Get-GPPPassword" "GetADUsers" "getArch" "GetNPUsers" "getPac" "getST" "getTGT" "GetUserSPNs"
+    "goldenPac" "karmaSMB" "keylistattack" "kintercept" "lookupsid" "machine_role" "mimikatz"
+    "mqtt_check" "mssqlclient" "mssqlinstance" "netview" "nmapAnswerMachine" "ntfs-read"
+    "ntlmrelayx" "ping" "ping6" "psexec" "raiseChild" "rbcd" "rdp_check" "reg" "registry-read"
+    "rpcdump" "rpcmap" "sambaPipe" "samrdump" "secretsdump" "services" "smbclient" "smbexec"
+    "smbpasswd" "smbrelayx" "smbserver" "sniff" "sniffer" "split" "ticketConverter" "ticketer"
+    "wmiexec" "wmipersist" "wmiquery")
+
+    for value in "${impacket[@]}"
+    do
+        ln -s /opt/${pkgname}*/bin/${value}.py "${pkgdir}/usr/bin/impacket-${value}"
+    done
+
+    sudo mv /opt/${pkgname}* "${pkgdir}/opt"
+
+    sudo chown -R pwnpad:users "${pkgdir}/opt"
+}
