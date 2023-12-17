@@ -1,34 +1,36 @@
-# Maintainer: Paul Taylor <bao7uo at gmail dot com>
-# Contributer: GI_Jack <GI_Jack@hackermail.com>
-# Contributer: ArchStrike <team@archstrike.org>
-
-pkgname=crackmapexec
-_pkgname=CrackMapExec
-pkgver=6.1.0
-_pkgver=6.1.0
-pkgrel=2
+pkgname=netexec
+_pkgname=NetExec
+pkgver=1.1.0
+pkgrel=1
 pkgdesc='A swiss army knife for pentesting Windows/Active Directory environments'
 arch=('any')
-url='https://github.com/byt3bl33d3r/CrackMapExec'
-license=('GPL3')
+url='https://github.com/Pennyw0rth/NetExec'
+license=('BSD2')
 makedepends=("python-poetry" "rust")
-source=("git+https://github.com/byt3bl33d3r/CrackMapExec")
-sha256sums=("SKIP")
 
 build() {
-    cd $_pkgname
+    sudo git clone ${url} /opt/${_pkgname}
+    cd /opt/${_pkgname}
+
+    sudo git checkout v${pkgver}
 
     sudo poetry config virtualenvs.create true
-    sudo poetry config virtualenvs.in-project false
-    sudo poetry config virtualenvs.path "/opt"
+    sudo poetry config virtualenvs.in-project true
+    sudo poetry config virtualenvs.path .
     sudo poetry install --only main
+
+    sudo rm -rf .dockerignore .git .github/ .gitignore build_collector.py CODE_OF_CONDUCT.md \
+                CONTRIBUTING.md Dockerfile LICENSE Makefile netexec.spec poetry.lock pyproject.toml \
+                README.md shell.nix tests/
+
+    sudo chown -R $USER:users /opt/NetExec
 }
 
 package() {
     mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/bin"
 
-    ln -s /opt/${pkgname}*/bin/cme "${pkgdir}/usr/bin/cme"
-    ln -s /opt/${pkgname}*/bin/cmedb "${pkgdir}/usr/bin/cmedb"
+    ln -s /opt/${_pkgname}/.venv/bin/nxc "${pkgdir}/usr/bin/nxc"
+    ln -s /opt/${_pkgname}/.venv/bin/nxcdb "${pkgdir}/usr/bin/nxcdb"
 
     impacket=("addcomputer" "atexec" "dcomexec" "dpapi" "esentutl" "exchanger" "findDelegation"
     "Get-GPPPassword" "GetADUsers" "getArch" "GetNPUsers" "getPac" "getST" "getTGT" "GetUserSPNs"
@@ -41,10 +43,8 @@ package() {
 
     for value in "${impacket[@]}"
     do
-        ln -s /opt/${pkgname}*/bin/${value}.py "${pkgdir}/usr/bin/impacket-${value}"
+        ln -s /opt/${_pkgname}/.venv/bin/${value}.py "${pkgdir}/usr/bin/impacket-${value}"
     done
 
-    sudo mv /opt/${pkgname}* "${pkgdir}/opt"
-
-    sudo chown -R pwnpad:users "${pkgdir}/opt"
+    sudo mv /opt/${_pkgname} "${pkgdir}/opt"
 }
