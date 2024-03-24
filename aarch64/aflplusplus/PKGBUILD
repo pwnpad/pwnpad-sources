@@ -1,8 +1,9 @@
 # This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
 # See COPYING for license details.
+# https://github.com/BlackArch/blackarch/blob/master/packages/aflplusplus/PKGBUILD
 
 pkgname=aflplusplus
-pkgver=v4.09c.r30.g358cd1b0
+pkgver=v4.10c.r0.g775861ea
 pkgrel=1
 epoch=1
 pkgdesc='American Fuzzing Lop fuzzer with community patches and additional features.'

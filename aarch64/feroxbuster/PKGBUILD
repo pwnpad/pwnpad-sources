@@ -1,8 +1,10 @@
 # This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
 # See COPYING for license details.
 
+# https://github.com/BlackArch/blackarch/blob/master/packages/feroxbuster/PKGBUILD
+
 pkgname=feroxbuster
-pkgver=v2.10.1.r5.gc1e7c5f
+pkgver=v2.10.2.r0.gf3d6d18
 pkgrel=1
 pkgdesc='A fast, simple, recursive content discovery tool written in Rust.'
 arch=('x86_64' 'aarch64')

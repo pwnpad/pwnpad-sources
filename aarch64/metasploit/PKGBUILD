@@ -3,9 +3,10 @@
 # Contributor: Sabart Otto - Seberm <seberm[at]seberm[dot]com>
 # Contributor: Tobias Veit - nIcE <m.on.key.tobi[at]gmail[dot]com>
 
+# https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
+
 pkgname=metasploit
-pkgver=6.3.50
-_commit=7a9bf0238754b6f222bd36d7aa298dcf4222049a # git rev-parse ${pkgver}
+pkgver=6.3.60
 pkgrel=1
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
@@ -23,8 +24,9 @@ depends=(
   'sqlite'
 )
 options=('!strip' '!emptydirs')
-source=(git+https://github.com/rapid7/metasploit-framework.git?signed#tag=${_commit})
-sha512sums=('SKIP')
+source=(git+https://github.com/rapid7/metasploit-framework.git?signed#tag=${pkgver})
+sha256sums=('2aa54a04fddeb95454f3596e68e39a4de114ebbcc0a6ef91823a9b7bbb2d5b07')
+b2sums=('5e93e9f2fa86b229c565eee2052277cc46b891ec353d9f495db982107765173623ee09c92258b64feb4bc20eedcbcb101587c92009c579690589c703137c3cb2')
 validpgpkeys=('09E55FAF4F7862CD6D558997CDFB5FA52007B954') # Metasploit <metasploit@rapid7.com>
 
 prepare() {

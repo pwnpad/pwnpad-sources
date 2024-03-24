@@ -1,5 +1,6 @@
 # This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
 # See COPYING for license details.
+# https://github.com/BlackArch/blackarch/blob/master/packages/angr/PKGBUILD
 
 pkgname=angr
 pkgver=9.1.11752
