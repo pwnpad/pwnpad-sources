@@ -1,0 +1,19 @@
+# Maintainer: KUMAX <kumax2048@pm.me>
+
+pkgname=yafu
+pkgver=2.09
+pkgrel=1
+pkgdesc="Automated integer factorization."
+url=https://github.com/bbuhrow/yafu
+license=("MIT")
+arch=('any')
+depends=('gmp' 'gmp-ecm')
+source=('yafu.tgz')
+
+build() {
+    tar xzf yafu.tgz
+}
+
+package() {
+    cp -a etc/ lib64/ usr/ $pkgdir
+}
