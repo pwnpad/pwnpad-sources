@@ -9,26 +9,16 @@ pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'
 arch=('any')
 license=('GPL2')
-depends=('python'
-         'python-capstone'
-         'python-unicorn'
-         'python-pefile'
-         'python-registry'
-         'python-keystone'
-         'python-pyelftools'
-         'python-gevent'
-         'python-multiprocess'
-         'python-yaml')
-makedepends=('python-setuptools')
-source=(https://files.pythonhosted.org/packages/source/${_name::1}/${_name}/${_name}-${pkgver}.tar.gz)
-sha256sums=('97759006526273895709ee59d459a8c5aa8e6e513bb80696da01bf9d39fce0a7')
+makedepends=('python-pip' 'cmake')
 
 build() {
-    cd "${_name}-${pkgver}"
-    python setup.py build
+    mkdir "${pkgname}"
+    sudo pip install --root "${pkgname}/" --compile https://github.com/qilingframework/qiling/archive/dev.zip
+    sudo chown -R $USER:users "${pkgname}/"
+    wget -O "${pkgname}/usr/bin/qltool" https://raw.githubusercontent.com/qilingframework/qiling/dev/qltool && \
+        chmod +x "${pkgname}/usr/bin/qltool"
 }
 
 package() {
-    cd "${_name}-${pkgver}"
-    python setup.py install --root="${pkgdir}" -O1 --skip-build
+    cp -a "${pkgname}/usr" "$pkgdir"
 }
