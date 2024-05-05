@@ -9,14 +9,23 @@ pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'
 arch=('any')
 license=('GPL2')
+depends=('python-capstone' 'python-registry' 'python-multiprocess')
 makedepends=('python-pip' 'cmake')
 
 build() {
     mkdir "${pkgname}"
     sudo pip install --root "${pkgname}/" --compile https://github.com/qilingframework/qiling/archive/dev.zip
     sudo chown -R $USER:users "${pkgname}/"
+
+    rm -rvf ${pkgname}/usr/lib/python3.12/site-packages/dill* \
+            ${pkgname}/usr/lib/python3.12/site-packages/unicodecsv* \
+            ${pkgname}/usr/lib/python3.12/site-packages/multiprocess* \
+            ${pkgname}/usr/lib/python3.12/site-packages/Registry \
+            ${pkgname}/usr/lib/python3.12/site-packages/capstone* \
+
     wget -O "${pkgname}/usr/bin/qltool" https://raw.githubusercontent.com/qilingframework/qiling/dev/qltool && \
         chmod +x "${pkgname}/usr/bin/qltool"
+
 }
 
 package() {
