@@ -11,6 +11,7 @@ arch=('any')
 license=('GPL2')
 depends=('python-capstone' 'python-registry' 'python-multiprocess')
 makedepends=('python-pip' 'cmake')
+source=('qltool.patch')
 
 build() {
     mkdir "${pkgname}"
@@ -23,9 +24,10 @@ build() {
             ${pkgname}/usr/lib/python3.12/site-packages/Registry \
             ${pkgname}/usr/lib/python3.12/site-packages/capstone* \
 
-    wget -O "${pkgname}/usr/bin/qltool" https://raw.githubusercontent.com/qilingframework/qiling/dev/qltool && \
+    wget -P "${pkgname}/usr/bin" https://raw.githubusercontent.com/qilingframework/qiling/dev/qltool && \
         chmod +x "${pkgname}/usr/bin/qltool"
 
+    patch ${pkgname}/usr/bin/qltool qltool.patch
 }
 
 package() {

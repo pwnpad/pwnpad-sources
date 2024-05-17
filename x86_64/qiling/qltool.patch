@@ -1,0 +1,18 @@
+--- qltool.bak	2024-05-17 15:23:26.174385008 +0800
++++ qltool	2024-05-17 15:25:27.576180009 +0800
+@@ -17,7 +17,6 @@
+ 
+ from qiling import Qiling
+ from qiling.arch import utils as arch_utils
+-from qiling.debugger.qdb import QlQdb
+ from qiling.const import QL_ENDIAN, QL_VERBOSE, endian_map, os_map, arch_map, verbose_map
+ from qiling.extensions.coverage import utils as cov_utils
+ from qiling.extensions import report
+@@ -277,6 +276,7 @@
+ 
+     # attach Qdb at entry point
+     if options.qdb:
++        from qiling.debugger.qdb import QlQdb
+         QlQdb(ql, rr=bool(options.rr)).run()
+ 
+         parser.exit(0)
