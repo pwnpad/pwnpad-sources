@@ -35,6 +35,7 @@ build() {
     --enable-interwork \
     --with-system-readline \
     --disable-nls \
+    --disable-sim \
     --with-python=/usr/bin/python \
     --with-system-gdbinit=/etc/gdb/gdbinit
 
