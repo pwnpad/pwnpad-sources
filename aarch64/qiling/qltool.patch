@@ -1,5 +1,11 @@
---- qltool.bak	2024-05-17 15:23:26.174385008 +0800
-+++ qltool	2024-05-17 15:25:27.576180009 +0800
+--- qltool.bak	2024-05-23 09:29:16.394258908 +0800
++++ qltool	2024-05-23 09:30:03.928178443 +0800
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python3
++#!/opt/Qiling/.venv/bin/python3
+ #
+ # Cross Platform and Multi Architecture Advanced Binary Emulation Framework
+ #
 @@ -17,7 +17,6 @@
  
  from qiling import Qiling

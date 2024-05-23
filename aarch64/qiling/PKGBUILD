@@ -2,34 +2,46 @@
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=python-qiling
 
 pkgname=qiling
+_pkgname=Qiling
 _name=${pkgname#python-}
-pkgver=1.4.6
+pkgver=1.4.6.106.gbdda8e8c
 pkgrel=1
 pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'
 arch=('any')
 license=('GPL2')
-depends=('python-capstone' 'python-registry' 'python-multiprocess')
-makedepends=('python-pip' 'cmake')
-source=('qltool.patch')
+makedepends=('python-poetry' 'cmake')
+source=('git+https://github.com/qilingframework/qiling.git#branch=dev' 'qltool.patch' )
+
+pkgver() {
+    cd "$srcdir/qiling"
+    git describe --tags | sed 's/^v//;s/-/./g'
+}
 
 build() {
-    mkdir "${pkgname}"
-    sudo pip install --root "${pkgname}/" --compile https://github.com/qilingframework/qiling/archive/dev.zip
-    sudo chown -R $USER:users "${pkgname}/"
+    sudo mv $srcdir/qiling /opt/${_pkgname}
 
-    rm -rvf ${pkgname}/usr/lib/python3.12/site-packages/dill* \
-            ${pkgname}/usr/lib/python3.12/site-packages/unicodecsv* \
-            ${pkgname}/usr/lib/python3.12/site-packages/multiprocess* \
-            ${pkgname}/usr/lib/python3.12/site-packages/Registry \
-            ${pkgname}/usr/lib/python3.12/site-packages/capstone* \
+    cd /opt/${_pkgname}
 
-    wget -P "${pkgname}/usr/bin" https://raw.githubusercontent.com/qilingframework/qiling/dev/qltool && \
-        chmod +x "${pkgname}/usr/bin/qltool"
+    sudo poetry config virtualenvs.create true
+    sudo poetry config virtualenvs.in-project true
+    sudo poetry config virtualenvs.path .
+    sudo poetry install --only main
 
-    patch ${pkgname}/usr/bin/qltool qltool.patch
+    sudo chown -R $USER:users /opt/${_pkgname}
+
+    patch qltool $srcdir/qltool.patch
+
+    rm -rf ChangeLog COPYING CREDITS.md Dockerfile .dockerignore docs .editorconfig examples .git \
+           .github .gitignore .gitmodules poetry.lock pyproject.toml README.md tests TODO
 }
 
 package() {
-    cp -a "${pkgname}/usr" "$pkgdir"
+    mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/bin"
+
+    ln -sf /opt/${_pkgname}/qltool "${pkgdir}/usr/bin/qltool"
+
+    cp -a /opt/${_pkgname} "${pkgdir}/opt"
+
+    sudo rm -rf /opt/${_pkgname}
 }
