@@ -1,5 +1,5 @@
 pkgname=ligolo-ng
-pkgver=0.5.2
+pkgver=0.6.2
 pkgrel=1
 pkgdesc="An advanced, yet simple, tunneling tool that uses a TUN interface"
 arch=('x86_64')
