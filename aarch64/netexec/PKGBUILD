@@ -1,8 +1,7 @@
 pkgname=netexec
 _pkgname=NetExec
-pkgver=1.1.0
+pkgver=1.2.0
 pkgrel=1
-commitver=a677b374143519353762a26fd6c11f7fe301dec7
 pkgdesc='A swiss army knife for pentesting Windows/Active Directory environments'
 arch=('any')
 url='https://github.com/Pennyw0rth/NetExec'
@@ -10,10 +9,8 @@ license=('BSD2')
 makedepends=("python-poetry" "rust")
 
 build() {
-    sudo git clone ${url} /opt/${_pkgname}
+    sudo git clone --branch=v${pkgver} ${url} /opt/${_pkgname}
     cd /opt/${_pkgname}
-
-    sudo git checkout ${commitver}
 
     sudo poetry config virtualenvs.create true
     sudo poetry config virtualenvs.in-project true
