@@ -6,8 +6,8 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=metasploit
-pkgver=6.4.7
-pkgrel=1
+pkgver=6.4.15
+pkgrel=2
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
 arch=('aarch64' 'x86_64' )
@@ -25,8 +25,8 @@ depends=(
 )
 options=('!strip' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git?signed#tag=${pkgver})
-sha256sums=('215378098e89f476175057d2df1960a124259861cd411e57431e864aefaf8429')
-b2sums=('2ad529d7de01d5cee2181cab6a6fd54e97b72b9815f29022fad317272f1bfdfb8c424ed2626bd192a913cc6d1eea357cc0a117ba17394a51cfe3406db2b3aa69')
+sha256sums=('4e7c8ae46180566237c102f80404ca27c10a8de74f37b9e6864b739992a563cd')
+b2sums=('30f2ab9b73b5375be7d9f29fddb08465ff4585913699734fb02d14a3a50f288d8fc2525af005bcf97b6782c694c86d86fa306b766b419015c0bd436d55f78b1f')
 validpgpkeys=('09E55FAF4F7862CD6D558997CDFB5FA52007B954') # Metasploit <metasploit@rapid7.com>
 
 prepare() {
@@ -35,7 +35,6 @@ prepare() {
   # https://github.com/undler/bundler/issues/6882
   sed -e '/BUNDLED WITH/,+1d' -i Gemfile.lock
 
-  bundle config build.nokogiri --use-system-libraries
   bundle config set --local deployment 'true'
   sed 's|git ls-files|find -type f|' -i metasploit-framework.gemspec
 }
@@ -50,6 +49,7 @@ build() {
 
 package() {
   cd ${pkgname}-framework
+  chmod 644 metasploit-framework.gemspec Gemfile.lock
 
   install -d "${pkgdir}/opt/${pkgname}" "${pkgdir}/usr/bin"
   cp -r . "${pkgdir}/opt/${pkgname}"
