@@ -1,8 +1,8 @@
 # GLIBC 2.39-2
 
 pkgname=lib32-gcc-libs
-pkgver=13.2.1
-pkgrel=5
+pkgver=14.1.1
+pkgrel=1
 pkgdesc="Runtime libraries shipped by GCC"
 arch=('aarch64')
 url="https://gcc.gnu.org"
