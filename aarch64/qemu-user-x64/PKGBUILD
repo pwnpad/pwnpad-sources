@@ -1,13 +1,13 @@
 pkgname=qemu-user-x64
-pkgver=8.2.2
-pkgrel=2
+pkgver=9.0.1
+pkgrel=1
 pkgdesc="QEMU user mode emulation for x86_64"
 arch=('aarch64')
 url="https://www.qemu.org"
 depends=('liburing' 'x86_64-elf-binutils' 'numactl')
 
 prepare() {
-    curl -fsSL http://sg.mirror.archlinuxarm.org/aarch64/extra/qemu-user-8.2.2-2-aarch64.pkg.tar.xz | \
+    curl -fsSL http://sg.mirror.archlinuxarm.org/aarch64/extra/qemu-user-${pkgver}-${pkgrel}-aarch64.pkg.tar.xz | \
         bsdtar -C . -xf -
 }
 
