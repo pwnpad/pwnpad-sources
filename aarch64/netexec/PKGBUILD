@@ -30,13 +30,14 @@ package() {
     ln -s /opt/${_pkgname}/.venv/bin/nxc "${pkgdir}/usr/bin/nxc"
     ln -s /opt/${_pkgname}/.venv/bin/nxcdb "${pkgdir}/usr/bin/nxcdb"
 
-    impacket=("addcomputer" "atexec" "dcomexec" "dpapi" "esentutl" "exchanger" "findDelegation"
-    "Get-GPPPassword" "GetADUsers" "getArch" "GetNPUsers" "getPac" "getST" "getTGT" "GetUserSPNs"
-    "goldenPac" "karmaSMB" "keylistattack" "kintercept" "lookupsid" "machine_role" "mimikatz"
-    "mqtt_check" "mssqlclient" "mssqlinstance" "netview" "nmapAnswerMachine" "ntfs-read"
-    "ntlmrelayx" "ping" "ping6" "psexec" "raiseChild" "rbcd" "rdp_check" "reg" "registry-read"
-    "rpcdump" "rpcmap" "sambaPipe" "samrdump" "secretsdump" "services" "smbclient" "smbexec"
-    "smbpasswd" "smbrelayx" "smbserver" "sniff" "sniffer" "split" "ticketConverter" "ticketer"
+    impacket=("DumpNTLMInfo" "Get-GPPPassword" "GetADComputers" "GetADUsers" "GetLAPSPassword"
+    "GetNPUsers" "GetUserSPNs" "addcomputer" "atexec" "changepasswd" "dcomexec" "describeTicket"
+    "dpapi" "esentutl" "exchanger" "findDelegation" "getArch" "getPac" "getST" "getTGT" "goldenPac"
+    "karmaSMB" "keylistattack" "kintercept" "lookupsid" "machine_role" "mimikatz" "mqtt_check"
+    "mssqlclient" "mssqlinstance" "net" "netview" "nmapAnswerMachine" "ntfs-read" "ntlmrelayx"
+    "ping" "ping6" "psexec" "raiseChild" "rbcd" "rdp_check" "reg" "registry-read" "rpcdump"
+    "rpcmap" "sambaPipe" "samrdump" "secretsdump" "services" "smbclient" "smbexec" "smbpasswd"
+    "smbrelayx" "smbserver" "sniff" "sniffer" "split" "ticketConverter" "ticketer" "tstool"
     "wmiexec" "wmipersist" "wmiquery")
 
     for value in "${impacket[@]}"

@@ -1,5 +1,5 @@
 pkgname=qemu-user-x64
-pkgver=9.0.1
+pkgver=9.0.2
 pkgrel=1
 pkgdesc="QEMU user mode emulation for x86_64"
 arch=('aarch64')
