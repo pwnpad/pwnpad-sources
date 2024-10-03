@@ -1,5 +1,5 @@
 pkgname=glibc
-pkgver=2.39
+pkgver=2.40
 pkgrel=1
 pkgdesc="GNU C Library"
 arch=('aarch64')
@@ -18,31 +18,31 @@ _extract_deb() {
 
 prepare() {
     # Getting libc from Ubuntu servers
-    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-bin_${pkgver}-0ubuntu8_arm64.deb"
-    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-dev-bin_${pkgver}-0ubuntu8_arm64.deb"
-    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-devtools_${pkgver}-0ubuntu8_arm64.deb"
-    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc6-dev_${pkgver}-0ubuntu8_arm64.deb"
-    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc6_${pkgver}-0ubuntu8_arm64.deb"
-    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/locales_${pkgver}-0ubuntu8_all.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-bin_${pkgver}-1ubuntu3_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-dev-bin_${pkgver}-1ubuntu3_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-devtools_${pkgver}-1ubuntu3_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc6-dev_${pkgver}-1ubuntu3_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc6_${pkgver}-1ubuntu3_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/locales_${pkgver}-1ubuntu3_all.deb"
 
     # Extracting files
-    _extract_deb "libc-bin_${pkgver}-0ubuntu8_arm64.deb"
-    _extract_deb "libc-dev-bin_${pkgver}-0ubuntu8_arm64.deb"
-    _extract_deb "libc-devtools_${pkgver}-0ubuntu8_arm64.deb"
-    _extract_deb "libc6-dev_${pkgver}-0ubuntu8_arm64.deb"
-    _extract_deb "libc6_${pkgver}-0ubuntu8_arm64.deb"
-    _extract_deb "locales_${pkgver}-0ubuntu8_all.deb"
+    _extract_deb "libc-bin_${pkgver}-1ubuntu3_arm64.deb"
+    _extract_deb "libc-dev-bin_${pkgver}-1ubuntu3_arm64.deb"
+    _extract_deb "libc-devtools_${pkgver}-1ubuntu3_arm64.deb"
+    _extract_deb "libc6-dev_${pkgver}-1ubuntu3_arm64.deb"
+    _extract_deb "libc6_${pkgver}-1ubuntu3_arm64.deb"
+    _extract_deb "locales_${pkgver}-1ubuntu3_all.deb"
 
     # Make directory to put files in
     mkdir glibc
 
     # Copying out only necessary files
-    cp -r libc-bin_2.39-0ubuntu8_arm64/data/* glibc
-    cp -r libc-dev-bin_2.39-0ubuntu8_arm64/data/* glibc
-    cp -r libc-devtools_2.39-0ubuntu8_arm64/data/* glibc
-    cp -r libc6-dev_2.39-0ubuntu8_arm64/data/* glibc
-    cp -r libc6_2.39-0ubuntu8_arm64/data/* glibc
-    cp -r locales_2.39-0ubuntu8_all/data/* glibc
+    cp -r libc-bin_${pkgver}-1ubuntu3_arm64/data/* glibc
+    cp -r libc-dev-bin_${pkgver}-1ubuntu3_arm64/data/* glibc
+    cp -r libc-devtools_${pkgver}-1ubuntu3_arm64/data/* glibc
+    cp -r libc6-dev_${pkgver}-1ubuntu3_arm64/data/* glibc
+    cp -r libc6_${pkgver}-1ubuntu3_arm64/data/* glibc
+    cp -r locales_${pkgver}-1ubuntu3_all/data/* glibc
 
     # Linking files accordingly so Arch will be happy
     cd glibc/usr/include && ln -sf aarch64-linux-gnu/* . && cd -

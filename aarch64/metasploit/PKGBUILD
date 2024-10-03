@@ -6,7 +6,7 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=metasploit
-pkgver=6.4.22
+pkgver=6.4.28
 pkgrel=1
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
@@ -21,12 +21,13 @@ depends=(
   'postgresql-libs'
   'ruby'
   'ruby-bundler'
+  'ruby-erb'
   'sqlite'
 )
 options=('!strip' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git?signed#tag=${pkgver})
-sha256sums=('ed16df7d885df3c4ad15b70093d1effbc96e78d592792c27301be0fbf9355e49')
-b2sums=('dcb9143e9f4e2c5417035592595aa9b9aa34f70e08b5a4aa8023e744419f4079f6454f75c47d8286840553bf58ddad655bc432c4b70303929e0c77a10f33801d')
+sha256sums=('09df6ef0c1969cfbe8b7cac2f4676a9cc1e837ad434a15c2cf9fd8fec2bf61dd')
+b2sums=('debbaf5da354f8ebe760296cadb6f57cb5df125635b27dc38520d7ed195133752f1a77604ce5a6033d4566eaacf4b2403e053de2b2636f9fb3865f3c23e8f803')
 validpgpkeys=('09E55FAF4F7862CD6D558997CDFB5FA52007B954') # Metasploit <metasploit@rapid7.com>
 
 prepare() {
@@ -49,7 +50,6 @@ build() {
 
 package() {
   cd ${pkgname}-framework
-  chmod 644 metasploit-framework.gemspec Gemfile.lock
 
   install -d "${pkgdir}/opt/${pkgname}" "${pkgdir}/usr/bin"
   cp -r . "${pkgdir}/opt/${pkgname}"
@@ -80,3 +80,4 @@ package() {
 }
 
 # vim: ts=2 sw=2 et:
+

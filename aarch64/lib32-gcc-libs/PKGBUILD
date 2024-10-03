@@ -1,7 +1,7 @@
-# GLIBC 2.39-2
+# GLIBC 2.40-1
 
 pkgname=lib32-gcc-libs
-pkgver=14.1.1
+pkgver=14.2.1
 pkgrel=1
 pkgdesc="Runtime libraries shipped by GCC"
 arch=('aarch64')
