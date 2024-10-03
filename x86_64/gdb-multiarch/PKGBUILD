@@ -2,7 +2,7 @@
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gdb-multiarch
 
 pkgname=gdb-multiarch
-pkgver=15.1
+pkgver=15.2
 pkgrel=1
 pkgdesc='The GNU Debugger for all gdb supported architectures (i386/arm/mips...)'
 arch=(aarch64 i686 x86_64)

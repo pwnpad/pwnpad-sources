@@ -2,8 +2,8 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/pwndbg/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=pwndbg
-pkgver=2024.02.14
-pkgrel=5
+pkgver=2024.08.29
+pkgrel=2
 pkgdesc='Makes debugging with GDB suck less'
 url='https://github.com/pwndbg/pwndbg'
 arch=('any')
@@ -40,22 +40,28 @@ optdepends=(
   'radare2: radare2 command support'
   'rizin: rizin command support'
 )
-source=("git+https://github.com/pwndbg/pwndbg.git#branch=dev")
+source=(https://github.com/pwndbg/pwndbg/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+        https://github.com/pwndbg/pwndbg/commit/b4a1b9a1.patch)
+sha512sums=('503924742d4a6d767ec369bb1e37c931afb5ab09f2b4cfa048765ce7a61fb6adcda2576cdda64dd4cf74de27d83b13b4dc09d6e7480e01ae8f646c5394992d43'
+            '992e267bcb68d7fd759f9dfe1690d19e8f1c222526ca84a7b9959419276e25b7be96289c7d07bc26869285e12232694bc199f3698b0253d32d604e9dcabf1a43')
+b2sums=('5333c318ba3ccbaaac459f9c7b917d3defa1ad712f45555b31eb76774089e55e80720744dc92813ad8234302445e3bed3237c2275c795a49856028dec416dcc2'
+        '334c3d0d94f7f372eb47d418a9fe262fb47a1a2f41cbd034cfb9e0784478db0b945eefd73234bb51a85ddc590af5164991c61eaaaf39eb95fc247a9ba533bf90')
 
 prepare() {
-  cd ${pkgname}
+  cd ${pkgname}-${pkgver}
   rm -rf caps profiling
+  patch -Rp1 < ../b4a1b9a1.patch # Revert dependency on unreleased pwntools
 }
 
 build() {
-  cd ${pkgname}
+  cd ${pkgname}-${pkgver}
   python -m compileall *.py
   python -O -m compileall *.py
   python -m build --wheel --no-isolation
 }
 
 package() {
-  cd ${pkgname}
+  cd ${pkgname}-${pkgver}
 
   python -m installer --destdir="${pkgdir}" dist/*.whl
 
