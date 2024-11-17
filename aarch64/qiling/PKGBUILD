@@ -4,7 +4,7 @@
 pkgname=qiling
 _pkgname=Qiling
 _name=${pkgname#python-}
-pkgver=1.4.6.127.g04e42e07
+pkgver=1.4.6.150.ga9ae6926
 pkgrel=1
 pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'

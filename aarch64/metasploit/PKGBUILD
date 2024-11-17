@@ -6,7 +6,7 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=metasploit
-pkgver=6.4.28
+pkgver=6.4.35
 pkgrel=1
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
@@ -24,10 +24,10 @@ depends=(
   'ruby-erb'
   'sqlite'
 )
-options=('!strip' '!emptydirs')
+options=('!strip' '!debug' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git?signed#tag=${pkgver})
-sha256sums=('09df6ef0c1969cfbe8b7cac2f4676a9cc1e837ad434a15c2cf9fd8fec2bf61dd')
-b2sums=('debbaf5da354f8ebe760296cadb6f57cb5df125635b27dc38520d7ed195133752f1a77604ce5a6033d4566eaacf4b2403e053de2b2636f9fb3865f3c23e8f803')
+sha256sums=('17cceb6266b0c25acf5ad38c4051756f1afd0ee182d9f302619b272b063ee21a')
+b2sums=('babf8830b3922c9e0bb8cfe5e6564fcd389b7264f400fbff939d06997804c9996eb342415f74df06818a7f4469396cf5279a683843249601994bd07c2571aa10')
 validpgpkeys=('09E55FAF4F7862CD6D558997CDFB5FA52007B954') # Metasploit <metasploit@rapid7.com>
 
 prepare() {
@@ -80,4 +80,3 @@ package() {
 }
 
 # vim: ts=2 sw=2 et:
-
