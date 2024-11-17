@@ -1,6 +1,6 @@
 pkgname=netexec
 _pkgname=NetExec
-pkgver=1.2.0
+pkgver=1.3.0
 pkgrel=1
 pkgdesc='A swiss army knife for pentesting Windows/Active Directory environments'
 arch=('any')
