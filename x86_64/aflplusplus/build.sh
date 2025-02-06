@@ -14,7 +14,7 @@ apt-get install -y gcc-x86-64-linux-gnu
 
 cd $HOME
 
-git clone --branch=v4.21c https://github.com/AFLplusplus/AFLplusplus
+git clone --branch=v4.30c https://github.com/AFLplusplus/AFLplusplus
 cd AFLplusplus
 
 MAKEFLAGS="-j$(nproc)" make distrib
