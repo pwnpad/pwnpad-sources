@@ -1,4 +1,4 @@
-# GLIBC 2.40-1
+# GLIBC 2.41-1
 
 pkgname=lib32-gcc-libs
 pkgver=14.2.1

@@ -3,7 +3,7 @@
 
 pkgname=rz-ghidra
 pkgver=0.7.0
-pkgrel=2
+pkgrel=3
 pkgdesc='Deep ghidra decompiler integration for rizin and rz-cutter'
 url='https://github.com/rizinorg/rz-ghidra'
 arch=('aarch64' 'x86_64')
@@ -38,7 +38,8 @@ build() {
     -DCMAKE_BUILD_TYPE=None \
     -DBUILD_CUTTER_PLUGIN=ON \
     -DBUILD_SLASPECS=ON \
-    -DCUTTER_INSTALL_PLUGDIR=/usr/share/rizin/cutter/plugins/native
+    -DCUTTER_INSTALL_PLUGDIR=/usr/share/rizin/cutter/plugins/native \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
   make -C build VERBOSE=1
 }
 
