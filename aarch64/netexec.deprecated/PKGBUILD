@@ -1,6 +1,6 @@
 pkgname=netexec
 _pkgname=NetExec
-pkgver=1.3.0
+pkgver=1.4.0
 pkgrel=1
 pkgdesc='A swiss army knife for pentesting Windows/Active Directory environments'
 arch=('any')
@@ -31,14 +31,14 @@ package() {
     ln -s /opt/${_pkgname}/.venv/bin/nxcdb "${pkgdir}/usr/bin/nxcdb"
 
     impacket=("DumpNTLMInfo" "Get-GPPPassword" "GetADComputers" "GetADUsers" "GetLAPSPassword"
-    "GetNPUsers" "GetUserSPNs" "addcomputer" "atexec" "changepasswd" "dcomexec" "describeTicket"
-    "dpapi" "esentutl" "exchanger" "findDelegation" "getArch" "getPac" "getST" "getTGT" "goldenPac"
-    "karmaSMB" "keylistattack" "kintercept" "lookupsid" "machine_role" "mimikatz" "mqtt_check"
-    "mssqlclient" "mssqlinstance" "net" "netview" "nmapAnswerMachine" "ntfs-read" "ntlmrelayx"
-    "ping" "ping6" "psexec" "raiseChild" "rbcd" "rdp_check" "reg" "registry-read" "rpcdump"
-    "rpcmap" "sambaPipe" "samrdump" "secretsdump" "services" "smbclient" "smbexec" "smbpasswd"
-    "smbrelayx" "smbserver" "sniff" "sniffer" "split" "ticketConverter" "ticketer" "tstool"
-    "wmiexec" "wmipersist" "wmiquery")
+    "GetNPUsers" "GetUserSPNs" "addcomputer" "atexec" "changepasswd" "dacledit" "dcomexec"
+    "describeTicket" "dpapi" "esentutl" "exchanger" "findDelegation" "getArch" "getPac" "getST"
+    "getTGT" "goldenPac" "karmaSMB" "keylistattack" "kintercept" "lookupsid" "machine_role"
+    "mimikatz" "mqtt_check" "mssqlclient" "mssqlinstance" "net" "netview" "ntfs-read" "ntlmrelayx"
+    "owneredit" "ping" "ping6" "psexec" "raiseChild" "rbcd" "rdp_check" "reg" "registry-read"
+    "regsecrets" "rpcdump" "rpcmap" "sambaPipe" "samrdump" "secretsdump" "services" "smbclient"
+    "smbexec" "smbserver" "sniff" "sniffer" "split" "ticketConverter" "ticketer" "tstool" "wmiexec"
+    "wmipersist" "wmiquery")
 
     for value in "${impacket[@]}"
     do
