@@ -1,0 +1,17 @@
+pkgname=lib32-glibc
+pkgver=2.41
+pkgrel=1
+pkgdesc="Runtime libraries shipped by GCC"
+arch=('aarch64')
+url="https://gcc.gnu.org"
+
+prepare() {
+    curl -fsSL https://archlinux.org/packages/core/x86_64/lib32-glibc/download | \
+        bsdtar -xf -
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/lib" "$pkgdir/lib32"
+    cp -a usr/lib32/* "$pkgdir/lib32"
+    ln -s ../../lib32/ld-linux.so.2 "$pkgdir/usr/lib/ld-linux.so.2"
+}
