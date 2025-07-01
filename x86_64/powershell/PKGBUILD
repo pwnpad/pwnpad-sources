@@ -1,5 +1,5 @@
 pkgname=powershell
-pkgver=7.5.0
+pkgver=7.5.2
 pkgrel=1
 pkgdesc="A cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework"
 license=('custom')
