@@ -1,0 +1,17 @@
+pkgname=lib64-gcc-libs
+pkgver=15.1.1
+pkgrel=1
+pkgdesc="Runtime libraries shipped by GCC"
+arch=('aarch64')
+depends=('lib64-glibc')
+url="https://gcc.gnu.org"
+
+prepare() {
+    curl -fsSL https://archlinux.org/packages/core/x86_64/gcc-libs/download | \
+        bsdtar -xf -
+}
+
+package() {
+    mkdir -p "$pkgdir/lib64"
+    cp -a usr/lib/* "$pkgdir/lib64"
+}
