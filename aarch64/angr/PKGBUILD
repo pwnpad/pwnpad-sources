@@ -3,7 +3,7 @@
 # https://github.com/BlackArch/blackarch/blob/master/packages/angr/PKGBUILD
 
 pkgname=angr
-pkgver=9.2.140
+pkgver=9.2.162
 pkgrel=1
 groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
         'blackarch-reversing')
@@ -19,7 +19,7 @@ depends=('python' 'python-capstone' 'python-networkx' 'python-rpyc'
          'python-z3-solver' 'python-gitpython' 'python-sortedcontainers'
          'python-pycparser' 'python-ailment' 'python-protobuf'
          'python-itanium-demangler' 'python-cppheaderparser'
-         'python-sympy' 'python-nampa')
+         'python-sympy' 'python-nampa' 'python-setuptools-rust')
 makedepends=('git' 'python-setuptools' 'python-pip' 'python-wheel')
 source=("https://files.pythonhosted.org/packages/source/${pkgname::1}/$pkgname/$pkgname-$pkgver.tar.gz")
 

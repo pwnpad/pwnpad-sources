@@ -2,8 +2,8 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/rz-ghidra/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=rz-ghidra
-pkgver=0.7.0
-pkgrel=3
+pkgver=0.8.0
+pkgrel=1
 pkgdesc='Deep ghidra decompiler integration for rizin and rz-cutter'
 url='https://github.com/rizinorg/rz-ghidra'
 arch=('aarch64' 'x86_64')
@@ -13,7 +13,7 @@ makedepends=('git' 'cmake' 'rz-cutter')
 source=("git+${url}#tag=v${pkgver}"
         rizin-ghidra::git+https://github.com/rizinorg/ghidra.git
         git+https://github.com/zeux/pugixml.git)
-sha512sums=('55d9f1dd661bd3501e32c2c5349e378a8e4fd2006563188e5d18c8d53378abdcde280a635319681dcea2701a857466b3e1623e64b5cf4b078b319aee90916a60'
+sha512sums=('fe857a56d3fab5150f61cf247b1d006381b37efba469630449300a20e28399efc6b5b589f38b2fe756451cd37f2b5e949cc395ec0255df9086d65eec5498e9e5'
             'SKIP'
             'SKIP')
 
@@ -38,8 +38,7 @@ build() {
     -DCMAKE_BUILD_TYPE=None \
     -DBUILD_CUTTER_PLUGIN=ON \
     -DBUILD_SLASPECS=ON \
-    -DCUTTER_INSTALL_PLUGDIR=/usr/share/rizin/cutter/plugins/native \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    -DCUTTER_INSTALL_PLUGDIR=/usr/share/rizin/cutter/plugins/native
   make -C build VERBOSE=1
 }
 
