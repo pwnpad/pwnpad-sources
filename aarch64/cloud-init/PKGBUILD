@@ -1,0 +1,121 @@
+# Maintainer: Christian Rebischke <chris.rebischke at archlinux.org>
+# Maintainer: David Runge <dvzrv@archlinux.org>
+# Contributor:  kpcyrd <git@rxv.cc>
+# Contributor: Jonathan Steel <jsteel at archlinux.org>
+# Contributor: Daniel Wallace <danielwallace at gtmanfred dot com>
+# Contributor: flaccid aka Chris Fordham <chris@fordham.id.au>
+# Contributor: Sparadox <etienne.lafarge at gmail.com>
+
+# https://gitlab.archlinux.org/archlinux/packaging/packages/cloud-init/-/blob/main/PKGBUILD?ref_type=heads
+
+pkgname=cloud-init
+pkgver=25.1.2
+pkgrel=1
+pkgdesc="Cloud instance initialization"
+arch=(any)
+url="https://cloud-init.io"
+_url="https://github.com/canonical/cloud-init"
+license=('GPL-3.0-only OR Apache-2.0')
+depends=(
+  bash
+  dhcp-client
+  python
+  python-configobj
+  python-jinja
+  python-jsonpatch
+  python-jsonschema
+  python-netifaces
+  python-oauthlib
+  python-pyserial
+  python-pyyaml
+  python-requests
+  python-typing_extensions
+  sudo
+  systemd
+)
+makedepends=(
+  python-build
+  python-installer
+  python-setuptools
+  python-wheel
+)
+checkdepends=(
+  procps-ng
+  python-httpretty
+  python-passlib
+  python-pytest
+  python-pytest-mock
+  python-responses
+)
+optdepends=(
+  'cloud-guest-utils: for growpart'
+  'netplan: for configuring network using netplan'
+  'python-passlib: for Azure and BSD support'
+  'python-urllib3: for LXD and Scaleway data sources'
+)
+backup=(
+  etc/cloud/cloud.cfg
+  etc/cloud/cloud.cfg.d/05_logging.cfg
+)
+source=(
+  $_url/archive/$pkgver/$pkgname-$pkgver.tar.gz
+)
+sha512sums=('0509a0413a13672745e12ef520f5132155308bf02bd440de60b4fb076d43ac0bd81ef9d63ea289093521a21c621ba6bac2ec1cbaa06f7dbe7caa171cb4c8b644')
+b2sums=('cf13302f452e1ffb4a0d7e0394bd22db32eb1bb9eec9732e4c973e2b35ff58f4959a09e3a9d896f41deacba65a820065d5b876419c131870fe20842a89f18e53')
+
+build() {
+  cd $pkgname-$pkgver
+  python -m build --wheel --no-isolation -C--distro=arch -C--prefix=/usr
+}
+
+check() {
+  local pytest_options=(
+   -vv
+    # we don't ship /etc/ca-certificates.conf
+    --deselect tests/unittests/config/test_cc_ca_certs.py::TestRemoveDefaultCaCerts::test_commands
+    --deselect tests/unittests/test_ds_identify.py::TestWSL::test_empty_cloudinitdir
+    --deselect tests/unittests/test_ds_identify.py::TestWSL::test_found_via_userdata
+    --deselect tests/unittests/config/test_schema.py::TestNetplanValidateNetworkSchema::test_network_config_schema_validation_false_when_skipped
+    --deselect 'tests/unittests/config/test_schema.py::TestNetworkSchema::test_network_schema[net_v2_complex_example]'
+    --deselect 'tests/unittests/config/test_schema.py::TestNetworkSchema::test_network_schema[net_v2_invalid_config]'
+    --deselect 'tests/unittests/config/test_schema.py::TestNetworkSchema::test_network_schema[net_v2_skipped]'
+  )
+  cd $pkgname-$pkgver
+  pytest "${pytest_options[@]}"
+}
+
+package() {
+  local template_file unit_file
+  local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
+
+  cd $pkgname-$pkgver
+  python -m installer --destdir="$pkgdir" dist/*.whl
+  # NOTE: due to limitations with PEP517, files are installed to site-packages,
+  # not to the correct global locations (e.g. /etc and /usr), so we remove them
+  # and install them manually below.
+  rm -frv "$pkgdir/$site_packages/"{usr,etc}
+
+  # configuration and hooks
+  install -vDm 644 config/cloud.cfg.d/* -t "$pkgdir/etc/cloud/cloud.cfg.d/"
+  ./tools/render-template --variant arch ./config/cloud.cfg.tmpl "$pkgdir/etc/cloud/cloud.cfg"
+  install -vDm 644 templates/*.tmpl -t "$pkgdir/etc/cloud/templates/"
+  install -vDm 755 tools/{ds-identify,hook-hotplug,uncloud-init,write-ssh-key-fingerprints} -t "$pkgdir/usr/lib/$pkgname/"
+  # documentation, man pages and shell completion
+  install -vDm 644 doc/*.txt -t "$pkgdir/usr/share/doc/$pkgname/"
+  install -vDm 644 doc/examples/*.txt -t "$pkgdir/usr/share/doc/$pkgname/examples/"
+  install -vDm 644 doc/examples/seed/* -t "$pkgdir/usr/share/doc/$pkgname/examples/seed/"
+  install -vDm 644 doc/man/*.1 -t "$pkgdir/usr/share/man/man1/"
+  install -vDm 655 bash_completion/$pkgname -t "$pkgdir/usr/share/bash-completion/completions/"
+  # udev rules
+  install -vDm 644 udev/*.rules -t "$pkgdir/usr/lib/udev/rules.d/"
+  # systemd integration
+  install -vdm 755 "$pkgdir/usr/lib/systemd/system"{,-generators}
+  for template_file in ./systemd/*.service.tmpl; do
+    unit_file="$(basename "${template_file%%.tmpl}")"
+    ./tools/render-template --variant arch $template_file "$pkgdir/usr/lib/systemd/system/$unit_file"
+  done
+  install -vDm 644 systemd/*.{service,socket,target} "$pkgdir/usr/lib/systemd/system/"
+  ./tools/render-template --variant arch ./systemd/cloud-init-generator.tmpl "$pkgdir/usr/lib/systemd/system-generators/cloud-init-generator"
+  chmod 755 "$pkgdir/usr/lib/systemd/system-generators/cloud-init-generator"
+  install -vDm 644 systemd/disable-sshd-keygen-if-cloud-init-active.conf -t "$pkgdir/usr/lib/systemd/system/sshd-keygen@.service.d/"
+}
