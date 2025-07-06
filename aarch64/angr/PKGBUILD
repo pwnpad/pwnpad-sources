@@ -1,9 +1,5 @@
-# This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
-# See COPYING for license details.
-# https://github.com/BlackArch/blackarch/blob/master/packages/angr/PKGBUILD
-
 pkgname=angr
-pkgver=9.2.162
+pkgver=9.2.163
 pkgrel=1
 groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
         'blackarch-reversing')
@@ -21,7 +17,7 @@ depends=('python' 'python-capstone' 'python-networkx' 'python-rpyc'
          'python-itanium-demangler' 'python-cppheaderparser'
          'python-sympy' 'python-nampa' 'python-setuptools-rust')
 makedepends=('git' 'python-setuptools' 'python-pip' 'python-wheel')
-source=("https://files.pythonhosted.org/packages/source/${pkgname::1}/$pkgname/$pkgname-$pkgver.tar.gz")
+source=("https://github.com/$pkgname/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
 
 prepare() {
   cd "$pkgname-$pkgver"
@@ -37,4 +33,3 @@ package() {
   cd "$pkgname-$pkgver"
 
   python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
-}
