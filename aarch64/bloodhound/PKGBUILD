@@ -1,0 +1,26 @@
+pkgname=bloodhound
+pkgver=7.5.1
+pkgrel=1
+pkgdesc="Six Degrees of Domain Admin"
+url="https://github.com/SpecterOps/BloodHound"
+arch=('aarch64')
+depends=('neo4j-community' 'postgresql')
+license=('Apache-2.0')
+source=("http://kali.download/kali/pool/main/b/bloodhound/bloodhound_$pkgver-0kali1_arm64.deb")
+sha256sums=('SKIP')
+
+_extract_deb() {
+    local deb_file="$1"
+    local dir_name="${deb_file%.deb}"
+
+    mkdir "${dir_name}"
+    ar -x --output "${dir_name}" "${deb_file}"
+    mkdir "${dir_name}/data"
+    tar -C "${dir_name}/data" -xvf "$dir_name"/data.tar.xz
+}
+
+package() {
+    _extract_deb "bloodhound_$pkgver-0kali1_arm64.deb"
+
+    cp -a bloodhound_$pkgver-0kali1_arm64/data/* $pkgdir
+}
