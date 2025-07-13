@@ -1,0 +1,72 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+# https://gitlab.archlinux.org/archlinux/packaging/packages/pwndbg/-/blob/main/PKGBUILD?ref_type=heads
+
+pkgname=pwndbg
+pkgver=2025.05.30
+pkgrel=1
+pkgdesc='Makes debugging with GDB suck less'
+url='https://github.com/pwndbg/pwndbg'
+arch=(any)
+license=(MIT)
+depends=(
+  debuginfod
+  gdb
+  python
+  python-capstone
+  python-psutil
+  python-pt
+  python-ptrace
+  python-pwntools
+  python-pycparser
+  python-pyelftools
+  python-pygments
+  python-requests
+  python-setuptools
+  python-sortedcontainers
+  python-tabulate
+  python-typing_extensions
+  python-unicorn
+  which
+)
+makedepends=(
+  python-build
+  python-hatchling
+  python-installer
+  python-poetry-core
+  python-wheel
+)
+optdepends=(
+  'checksec: checksec command support'
+  'ropper: ropper command support'
+  'ropgadget: ropgadget command support'
+  'radare2: radare2 command support'
+  'rizin: rizin command support'
+  'one_gadget: command to find ROP one_gadget'
+)
+source=(
+  https://github.com/pwndbg/pwndbg/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+)
+
+prepare() {
+  cd ${pkgname}-${pkgver}
+  rm -rf caps profiling
+}
+
+build() {
+  cd ${pkgname}-${pkgver}
+  python -m compileall *.py
+  python -O -m compileall *.py
+  python -m build --wheel --no-isolation
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+
+  python -m installer --destdir="${pkgdir}" dist/*.whl
+
+  install -d "${pkgdir}/usr/share/pwndbg"
+  cp -r *.py __pycache__ "${pkgdir}/usr/share/pwndbg"
+  touch "${pkgdir}/usr/share/pwndbg/.skip-venv"
+}
+
+# vim: ts=2 sw=2 et:

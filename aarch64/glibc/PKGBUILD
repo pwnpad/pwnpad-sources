@@ -1,0 +1,76 @@
+pkgname=glibc
+pkgver=2.41
+pkgrel=1
+pkgdesc="GNU C Library"
+arch=('aarch64')
+depends=("linux-api-headers>=4.10" "tzdata" "filesystem")
+url="https://www.gnu.org/software/libc"
+
+_extract_deb() {
+    local deb_file="$1"
+    local dir_name="${deb_file%.deb}"
+
+    mkdir "${dir_name}"
+    ar -x --output "${dir_name}" "${deb_file}"
+    mkdir "${dir_name}/data"
+    tar -C "${dir_name}/data" -xvf "$dir_name"/data.tar.zst
+}
+
+prepare() {
+    ubuntu_ver="6ubuntu1"
+    # Getting libc from Ubuntu servers
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-bin_${pkgver}-${ubuntu_ver}_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-dev-bin_${pkgver}-${ubuntu_ver}_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-devtools_${pkgver}-${ubuntu_ver}_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc6-dev_${pkgver}-${ubuntu_ver}_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc6_${pkgver}-${ubuntu_ver}_arm64.deb"
+    wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/locales_${pkgver}-${ubuntu_ver}_all.deb"
+
+    # Extracting files
+    _extract_deb "libc-bin_${pkgver}-${ubuntu_ver}_arm64.deb"
+    _extract_deb "libc-dev-bin_${pkgver}-${ubuntu_ver}_arm64.deb"
+    _extract_deb "libc-devtools_${pkgver}-${ubuntu_ver}_arm64.deb"
+    _extract_deb "libc6-dev_${pkgver}-${ubuntu_ver}_arm64.deb"
+    _extract_deb "libc6_${pkgver}-${ubuntu_ver}_arm64.deb"
+    _extract_deb "locales_${pkgver}-${ubuntu_ver}_all.deb"
+
+    # Make directory to put files in
+    mkdir glibc
+
+    # Copying out only necessary files
+    cp -r libc-bin_${pkgver}-${ubuntu_ver}_arm64/data/* glibc
+    cp -r libc-dev-bin_${pkgver}-${ubuntu_ver}_arm64/data/* glibc
+    cp -r libc-devtools_${pkgver}-${ubuntu_ver}_arm64/data/* glibc
+    cp -r libc6-dev_${pkgver}-${ubuntu_ver}_arm64/data/* glibc
+    cp -r libc6_${pkgver}-${ubuntu_ver}_arm64/data/* glibc
+    cp -r locales_${pkgver}-${ubuntu_ver}_all/data/* glibc
+
+    # Linking files accordingly so Arch will be happy
+    cd glibc/usr/include && ln -sf aarch64-linux-gnu/* . && cd -
+    cd glibc/usr/lib && ln -sf aarch64-linux-gnu/* . && cd -
+    cd glibc/usr/share/gdb/auto-load/lib && ln -sf aarch64-linux-gnu/* . && cd -
+    cd glibc/usr/include/finclude && ln -sf aarch64-linux-gnu/* . && cd -
+
+    # Fixed issue with /usr/include/sys
+    rm glibc/usr/include/sys && \
+        mv glibc/usr/include/aarch64-linux-gnu/sys glibc/usr/include && \
+        cd glibc/usr/include/aarch64-linux-gnu && ln -s ../sys . && cd -
+
+    # Fix issue with locale-gen
+    printf "en_US.UTF-8 UTF-8" >> glibc/etc/locale.gen
+
+    # Moved everything from sbin to bin
+    mv glibc/usr/sbin/* glibc/usr/bin && \
+        rmdir glibc/usr/sbin
+
+    # Remove docs because who needs that
+    rm -rf glibc/usr/share/man glibc/usr/share/doc
+
+    # Remove files that are created by other packages
+    rm glibc/etc/bindresvport.blacklist glibc/etc/ld.so.conf glibc/usr/bin/tzselect \
+       glibc/usr/bin/zdump glibc/usr/bin/zic
+}
+
+package() {
+    cp -a glibc/etc glibc/usr glibc/var "${pkgdir}"
+}

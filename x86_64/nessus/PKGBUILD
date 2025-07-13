@@ -1,0 +1,27 @@
+pkgname=nessus
+pkgver=10.9.0
+pkgrel=1
+pkgdesc='Nessus vulnerability scanner'
+arch=('x86_64')
+url='https://www.tenable.com'
+license=('custom')
+
+build() {
+    curl --request GET \
+         --url "https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-${pkgver}-ubuntu1604_amd64.deb" \
+         --output "Nessus-${pkgver}-ubuntu1404_amd64.deb"
+
+    ar vx "Nessus-${pkgver}-ubuntu1404_amd64.deb"
+
+    tar xvf data.tar.gz
+}
+
+package() {
+    cp -a opt/ "$pkgdir/"
+
+    mkdir -p "$pkgdir/usr/bin"
+    ln -s /opt/nessus/sbin/nessuscli "$pkgdir/usr/bin"
+
+    mkdir -p "$pkgdir/usr/lib/systemd/system"
+    ln -s /opt/nessus/var/nessus/tmp/nessusd.service "$pkgdir/usr/lib/systemd/system"
+}

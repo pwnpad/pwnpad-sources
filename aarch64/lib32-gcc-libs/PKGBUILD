@@ -1,0 +1,17 @@
+pkgname=lib32-gcc-libs
+pkgver=15.1.1
+pkgrel=1
+pkgdesc="Runtime libraries shipped by GCC"
+arch=('aarch64')
+depends=('lib32-glibc')
+url="https://gcc.gnu.org"
+
+prepare() {
+    curl -fsSL https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/download | \
+        bsdtar -xf -
+}
+
+package() {
+    mkdir -p "$pkgdir/lib32"
+    cp -a usr/lib32/* "$pkgdir/lib32"
+}

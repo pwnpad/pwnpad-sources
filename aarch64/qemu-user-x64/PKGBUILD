@@ -1,0 +1,18 @@
+pkgname=qemu-user-x64
+pkgver=9.2.3
+pkgrel=1
+pkgdesc="QEMU user mode emulation for x86_64"
+arch=('aarch64')
+url="https://www.qemu.org"
+depends=('liburing' 'x86_64-elf-binutils' 'numactl')
+
+prepare() {
+    curl -fsSL http://tw2.mirror.archlinuxarm.org/aarch64/extra/qemu-user-${pkgver}-${pkgrel}-aarch64.pkg.tar.xz | \
+        bsdtar -C . -xf -
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/bin"
+    cp -a usr/bin/qemu-i386 "$pkgdir/usr/bin"
+    cp -a usr/bin/qemu-x86_64 "$pkgdir/usr/bin"
+}

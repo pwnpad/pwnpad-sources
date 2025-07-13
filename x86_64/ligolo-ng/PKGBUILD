@@ -1,0 +1,61 @@
+pkgname=ligolo-ng
+pkgver=0.8.2
+pkgrel=1
+pkgdesc="An advanced, yet simple, tunneling tool that uses a TUN interface"
+arch=('x86_64')
+url="https://github.com/nicocha30/ligolo-ng"
+
+prepare() {
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_proxy_${pkgver}_linux_amd64.tar.gz \
+        -O proxy.tgz && \
+    tar -xzf proxy.tgz proxy && \
+    rm proxy.tgz
+
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_linux_amd64.tar.gz \
+        -O agent.tgz && \
+    tar --transform='s/agent/agent_amd64.elf/g' -xzf agent.tgz agent && \
+    rm agent.tgz
+
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_linux_arm64.tar.gz \
+        -O agent.tgz && \
+    tar --transform='s/agent/agent_arm64.elf/g' -xzf agent.tgz agent && \
+    rm agent.tgz
+
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_darwin_amd64.tar.gz \
+        -O agent.tgz && \
+    tar --transform='s/agent/agent_amd64.macho/g' -xzf agent.tgz agent && \
+    rm agent.tgz
+
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_darwin_arm64.tar.gz \
+        -O agent.tgz && \
+    tar --transform='s/agent/agent_arm64.macho/g' -xzf agent.tgz agent && \
+    rm agent.tgz
+
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_windows_amd64.zip \
+        -O agent.zip && \
+    unzip agent.zip agent.exe && mv agent.exe agent_amd64.exe && \
+    rm agent.zip
+
+    wget https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_windows_arm64.zip \
+        -O agent.zip && \
+    unzip agent.zip agent.exe && mv agent.exe agent_arm64.exe && \
+    rm agent.zip
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/bin/"
+    mkdir -p "$pkgdir/opt/${pkgname}/"
+
+    cp proxy "$pkgdir/opt/${pkgname}/"
+    cp agent* "$pkgdir/opt/${pkgname}/"
+
+    cat > "$pkgdir/usr/bin/ligolo-proxy" <<EOF
+#!/bin/sh
+if ! ip link show "ligolo" >/dev/null 2>&1; then
+    sudo ip tuntap add user \$USER mode tun ligolo
+    sudo ip link set ligolo up
+fi
+/opt/ligolo-ng/proxy \$@
+EOF
+    chmod +x "$pkgdir/usr/bin/ligolo-proxy"
+}

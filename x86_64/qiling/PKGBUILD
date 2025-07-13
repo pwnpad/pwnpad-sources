@@ -1,0 +1,47 @@
+# Maintainer: Avery Warddhana <them+arch _ nullablevo id au>
+# https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=python-qiling
+
+pkgname=qiling
+_pkgname=Qiling
+_name=${pkgname#python-}
+pkgver=1.4.6.150.ga9ae6926
+pkgrel=1
+pkgdesc="An advanced binary emulation framework"
+url='https://qiling.io/'
+arch=('any')
+license=('GPL2')
+makedepends=('python-poetry' 'cmake')
+source=('git+https://github.com/qilingframework/qiling.git#branch=dev' 'qltool.patch' )
+
+pkgver() {
+    cd "$srcdir/qiling"
+    git describe --tags | sed 's/^v//;s/-/./g'
+}
+
+build() {
+    sudo mv $srcdir/qiling /opt/${_pkgname}
+
+    cd /opt/${_pkgname}
+
+    sudo poetry config virtualenvs.create true
+    sudo poetry config virtualenvs.in-project true
+    sudo poetry config virtualenvs.path .
+    sudo poetry install --only main
+
+    sudo chown -R $USER:users /opt/${_pkgname}
+
+    patch qltool $srcdir/qltool.patch
+
+    rm -rf ChangeLog COPYING CREDITS.md Dockerfile .dockerignore docs .editorconfig examples .git \
+           .github .gitignore .gitmodules poetry.lock pyproject.toml README.md tests TODO
+}
+
+package() {
+    mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/bin"
+
+    ln -sf /opt/${_pkgname}/qltool "${pkgdir}/usr/bin/qltool"
+
+    cp -a /opt/${_pkgname} "${pkgdir}/opt"
+
+    sudo rm -rf /opt/${_pkgname}
+}

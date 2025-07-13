@@ -1,0 +1,17 @@
+pkgname=lib64-glibc
+pkgver=2.41
+pkgrel=1
+pkgdesc="Runtime libraries shipped by GCC"
+arch=('aarch64')
+url="https://gcc.gnu.org"
+
+prepare() {
+    curl -fsSL https://archlinux.org/packages/core/x86_64/glibc/download | \
+        bsdtar -xf -
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/lib" "$pkgdir/lib64"
+    cp -a usr/lib/* "$pkgdir/lib64"
+    ln -s ../../lib64/ld-linux-x86-64.so.2 "$pkgdir/usr/lib/ld-linux-x86-64.so.2"
+}

@@ -1,0 +1,28 @@
+pkgname=sliver
+pkgver=1.5.42
+pkgrel=1
+pkgdesc="Sliver is a an opensource C2 framework designed by bishop fox"
+url="https://github.com/BishopFox/sliver"
+arch=('aarch64')
+optdepends=()
+license=('BSD-3-Clause')
+provides=("${pkgname}")
+install=
+source=("http://http.kali.org/kali/pool/main/s/sliver/sliver_${pkgver}-0kali1_arm64.deb")
+sha256sums=('SKIP')
+
+_extract_deb() {
+    local deb_file="$1"
+    local dir_name="${deb_file%.deb}"
+
+    mkdir "${dir_name}"
+    ar -x --output "${dir_name}" "${deb_file}"
+    mkdir "${dir_name}/data"
+    tar -C "${dir_name}/data" -xvf "$dir_name"/data.tar.xz
+}
+
+package() {
+    _extract_deb "sliver_${pkgver}-0kali1_arm64.deb"
+
+    cp -r sliver_$pkgver-0kali1_arm64/data/* $pkgdir
+}

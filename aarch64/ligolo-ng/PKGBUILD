@@ -1,0 +1,60 @@
+pkgname=ligolo-ng
+pkgver=0.8.2
+pkgrel=2
+pkgdesc="An advanced, yet simple, tunneling tool that uses a TUN interface"
+arch=('aarch64')
+url="https://github.com/nicocha30/ligolo-ng"
+
+prepare() {
+    # Linux arm64 proxy
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_proxy_${pkgver}_linux_arm64.tar.gz |\
+        tar --transform='s/proxy/ligolo-proxy/g' -xzf - proxy
+
+    # Linux amd64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_linux_amd64.tar.gz |\
+        tar --transform='s/agent/linux-agent_amd64.elf/g' -xzf - agent
+
+    # Linux arm64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_linux_arm64.tar.gz |\
+        tar --transform='s/agent/linux-agent_arm64.elf/g' -xzf - agent
+
+    # MacOS amd64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_darwin_amd64.tar.gz |\
+        tar --transform='s/agent/darwin-agent_amd64.macho/g' -xzf - agent
+
+    # MacOS arm64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_darwin_arm64.tar.gz |\
+        tar --transform='s/agent/darwin-agent_arm64.macho/g' -xzf - agent
+
+    # OpenBSD amd64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_openbsd_amd64.tar.gz |\
+        tar --transform='s/agent/openbsd-agent_amd64.elf/g' -xzf - agent
+
+    # OpenBSD arm64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_openbsd_arm64.tar.gz |\
+        tar --transform='s/agent/openbsd-agent_arm64.elf/g' -xzf - agent
+
+    # FreeBSD amd64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_freebsd_amd64.tar.gz |\
+        tar --transform='s/agent/freebsd-agent_amd64.elf/g' -xzf - agent
+
+    # FreeBSD arm64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_freebsd_arm64.tar.gz |\
+        tar --transform='s/agent/freebsd-agent_arm64.elf/g' -xzf - agent
+
+    # Windows amd64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_windows_amd64.zip |\
+        bsdtar -s '/agent.exe/windows-agent_amd64.exe/g' -xf - agent.exe
+
+    # Windows arm64 agent
+    curl -fSL https://github.com/nicocha30/ligolo-ng/releases/download/v${pkgver}/ligolo-ng_agent_${pkgver}_windows_arm64.zip |\
+        bsdtar -s '/agent.exe/windows-agent_arm64.exe/g' -xf - agent.exe
+}
+
+package() {
+    mkdir -p "$pkgdir/usr/bin/"
+    mkdir -p "$pkgdir/opt/${pkgname}/"
+
+    cp ligolo-proxy "$pkgdir/usr/bin/"
+    cp *-agent_* "$pkgdir/opt/${pkgname}/"
+}

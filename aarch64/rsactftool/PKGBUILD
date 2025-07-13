@@ -1,0 +1,28 @@
+pkgname=rsactftool
+pkgver=1153.85e3485
+pkgrel=1
+pkgdesc='RSA tool for ctf - retrieve private key from weak public key and/or uncipher data.'
+arch=('aarch64')
+url='https://github.com/Ganapati/RsaCtfTool'
+makedepends=('git' 'python-virtualenv')
+
+build() {
+  mkdir $pkgname
+  cd $pkgname
+
+  virtualenv venv
+  source venv/bin/activate
+  pip install git+https://github.com/RsaCtfTool/RsaCtfTool
+
+  pip install pyinstaller
+  pyinstaller --onefile $(which rsacrack)
+
+  deactivate
+}
+
+package() {
+  cd $pkgname
+
+  install -Dm 755 ./dist/rsacrack "$pkgdir/usr/bin/rsacrack"
+}
+
