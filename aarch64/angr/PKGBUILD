@@ -1,5 +1,5 @@
 pkgname=angr
-pkgver=9.2.163
+pkgver=9.2.165
 pkgrel=1
 groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
         'blackarch-reversing')
@@ -33,3 +33,4 @@ package() {
   cd "$pkgname-$pkgver"
 
   python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}
