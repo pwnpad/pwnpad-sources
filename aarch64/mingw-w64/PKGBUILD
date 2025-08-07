@@ -1,8 +1,8 @@
-# Use apt-get install --download-only and look at /var/cache/apt/archives to get the .deb files
+# Use apt-get install --download-only mingw-w64 from ubuntu:devel and look at /var/cache/apt/archives to get the .deb files
 
 pkgname=mingw-w64
-pkgver=12.0.0.3
-pkgrel=3
+pkgver=12.0.0
+pkgrel=4
 pkgdesc='Cross GCC for the MinGW-w64 cross-compiler'
 arch=('aarch64')
 url='https://gcc.gnu.org'
@@ -34,7 +34,7 @@ source=(
     "gcc-mingw-w64-x86-64-win32-runtime_13.2.0-6ubuntu1+26.1_arm64.deb"
     "libisl23_0.27-1_arm64.deb"
     "libmpc3_1.3.1-1build2_arm64.deb"
-    "libmpfr6_4.2.2-1_arm64.deb"
+    "libmpfr6_4.2.2-1build1_arm64.deb"
     "mingw-w64_12.0.0-3_all.deb"
     "mingw-w64-common_12.0.0-3_all.deb"
     "mingw-w64-i686-dev_12.0.0-3_all.deb"
@@ -53,7 +53,7 @@ _extract_deb() {
 }
 
 build() {
-    mkdir "mingw-w64"
+    mkdir "${pkgname}"
 
     for deb_file in "${source[@]}"; do
         # Extract the .deb files
@@ -62,10 +62,17 @@ build() {
         # Copy deb files into package directory
         name="${deb_file%.deb}"
 
-        cp -r $name/data/* mingw-w64
+        cp -r $name/data/* "${pkgname}"
     done
 }
 
 package() {
-    cp -a mingw-w64/* $pkgdir
+    cp -a $pkgname/* $pkgdir
+
+    cd $pkgdir/usr/bin
+
+    for posix_bin in *-posix; do
+        name="${posix_bin%-posix}"
+        ln -s $posix_bin $name
+    done
 }

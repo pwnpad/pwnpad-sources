@@ -1,6 +1,6 @@
 pkgname=powershell
 pkgver=7.5.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework"
 license=('custom')
 arch=('aarch64')
@@ -11,5 +11,6 @@ sha256sums=("SKIP")
 package() {
     mkdir -p "$pkgdir/opt/${pkgname}" "$pkgdir/usr/bin"
     cp -a * "$pkgdir/opt/${pkgname}"
+    chmod 755 "$pkgdir/opt/${pkgname}/pwsh"
     ln -s "/opt/${pkgname}/pwsh" "$pkgdir/usr/bin/pwsh"
 }

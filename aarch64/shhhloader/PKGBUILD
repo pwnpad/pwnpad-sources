@@ -1,0 +1,38 @@
+pkgname=shhhloader
+pkgver=r38.f5f1ed1
+pkgrel=1
+pkgdesc="Syscall Shellcode Loader (Work in Progress)"
+arch=('x86_64' 'aarch64')
+url="https://github.com/icyguider/${pkgname}"
+license=('GPL3')
+depends=('python' 'mingw-w64-gcc' 'python-virtualenv')
+makedepends=('git')
+source=("git+${url}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "$srcdir/$pkgname"
+
+  virtualenv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+}
+
+package() {
+  cd "$srcdir/$pkgname"
+
+  install -d "${pkgdir}/usr/share/${pkgname}"
+  cp -r PoolParty.h SW2Syscalls.h SW3Syscalls.h Shhhavoc.py Shhhloader.py mstscax_shim.bin skCrypter.h words_alpha.txt venv "${pkgdir}/usr/share/${pkgname}/"
+
+  install -d "${pkgdir}/usr/bin"
+  cat > "${pkgdir}/usr/bin/shhhloader" <<EOF
+#!/bin/sh
+/usr/share/${pkgname}/venv/bin/python /usr/share/${pkgname}/Shhhloader.py "\$@"
+EOF
+  chmod +x "${pkgdir}/usr/bin/shhhloader"
+}
