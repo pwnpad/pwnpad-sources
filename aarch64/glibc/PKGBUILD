@@ -1,5 +1,5 @@
 pkgname=glibc
-pkgver=2.41
+pkgver=2.42
 pkgrel=1
 pkgdesc="GNU C Library"
 arch=('aarch64')
@@ -17,7 +17,7 @@ _extract_deb() {
 }
 
 prepare() {
-    ubuntu_ver="6ubuntu1"
+    ubuntu_ver="0ubuntu1"
     # Getting libc from Ubuntu servers
     wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-bin_${pkgver}-${ubuntu_ver}_arm64.deb"
     wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-dev-bin_${pkgver}-${ubuntu_ver}_arm64.deb"

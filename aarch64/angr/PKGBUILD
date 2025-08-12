@@ -1,5 +1,5 @@
 pkgname=angr
-pkgver=9.2.165
+pkgver=9.2.169
 pkgrel=1
 groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
         'blackarch-reversing')

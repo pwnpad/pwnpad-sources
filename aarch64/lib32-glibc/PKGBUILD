@@ -1,5 +1,5 @@
 pkgname=lib32-glibc
-pkgver=2.41
+pkgver=2.42
 pkgrel=1
 pkgdesc="Runtime libraries shipped by GCC"
 arch=('aarch64')
