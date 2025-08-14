@@ -1,0 +1,110 @@
+[__config__]
+max_concurrency = 5
+keyfile = "keyfile.toml"
+oldver = "old_ver.txt"
+newver = "new_ver.txt"
+
+[aflplusplus]
+source = "github"
+github = "AFLplusplus/AFLplusplus"
+use_latest_release = true
+prefix = "v"
+
+[angr]
+source = "github"
+github = "angr/angr"
+use_latest_tag = true
+prefix = "v"
+
+[autopsy]
+source = "github"
+github = "sleuthkit/autopsy"
+use_latest_release = true
+prefix = "autopsy-"
+
+[bloodhound]
+source = "gitlab"
+gitlab = "kalilinux/packages/bloodhound"
+use_max_tag = true
+exclude_regex = "kali"
+prefix = "upstream/"
+
+[donut]
+source = "github"
+github = "MEhrn00/donut"
+use_latest_release = true
+prefix = "v"
+
+[feroxbuster]
+source = "github"
+github = "epi052/feroxbuster"
+use_max_tag = true
+prefix = "v"
+
+[glibc]
+source = "ubuntupkg"
+ubuntupkg = "glibc"
+
+[hangover]
+source = "github"
+github = "AndreRH/hangover"
+use_latest_release = true
+prefix = "hangover-"
+
+[ligolo-ng]
+source = "github"
+github = "nicocha30/ligolo-ng"
+use_latest_release = true
+prefix = "v"
+
+[metasploit]
+source = "github"
+github = "rapid7/metasploit-framework"
+use_latest_tag = true
+
+[mingw-w64]
+source = "ubuntupkg"
+ubuntupkg = "mingw-w64"
+
+[nessus]
+source = "regex"
+url = "https://www.tenable.com/downloads/nessus?loginAttempted=true"
+regex = "Nessus - (\\d{1,2}.\\d{1,2}.\\d{1,2})"
+
+[netexec]
+source = "github"
+github = "Pennyw0rth/NetExec"
+use_latest_release = true
+prefix = "v"
+
+[ngrok]
+source = "aur"
+aur = "ngrok"
+
+[powershell]
+source = "github"
+github = "PowerShell/PowerShell"
+use_latest_release = true
+prefix = "v"
+
+[pwndbg]
+source = "manual"
+manual = "2025.04.18"
+# source = "github"
+# github = "pwndbg/pwndbg"
+# use_latest_release = true
+
+[qiling]
+source = "github"
+github = "qilingframework/qiling"
+use_latest_release = true
+
+[rsactftool]
+source = "github"
+github = "RsaCtfTool/RsaCtfTool"
+
+[sliver]
+source = "gitlab"
+gitlab = "kalilinux/packages/sliver"
+use_max_tag = true
+prefix = "upstream/"

@@ -1,0 +1,96 @@
+{
+  "version": 2,
+  "data": {
+    "aflplusplus": {
+      "version": "4.33c",
+      "gitref": "refs/tags/v4.33c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
+    },
+    "angr": {
+      "version": "9.2.170",
+      "gitref": "refs/tags/v9.2.170",
+      "revision": "eda02fc8ddd9f593f392f36b2663f4bc8f7254f8",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.170"
+    },
+    "autopsy": {
+      "version": "4.22.1",
+      "gitref": "refs/tags/autopsy-4.22.1",
+      "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
+    },
+    "bloodhound": {
+      "version": "8.0.2",
+      "revision": "028b1479c5a179ae9de0bae807749cc8ac254342",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.0.2"
+    },
+    "donut": {
+      "version": "2.0.0",
+      "gitref": "refs/tags/v2.0.0",
+      "url": "https://github.com/MEhrn00/donut/releases/tag/v2.0.0"
+    },
+    "feroxbuster": {
+      "version": "2.11.0",
+      "gitref": "refs/tags/v2.11.0",
+      "revision": "64113b8da434f51077867302968764fd641e9ffc",
+      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.11.0"
+    },
+    "glibc": {
+      "version": "2.42-0ubuntu1",
+      "url": "https://packages.ubuntu.com/questing/glibc"
+    },
+    "hangover": {
+      "version": "10.11",
+      "gitref": "refs/tags/hangover-10.11",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.11"
+    },
+    "ligolo-ng": {
+      "version": "0.8.2",
+      "gitref": "refs/tags/v0.8.2",
+      "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
+    },
+    "metasploit": {
+      "version": "6.4.79",
+      "gitref": "refs/tags/6.4.79",
+      "revision": "3c22dff31c0cf5aac3b0889a722e575a3e3ebcee",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.79"
+    },
+    "mingw-w64": {
+      "version": "12.0.0-5",
+      "url": "https://packages.ubuntu.com/questing/mingw-w64"
+    },
+    "nessus": {
+      "version": "10.9.2"
+    },
+    "netexec": {
+      "version": "1.4.0",
+      "gitref": "refs/tags/v1.4.0",
+      "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.4.0"
+    },
+    "ngrok": {
+      "version": "3.26.0-1",
+      "url": "https://aur.archlinux.org/packages/ngrok"
+    },
+    "powershell": {
+      "version": "7.5.2",
+      "gitref": "refs/tags/v7.5.2",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.2"
+    },
+    "pwndbg": {
+      "version": "2025.04.18"
+    },
+    "qiling": {
+      "version": "1.4.7",
+      "gitref": "refs/tags/1.4.7",
+      "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.7"
+    },
+    "rsactftool": {
+      "version": "20250812.234513",
+      "revision": "b0b176fd4a18c2322600a25ab810adbf7a5dbab3",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/b0b176fd4a18c2322600a25ab810adbf7a5dbab3"
+    },
+    "sliver": {
+      "version": "1.5.42",
+      "revision": "cdcf9506e5535399c0af66d7b4e3864462af372a",
+      "url": "https://gitlab.com/kalilinux/packages/sliver/-/tags/upstream/1.5.42"
+    }
+  }
+}
