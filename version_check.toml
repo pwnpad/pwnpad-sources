@@ -87,13 +87,6 @@ github = "PowerShell/PowerShell"
 use_latest_release = true
 prefix = "v"
 
-[pwndbg]
-source = "manual"
-manual = "2025.04.18"
-# source = "github"
-# github = "pwndbg/pwndbg"
-# use_latest_release = true
-
 [qiling]
 source = "github"
 github = "qilingframework/qiling"
