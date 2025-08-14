@@ -7,7 +7,7 @@ arch=('aarch64')
 depends=('neo4j-community' 'postgresql')
 license=('Apache-2.0')
 source=("http://kali.download/kali/pool/main/b/bloodhound/bloodhound_$pkgver-0kali1_arm64.deb")
-sha256sums=('SKIP')
+sha512sums=('18a4c710adc45cc8f23f9d8f9c5d2be81b4a6c6c1d9d61ee385bc4178877c08d9efa136d65401bf1dede95e1e86c2c996098e25fc9d8644eeac053a383def000')
 
 _extract_deb() {
     local deb_file="$1"

@@ -14,7 +14,7 @@ license=('BSD')
 depends=('python')
 makedepends=('gcc' 'make' 'git' 'python-setuptools')
 source=("git+https://github.com/MEhrn00/$pkgname.git#tag=v$pkgver")
-sha512sums=('SKIP')
+sha512sums=('3a5b97789349dfc93ca810357d0a21810d71f1593cb5ff8771537a76fa9e9a9eeeb3f74008cc68dea12db5554ae7b114a7734646594a6b1a1236e4a44f8a5b74')
 
 prepare() {
   cd $pkgname

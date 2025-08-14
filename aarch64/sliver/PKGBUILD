@@ -9,7 +9,7 @@ license=('BSD-3-Clause')
 provides=("${pkgname}")
 install=
 source=("http://http.kali.org/kali/pool/main/s/sliver/sliver_${pkgver}-0kali1_arm64.deb")
-sha256sums=('SKIP')
+sha512sums=('7a01d515270a9cd26e623ca0b89f1e05ee7fbfe2e8f2800d042468d718363150475138c085fce9d6aabecbed87c356c2bab9d828fc12164cd7682771db941ac4')
 
 _extract_deb() {
     local deb_file="$1"

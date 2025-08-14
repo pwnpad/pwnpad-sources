@@ -18,6 +18,7 @@ depends=('python' 'python-capstone' 'python-networkx' 'python-rpyc'
          'python-sympy' 'python-nampa' 'python-setuptools-rust')
 makedepends=('git' 'python-setuptools' 'python-pip' 'python-wheel')
 source=("https://github.com/$pkgname/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
+sha512sums=('1f1d22d7b435f100435b7456bf1f28c9fb108f90b3e507bec7d3a9660eb3725831bfd86c0f3b09a607f759aba92307ac6c36cc9d83d3cb42d0529d377eac7f47')
 
 prepare() {
   cd "$pkgname-$pkgver"

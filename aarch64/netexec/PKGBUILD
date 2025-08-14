@@ -14,7 +14,7 @@ license=('BSD')
 # need rust for aardwolf
 makedepends=('git' 'rust' 'python-virtualenv')
 source=("$pkgname::git+https://github.com/Pennyw0rth/NetExec.git#tag=$pkgver")
-sha512sums=('SKIP')
+sha512sums=('0a59d1c4a4abfe444ae992a20d5f6271be037e9fec3abe9154415d242985a7fe9a9941d215024379da1cab2d57abbdfcc0eada75c7bb194dcd80b7599ee72cb5')
 
 build() {
   cd $pkgname

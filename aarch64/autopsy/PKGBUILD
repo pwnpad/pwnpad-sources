@@ -8,7 +8,8 @@ license=('Apache-2.0')
 _skver=4.14.0
 depends=("testdisk" "sleuthkit" "liberica-jdk-17-full-bin")
 source=("https://github.com/pwnpad/pwnpad-sources/releases/download/binaries/${pkgname}-${pkgver}.zip" "autopsy.sh")
-sha256sums=('SKIP' 'SKIP')
+sha512sums=('4065f7cc2eb9bb003fb487c013dc8546a9498c72590707dc51503dac5684512bf10eb82512b4e2ff8bf4cf2f6f9cebf261fc45dab8e817b2099d77e50eedefc6'
+            '0bef213a56acf561e963dc9d731fb785698752794d505eec4fbc881a0f076c6bf6a2a97e2fdb9a0887145b1f583cba7abc0b669ff03ef4e9b2e7af445a99c3b8')
 
 package() {
     mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/local/bin"

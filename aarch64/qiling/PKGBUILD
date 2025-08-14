@@ -12,6 +12,8 @@ arch=('any')
 license=('GPL2')
 makedepends=('python-poetry' 'cmake')
 source=('git+https://github.com/qilingframework/qiling.git#branch=dev' 'qltool.patch' )
+sha512sums=('SKIP'
+            '6de62270e200b27250e41994923201dbed7d6074dfd23cf23c5a58035d73c7b25e1f609fe70b45e04f03bd4221ae74a7c387b2475840d008ad196ea1defda704')
 
 pkgver() {
     cd "$srcdir/qiling"

@@ -46,6 +46,7 @@ optdepends=(
 source=(
   https://github.com/pwndbg/pwndbg/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
 )
+sha512sums=('10bb330f8a5c15eb82ab1f4767dd67146fa8dfe2b8b1f62190f46cdc54fbe1109d9e987c4f7848ea3e9844c1be6cb78f9e74e1ca59d1620b802d0a1d789bd290')
 
 prepare() {
   cd ${pkgname}-${pkgver}

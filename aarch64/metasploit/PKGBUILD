@@ -26,8 +26,7 @@ depends=(
 )
 options=('!strip' '!debug' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git?signed#tag=${pkgver})
-sha256sums=('SKIP')
-b2sums=('SKIP')
+sha512sums=('f4ead5e140d55c70cda15fec65917937fc62731597b58c7320bf883ca5b34dce16c740ff7aa9de19f5302a37040cbbb35bc6f1f4104ae2d53af41bc4800e646e')
 
 prepare() {
   cd ${pkgname}-framework
