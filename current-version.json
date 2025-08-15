@@ -90,9 +90,6 @@
       "gitref": "refs/tags/v7.5.2",
       "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.2"
     },
-    "pwndbg": {
-      "version": "2025.04.18"
-    },
     "qiling": {
       "version": "1.4.7",
       "gitref": "refs/tags/1.4.7",
