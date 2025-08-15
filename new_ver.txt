@@ -42,23 +42,39 @@
       "gitref": "refs/tags/hangover-10.11",
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.11"
     },
+    "lib32-gcc-libs": {
+      "version": "15.2.1+r22+gc4e96a094636-1",
+      "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
+    },
+    "lib32-glibc": {
+      "version": "2.42+r17+gd7274d718e6f-1",
+      "url": "https://archlinux.org/packages/core/x86_64/lib32-glibc/"
+    },
+    "lib64-gcc-libs": {
+      "version": "15.2.1+r22+gc4e96a094636-1",
+      "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
+    },
+    "lib64-glibc": {
+      "version": "2.42+r17+gd7274d718e6f-1",
+      "url": "https://archlinux.org/packages/core/x86_64/glibc/"
+    },
     "ligolo-ng": {
       "version": "0.8.2",
       "gitref": "refs/tags/v0.8.2",
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.79",
-      "gitref": "refs/tags/6.4.79",
-      "revision": "3c22dff31c0cf5aac3b0889a722e575a3e3ebcee",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.79"
+      "version": "6.4.81",
+      "gitref": "refs/tags/6.4.81",
+      "revision": "03649d60e6146eca0c119f0d28fcbf98670d88ef",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.81"
     },
     "mingw-w64": {
       "version": "12.0.0-5",
       "url": "https://packages.ubuntu.com/questing/mingw-w64"
     },
     "nessus": {
-      "version": "10.9.2"
+      "version": "10.9.3"
     },
     "netexec": {
       "version": "1.4.0",
@@ -73,9 +89,6 @@
       "version": "7.5.2",
       "gitref": "refs/tags/v7.5.2",
       "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.2"
-    },
-    "pwndbg": {
-      "version": "2025.04.18"
     },
     "qiling": {
       "version": "1.4.7",

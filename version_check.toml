@@ -51,6 +51,22 @@ github = "AndreRH/hangover"
 use_latest_release = true
 prefix = "hangover-"
 
+[lib32-gcc-libs]
+source = "archpkg"
+archpkg = "lib32-gcc-libs"
+
+[lib32-glibc]
+source = "archpkg"
+archpkg = "lib32-glibc"
+
+[lib64-gcc-libs]
+source = "archpkg"
+archpkg = "gcc-libs"
+
+[lib64-glibc]
+source = "archpkg"
+archpkg = "glibc"
+
 [ligolo-ng]
 source = "github"
 github = "nicocha30/ligolo-ng"
@@ -69,7 +85,7 @@ ubuntupkg = "mingw-w64"
 [nessus]
 source = "regex"
 url = "https://www.tenable.com/downloads/nessus?loginAttempted=true"
-regex = "Nessus - (\\d{1,2}.\\d{1,2}.\\d{1,2})"
+regex = "Nessus - (\\d{1,2}\\.\\d{1,2}\\.\\d{1,2})"
 
 [netexec]
 source = "github"
