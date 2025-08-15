@@ -10,12 +10,12 @@ url='https://aflplus.plus/'
 license=('Apache')
 depends=('bash' 'python')
 conflicts=('afl')
-source=("https://github.com/pwnpad/pwnpad-sources/releases/download/binaries/aflplusplus.tgz" "afl-qemu-switch")
+source=("https://github.com/pwnpad/pwnpad-sources/releases/download/binaries/aflplusplus-4.33c-aarch64.tgz" "afl-qemu-switch")
 sha512sums=('a264348b6868e411e2955ca0e1989436d545d6274e8f724c028182d3c87f69eb7671ef47dbee194fa812748ce6629ae96ad520cd37a9d9ba38fd3d562cf10806'
             'c8902a97d1d160bbcc54b87a518920e7993a5ec431f373c4d56f88726dfbaf9411bbd8d9b9c216bb55f2f077ebad339b119feb5a98b71e0d75932a211dd3bea3')
 
 build() {
-    tar xzf aflplusplus.tgz
+    tar xzf aflplusplus-4.33c-aarch64.tgz
 }
 
 package() {
