@@ -1,5 +1,5 @@
 pkgname=nessus
-pkgver=10.9.2
+pkgver=10.9.3
 pkgrel=1
 pkgdesc='Nessus vulnerability scanner'
 arch=('aarch64')

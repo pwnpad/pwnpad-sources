@@ -13,7 +13,6 @@ url='https://ngrok.com'
 license=('LicenseRef-custom')
 arch=('i686' 'x86_64' 'armv7h' 'aarch64')
 optdepends=('bash-completion: Bash completion support')
-source=("TERMS-OF-SERVICE.txt")
 source_x86_64=("https://bin.equinox.io/a/eVTvzGP2KLj/ngrok-v3-3.26.0-linux-amd64.tar.gz")
 source_i686=("https://bin.equinox.io/a/nnUVPPmbn7Q/ngrok-v3-3.26.0-linux-386.tar.gz")
 source_armv7h=("https://bin.equinox.io/a/hHrXJrsTec6/ngrok-v3-3.26.0-linux-arm.tar.gz")
@@ -30,9 +29,6 @@ options=(!strip)
 package() {
   BASH_COMPLETION_DIR="$pkgdir/usr/share/bash-completion/completions"
   ZSH_COMPLETION_DIR="$pkgdir/usr/share/zsh/site-functions"
-
-  # Copy terms of service to license directory
-  install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" TERMS-OF-SERVICE.txt
 
   cd "${srcdir}"
 

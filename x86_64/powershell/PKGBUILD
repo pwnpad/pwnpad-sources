@@ -1,15 +1,16 @@
 pkgname=powershell
 pkgver=7.5.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework"
 license=('custom')
 arch=('x86_64')
 url="https://github.com/PowerShell/PowerShell"
 source=("https://github.com/PowerShell/PowerShell/releases/download/v${pkgver}/powershell-${pkgver}-linux-x64.tar.gz")
-sha256sums=("SKIP")
+sha512sums=('5d44f6632e8090a79c396d0b679c6a5ea8833df23d2ea2e3c1c74664b14cb9d748625870b4e8caa5ed99f47d93a5246dd30097c773ccc9090982ab470b446276')
 
 package() {
     mkdir -p "$pkgdir/opt/${pkgname}" "$pkgdir/usr/bin"
     cp -a * "$pkgdir/opt/${pkgname}"
+    chmod 755 "$pkgdir/opt/${pkgname}/pwsh"
     ln -s "/opt/${pkgname}/pwsh" "$pkgdir/usr/bin/pwsh"
 }
