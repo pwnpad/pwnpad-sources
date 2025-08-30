@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
     },
     "angr": {
-      "version": "9.2.170",
-      "gitref": "refs/tags/v9.2.170",
-      "revision": "eda02fc8ddd9f593f392f36b2663f4bc8f7254f8",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.170"
+      "version": "9.2.172",
+      "gitref": "refs/tags/v9.2.172",
+      "revision": "51b198b8795e82e2c0c83857692cbb17f6a4c74e",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.172"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -18,9 +18,9 @@
       "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
     },
     "bloodhound": {
-      "version": "8.0.2",
-      "revision": "028b1479c5a179ae9de0bae807749cc8ac254342",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.0.2"
+      "version": "8.1.0",
+      "revision": "7c08e1eb03890798fcfdf5a3eca3ae1cd4902ce2",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.1.0"
     },
     "donut": {
       "version": "2.0.0",
@@ -64,10 +64,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.81",
-      "gitref": "refs/tags/6.4.81",
-      "revision": "03649d60e6146eca0c119f0d28fcbf98670d88ef",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.81"
+      "version": "6.4.85",
+      "gitref": "refs/tags/6.4.85",
+      "revision": "983fa7a1bc2955413a0602bfea4f3995fb244204",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.85"
     },
     "mingw-w64": {
       "version": "12.0.0-5",
@@ -82,7 +82,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.4.0"
     },
     "ngrok": {
-      "version": "3.26.0-1",
+      "version": "3.27.0-1",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "powershell": {

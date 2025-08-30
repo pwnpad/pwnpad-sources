@@ -1,5 +1,5 @@
 pkgname=angr
-pkgver=9.2.169
+pkgver=9.2.172
 pkgrel=1
 groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
         'blackarch-reversing')
@@ -18,7 +18,7 @@ depends=('python' 'python-capstone' 'python-networkx' 'python-rpyc'
          'python-sympy' 'python-nampa' 'python-setuptools-rust')
 makedepends=('git' 'python-setuptools' 'python-pip' 'python-wheel')
 source=("https://github.com/$pkgname/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
-sha512sums=('1f1d22d7b435f100435b7456bf1f28c9fb108f90b3e507bec7d3a9660eb3725831bfd86c0f3b09a607f759aba92307ac6c36cc9d83d3cb42d0529d377eac7f47')
+sha512sums=('62e5084a9710d740eeca79a8ddbe0d0444adfd377b4069f5e54266bf24fb206e7487da2f5e2d9774ab174751bf111e4dae8a4a33283c9fe526dbb6cefeeaedc2')
 
 prepare() {
   cd "$pkgname-$pkgver"
