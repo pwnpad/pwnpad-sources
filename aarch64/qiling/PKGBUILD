@@ -2,48 +2,67 @@
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=python-qiling
 
 pkgname=qiling
-_pkgname=Qiling
-_name=${pkgname#python-}
-pkgver=1.4.6.150.ga9ae6926
+_python_ver=3.12.11
+_keystone_ver=0.9.2
+pkgver=1.4.7
 pkgrel=1
 pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'
 arch=('any')
 license=('GPL2')
-makedepends=('python-poetry' 'cmake')
-source=('git+https://github.com/qilingframework/qiling.git#branch=dev' 'qltool.patch' )
-sha512sums=('SKIP'
-            '6de62270e200b27250e41994923201dbed7d6074dfd23cf23c5a58035d73c7b25e1f609fe70b45e04f03bd4221ae74a7c387b2475840d008ad196ea1defda704')
+makedepends=('git' 'pyenv' 'python-pip' 'python-virtualenv' 'cmake')
+source=("git+https://github.com/qilingframework/qiling.git#tag=${pkgver}"
+        "https://files.pythonhosted.org/packages/source/k/keystone-engine/keystone-engine-${_keystone_ver}.tar.gz")
+sha512sums=('81535f16aeda39fb55ae0c2c851e20bf4a3a0be702268fd41496d916bdbdbeca83b7804cac4c1baf82b05fc50c2af02c1b3096cf0fcc9b6244e846ac2d859ccc'
+            'e07a8559e27daf49cad3c5c50b415d8d40ae2c63681a220289246c45dd220337506735a668d2c31d1504f83bea9614ca56af8b775be05cfe2759137f29eb3606')
 
-pkgver() {
-    cd "$srcdir/qiling"
-    git describe --tags | sed 's/^v//;s/-/./g'
+prepare() {
+    cd "${srcdir}/keystone-engine-${_keystone_ver}"
+
+    sed -i 's/cmake_minimum_required(VERSION 2.8.7)/cmake_minimum_required(VERSION 3.10)/' src/CMakeLists.txt
+    sed -i 's/cmake_minimum_required(VERSION 2.8.7)/cmake_minimum_required(VERSION 3.10)/' src/llvm/CMakeLists.txt
+
+    sed -i '21,29d' src/CMakeLists.txt
+    sed -i '16,24d' src/llvm/CMakeLists.txt
 }
 
 build() {
-    sudo mv $srcdir/qiling /opt/${_pkgname}
+    cd "${srcdir}/${pkgname}"
 
-    cd /opt/${_pkgname}
+    export PYENV_ROOT="$srcdir/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
 
-    sudo poetry config virtualenvs.create true
-    sudo poetry config virtualenvs.in-project true
-    sudo poetry config virtualenvs.path .
-    sudo poetry install --only main
+    pyenv install --skip-existing "$_python_ver"
+    local py_path="$PYENV_ROOT/versions/$_python_ver/bin/python"
 
-    sudo chown -R $USER:users /opt/${_pkgname}
+    $py_path -m venv --copies venv
 
-    patch qltool $srcdir/qltool.patch
+    bash -c "
+        source venv/bin/activate
+        pip install --upgrade pip wheel
 
-    rm -rf ChangeLog COPYING CREDITS.md Dockerfile .dockerignore docs .editorconfig examples .git \
-           .github .gitignore .gitmodules poetry.lock pyproject.toml README.md tests TODO
+        pip install ../keystone-engine-${_keystone_ver}
+        pip install .
+    "
 }
 
 package() {
-    mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/bin"
+    install -d "${pkgdir}/opt/"
+    cp -r "${srcdir}/${pkgname}/venv" "${pkgdir}/opt/${pkgname}"
+    cp "${srcdir}/${pkgname}/qltool" "${pkgdir}/opt/${pkgname}/bin"
 
-    ln -sf /opt/${_pkgname}/qltool "${pkgdir}/usr/bin/qltool"
+    install -d "${pkgdir}/usr/bin"
+    cat << EOF > "${pkgdir}/usr/bin/qltool"
+#!/bin/bash
+/opt/${pkgname}/bin/python /opt/${pkgname}/bin/qltool "\$@"
+EOF
+    chmod +x "${pkgdir}/usr/bin/qltool"
 
-    cp -a /opt/${_pkgname} "${pkgdir}/opt"
-
-    sudo rm -rf /opt/${_pkgname}
+    cat << EOF > "$pkgdir/usr/bin/qiling-env"
+#!/bin/bash
+source /opt/${pkgname}/bin/activate
+echo "Qiling Framework environment activated (using bundled Python $_python_ver). Type 'exit' to return."
+exec "\${SHELL:-/bin/bash}"
+EOF
+  chmod +x "${pkgdir}/usr/bin/qiling-env"
 }
