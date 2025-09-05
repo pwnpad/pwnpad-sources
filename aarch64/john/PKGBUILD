@@ -27,7 +27,7 @@ conflicts=('john')
 backup=('etc/john/john.conf')
 options=('!strip')
 source=("$_pkgname::git+https://github.com/magnumripper/JohnTheRipper.git")
-md5sums=('SKIP')
+sha512sums=('SKIP')
 
 pkgver() {
   cd "$srcdir/$_pkgname"

@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
     },
     "angr": {
-      "version": "9.2.172",
-      "gitref": "refs/tags/v9.2.172",
-      "revision": "51b198b8795e82e2c0c83857692cbb17f6a4c74e",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.172"
+      "version": "9.2.173",
+      "gitref": "refs/tags/v9.2.173",
+      "revision": "e88d4196a24c0d4f63cd9b03b1050e853daead9e",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.173"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -28,10 +28,10 @@
       "url": "https://github.com/MEhrn00/donut/releases/tag/v2.0.0"
     },
     "feroxbuster": {
-      "version": "2.11.0",
-      "gitref": "refs/tags/v2.11.0",
-      "revision": "64113b8da434f51077867302968764fd641e9ffc",
-      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.11.0"
+      "version": "2.12.0",
+      "gitref": "refs/tags/v2.12.0",
+      "revision": "449e30191544e38122abcc26b0f2b820ddbe3dcb",
+      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.12.0"
     },
     "glibc": {
       "version": "2.42-0ubuntu1",
@@ -41,6 +41,11 @@
       "version": "10.11",
       "gitref": "refs/tags/hangover-10.11",
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.11"
+    },
+    "john": {
+      "version": "20250904.215010",
+      "revision": "67fcf9fe5a4b757af79529578e28bd35a1c450cd",
+      "url": "https://github.com/openwall/john/commit/67fcf9fe5a4b757af79529578e28bd35a1c450cd"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1+r22+gc4e96a094636-1",
@@ -64,10 +69,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.85",
-      "gitref": "refs/tags/6.4.85",
-      "revision": "983fa7a1bc2955413a0602bfea4f3995fb244204",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.85"
+      "version": "6.4.86",
+      "gitref": "refs/tags/6.4.86",
+      "revision": "4a0a5a6a8613c003e5e212d9a20c6716df64fab7",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.86"
     },
     "mingw-w64": {
       "version": "12.0.0-5",

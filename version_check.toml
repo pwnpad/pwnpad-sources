@@ -51,6 +51,11 @@ github = "AndreRH/hangover"
 use_latest_release = true
 prefix = "hangover-"
 
+[john]
+source = "github"
+github = "openwall/john"
+use_release_name = true
+
 [lib32-gcc-libs]
 source = "archpkg"
 archpkg = "lib32-gcc-libs"

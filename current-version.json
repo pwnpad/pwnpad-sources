@@ -28,10 +28,10 @@
       "url": "https://github.com/MEhrn00/donut/releases/tag/v2.0.0"
     },
     "feroxbuster": {
-      "version": "2.11.0",
-      "gitref": "refs/tags/v2.11.0",
-      "revision": "64113b8da434f51077867302968764fd641e9ffc",
-      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.11.0"
+      "version": "2.12.0",
+      "gitref": "refs/tags/v2.12.0",
+      "revision": "449e30191544e38122abcc26b0f2b820ddbe3dcb",
+      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.12.0"
     },
     "glibc": {
       "version": "2.42-0ubuntu1",
@@ -41,6 +41,11 @@
       "version": "10.11",
       "gitref": "refs/tags/hangover-10.11",
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.11"
+    },
+    "john": {
+      "version": "20250904.215010",
+      "revision": "67fcf9fe5a4b757af79529578e28bd35a1c450cd",
+      "url": "https://github.com/openwall/john/commit/67fcf9fe5a4b757af79529578e28bd35a1c450cd"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1+r22+gc4e96a094636-1",
