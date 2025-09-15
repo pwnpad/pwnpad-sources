@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
     },
     "angr": {
-      "version": "9.2.173",
-      "gitref": "refs/tags/v9.2.173",
-      "revision": "e88d4196a24c0d4f63cd9b03b1050e853daead9e",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.173"
+      "version": "9.2.174",
+      "gitref": "refs/tags/v9.2.174",
+      "revision": "00eb5e1dbab3714c93e2055bee8c950b5406f955",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.174"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -34,13 +34,13 @@
       "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.12.0"
     },
     "glibc": {
-      "version": "2.42-0ubuntu1",
+      "version": "2.42-0ubuntu3",
       "url": "https://packages.ubuntu.com/questing/glibc"
     },
     "hangover": {
-      "version": "10.11",
-      "gitref": "refs/tags/hangover-10.11",
-      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.11"
+      "version": "10.14",
+      "gitref": "refs/tags/hangover-10.14",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.14"
     },
     "john": {
       "version": "20250904.215010",
@@ -69,10 +69,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.86",
-      "gitref": "refs/tags/6.4.86",
-      "revision": "4a0a5a6a8613c003e5e212d9a20c6716df64fab7",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.86"
+      "version": "6.4.88",
+      "gitref": "refs/tags/6.4.88",
+      "revision": "73948ea2ca0ab8794999d6ffd61a3482f36faf33",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.88"
     },
     "mingw-w64": {
       "version": "12.0.0-5",
@@ -87,13 +87,13 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.4.0"
     },
     "ngrok": {
-      "version": "3.27.0-1",
+      "version": "3.28.0-1",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "powershell": {
-      "version": "7.5.2",
-      "gitref": "refs/tags/v7.5.2",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.2"
+      "version": "7.5.3",
+      "gitref": "refs/tags/v7.5.3",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.3"
     },
     "qiling": {
       "version": "1.4.7",

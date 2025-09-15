@@ -6,17 +6,17 @@
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=ngrok
 
 pkgname=ngrok
-pkgver=3.26.0
+pkgver=3.28.0
 pkgrel=1
 pkgdesc='A tunneling, reverse proxy for developing and understanding networked, HTTP services'
 url='https://ngrok.com'
 license=('LicenseRef-custom')
 arch=('i686' 'x86_64' 'armv7h' 'aarch64')
 optdepends=('bash-completion: Bash completion support')
-source_x86_64=("https://bin.equinox.io/a/eVTvzGP2KLj/ngrok-v3-3.26.0-linux-amd64.tar.gz")
-source_i686=("https://bin.equinox.io/a/nnUVPPmbn7Q/ngrok-v3-3.26.0-linux-386.tar.gz")
-source_armv7h=("https://bin.equinox.io/a/hHrXJrsTec6/ngrok-v3-3.26.0-linux-arm.tar.gz")
-source_aarch64=("https://bin.equinox.io/a/2MhEizvCU8b/ngrok-v3-3.26.0-linux-arm64.tar.gz")
+source_x86_64=("https://bin.equinox.io/a/eVTvzGP2KLj/ngrok-v3-${pkgver}-linux-amd64.tar.gz")
+source_i686=("https://bin.equinox.io/a/nnUVPPmbn7Q/ngrok-v3-${pkgver}-linux-386.tar.gz")
+source_armv7h=("https://bin.equinox.io/a/hHrXJrsTec6/ngrok-v3-${pkgver}-linux-arm.tar.gz")
+source_aarch64=("https://bin.equinox.io/a/2MhEizvCU8b/ngrok-v3-${pkgver}-linux-arm64.tar.gz")
 sha256sums_i686=('a996d1ecba004440ba53917c8468384e7b2b11f231772fe7d7bfc550b151c6a2')
 sha256sums_x86_64=('21c6d25f78ee768d894ac4c8022f96a3f4a9573c52afcd8714452856353403b6')
 sha256sums_armv7h=('91a56766b889ef7641aff5d791a6d3e75611e2f8cdfb7a48c9cd6885793a44da')

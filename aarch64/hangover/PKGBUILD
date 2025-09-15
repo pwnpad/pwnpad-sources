@@ -1,5 +1,5 @@
 pkgname=hangover
-pkgver=10.11
+pkgver=10.14
 pkgrel=1
 pkgdesc="Hangover runs simple Win32 applications on arm64 Linux"
 arch=('aarch64')

@@ -6,7 +6,7 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=metasploit
-pkgver=6.4.85
+pkgver=6.4.88
 pkgrel=1
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
@@ -26,7 +26,7 @@ depends=(
 )
 options=('!strip' '!debug' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git#tag=${pkgver})
-sha512sums=('b2532f658c752910eaecd00c05e32fd389fc4e843fff41fdcaa36feb28b5e8639f6896c361c9c794730bc3db7b48b2cf61e8d95ec3efb23c28166aae1522c132')
+sha512sums=('f7e1a96f507a89ea026ed6afe57f659d52ddc1c63bc7a69d65bbf3d2d1fb8cae43a4cada96999d4de486c18531b266c3f9c38125168a35db43d049968706409b')
 
 prepare() {
   cd ${pkgname}-framework
@@ -75,6 +75,54 @@ package() {
   rm -r "${pkgdir}"/opt/metasploit/vendor/bundle/ruby/*/cache
   sed -e '/^BUNDLE_JOBS/d' -i "${pkgdir}/opt/metasploit/.bundle/config"
   find "${pkgdir}/opt/metasploit/vendor/bundle/ruby/" -name Makefile -delete
+
+  cat <<EOF > "${pkgdir}/opt/${pkgname}/script-exploit"
+#!/bin/sh
+name_script=\$(basename \$0)
+tool_name=\${name_script##msf-}
+
+exec "${pkgdir}/opt/${pkgname}/tools/exploit/\$tool_name" "\$@"
+EOF
+
+  cat <<EOF > "${pkgdir}/opt/${pkgname}/script-password"
+#!/bin/sh
+name_script=\$(basename \$0)
+tool_name=\${name_script##msf-}
+
+exec "${pkgdir}/opt/${pkgname}/tools/password/\$tool_name" "\$@"
+EOF
+
+  cat <<EOF > "${pkgdir}/opt/${pkgname}/script-recon"
+#!/bin/sh
+name_script=\$(basename \$0)
+tool_name=\${name_script##msf-}
+
+exec "${pkgdir}/opt/${pkgname}/tools/recon/\$tool_name" "\$@"
+EOF
+
+  chmod +x "${pkgdir}/opt/${pkgname}/script-exploit"
+  chmod +x "${pkgdir}/opt/${pkgname}/script-password"
+  chmod +x "${pkgdir}/opt/${pkgname}/script-recon"
+
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-egghunter"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-exe2vba"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-exe2vbs"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-find_badchars"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-java_deserializer"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-jsobfu"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-metasm_shell"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-msf_irb_shell"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-nasm_shell"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-pattern_create"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-pattern_offset"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-pdf2xdp"
+  ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-virustotal"
+
+  ln -s "/opt/${pkgname}/script-password" "${pkgdir}/usr/bin/msf-halflm_second"
+  ln -s "/opt/${pkgname}/script-password" "${pkgdir}/usr/bin/msf-hmac_sha1_crack"
+  ln -s "/opt/${pkgname}/script-password" "${pkgdir}/usr/bin/msf-ms5_lookup"
+
+  ln -s "/opt/${pkgname}/script-recon" "${pkgdir}/usr/bin/msf-makeiplist"
 }
 
 # vim: ts=2 sw=2 et:
