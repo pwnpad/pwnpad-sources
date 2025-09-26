@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
     },
     "angr": {
-      "version": "9.2.174",
-      "gitref": "refs/tags/v9.2.174",
-      "revision": "00eb5e1dbab3714c93e2055bee8c950b5406f955",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.174"
+      "version": "9.2.176",
+      "gitref": "refs/tags/v9.2.176",
+      "revision": "d8086e39e8b75bfbc736041ead7dfe2e25946bea",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.176"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -18,9 +18,9 @@
       "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
     },
     "bloodhound": {
-      "version": "8.1.0",
-      "revision": "7c08e1eb03890798fcfdf5a3eca3ae1cd4902ce2",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.1.0"
+      "version": "8.2.0",
+      "revision": "d946c56e2d57d8fd3be0adc775dda2450f0345a6",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.2.0"
     },
     "donut": {
       "version": "2.0.0",
@@ -43,13 +43,9 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.14"
     },
     "john": {
-      "version": "20250904.215010",
-      "revision": "67fcf9fe5a4b757af79529578e28bd35a1c450cd",
-      "url": "https://github.com/openwall/john/commit/67fcf9fe5a4b757af79529578e28bd35a1c450cd"
-    },
-    "lib32-gcc-libs": {
-      "version": "15.2.1+r22+gc4e96a094636-1",
-      "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
+      "version": "20250922.074751",
+      "revision": "fca34f99970d1308055d0118c537457b50398a55",
+      "url": "https://github.com/openwall/john/commit/fca34f99970d1308055d0118c537457b50398a55"
     },
     "lib32-glibc": {
       "version": "2.42+r17+gd7274d718e6f-1",
@@ -59,27 +55,23 @@
       "version": "15.2.1+r22+gc4e96a094636-1",
       "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
     },
-    "lib64-glibc": {
-      "version": "2.42+r17+gd7274d718e6f-1",
-      "url": "https://archlinux.org/packages/core/x86_64/glibc/"
-    },
     "ligolo-ng": {
       "version": "0.8.2",
       "gitref": "refs/tags/v0.8.2",
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.88",
-      "gitref": "refs/tags/6.4.88",
-      "revision": "73948ea2ca0ab8794999d6ffd61a3482f36faf33",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.88"
+      "version": "6.4.90",
+      "gitref": "refs/tags/6.4.90",
+      "revision": "d113b7f4aff5290647f6d7ddf2a8259fd78ac9a6",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.90"
     },
     "mingw-w64": {
       "version": "12.0.0-5",
       "url": "https://packages.ubuntu.com/questing/mingw-w64"
     },
     "nessus": {
-      "version": "10.9.3"
+      "version": "10.9.4"
     },
     "netexec": {
       "version": "1.4.0",
@@ -87,7 +79,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.4.0"
     },
     "ngrok": {
-      "version": "3.28.0-1",
+      "version": "3.30.0-1",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "powershell": {

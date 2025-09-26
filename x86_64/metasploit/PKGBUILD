@@ -6,7 +6,7 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=metasploit
-pkgver=6.4.88
+pkgver=6.4.90
 pkgrel=2
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
@@ -26,7 +26,7 @@ depends=(
 )
 options=('!strip' '!debug' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git#tag=${pkgver})
-sha512sums=('f7e1a96f507a89ea026ed6afe57f659d52ddc1c63bc7a69d65bbf3d2d1fb8cae43a4cada96999d4de486c18531b266c3f9c38125168a35db43d049968706409b')
+sha512sums=('4161495a26830781e4f58e714dfd22ba6bd972b31b364e84e7be15d39ee780f58f6ca97db7513881ed171b7b550aec0a54c4c89419cd9d083faeb804ca62be3b')
 
 prepare() {
   cd ${pkgname}-framework
@@ -100,9 +100,18 @@ tool_name=\${name_script##msf-}
 exec "/opt/${pkgname}/tools/recon/\$tool_name.rb" "\$@"
 EOF
 
+  cat <<EOF > "${pkgdir}/usr/bin/msfrop"
+#!/bin/sh
+GEM_HOME=/opt/metasploit/vendor/bundle/ruby/3.4.0 \
+GEM_PATH=/opt/metasploit/vendor/bundle/ruby/3.4.0 \
+RUBYLIB=/opt/metasploit/lib \
+ruby /opt/metasploit/vendor/bundle/ruby/3.4.0/bin/msfrop "\$@"
+EOF
+
   chmod +x "${pkgdir}/opt/${pkgname}/script-exploit"
   chmod +x "${pkgdir}/opt/${pkgname}/script-password"
   chmod +x "${pkgdir}/opt/${pkgname}/script-recon"
+  chmod +x "${pkgdir}/usr/bin/msfrop"
 
   ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-egghunter"
   ln -s "/opt/${pkgname}/script-exploit" "${pkgdir}/usr/bin/msf-exe2vba"
