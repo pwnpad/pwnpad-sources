@@ -2,9 +2,9 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "4.33c",
-      "gitref": "refs/tags/v4.33c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
+      "version": "4.34c",
+      "gitref": "refs/tags/v4.34c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.34c"
     },
     "angr": {
       "version": "9.2.185",
@@ -43,9 +43,9 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.18"
     },
     "john": {
-      "version": "20250922.074751",
-      "revision": "fca34f99970d1308055d0118c537457b50398a55",
-      "url": "https://github.com/openwall/john/commit/fca34f99970d1308055d0118c537457b50398a55"
+      "version": "20251127.233635",
+      "revision": "7a0ec105fd4904e57cdd4c9e7eaead77c8dd264d",
+      "url": "https://github.com/openwall/john/commit/7a0ec105fd4904e57cdd4c9e7eaead77c8dd264d"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1+r301+gf24307422d1d-1",
@@ -69,17 +69,17 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.90",
-      "gitref": "refs/tags/6.4.90",
-      "revision": "d113b7f4aff5290647f6d7ddf2a8259fd78ac9a6",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.90"
+      "version": "6.4.100",
+      "gitref": "refs/tags/6.4.100",
+      "revision": "018ac089bb1c0e85c39013b2db9fcfd249ca2110",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.100"
     },
     "mingw-w64": {
       "version": "13.0.0-1",
       "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
-      "version": "10.9.4"
+      "version": "10.11.0"
     },
     "netexec": {
       "version": "1.4.0",
@@ -87,7 +87,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.4.0"
     },
     "ngrok": {
-      "version": "3.30.0-1",
+      "version": "3.33.1-1",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "powershell": {
