@@ -1,7 +1,9 @@
 #!/bin/sh
 
+VERSION="4.34c"
+
 # Ubuntu build script
-# docker run --rm -it ubuntu:24.04
+# docker run --rm -it ubuntu:25.04
 apt-get update
 apt-get install -y build-essential python3-dev automake cmake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools cargo libgtk-3-dev
 apt-get install -y lld-14 llvm-14 llvm-14-dev clang-14 || apt-get install -y lld llvm llvm-dev clang
@@ -14,7 +16,7 @@ apt-get install -y gcc-x86-64-linux-gnu
 
 cd $HOME
 
-git clone --branch=v4.33c https://github.com/AFLplusplus/AFLplusplus
+git clone --branch=v${VERSION} https://github.com/AFLplusplus/AFLplusplus
 cd AFLplusplus
 
 MAKEFLAGS="-j$(nproc)" make distrib
@@ -42,4 +44,4 @@ ln -s afl-qemu-trace-$(uname -m) $HOME/usr/bin/afl-qemu-trace
 
 cd $HOME
 
-tar czvf aflplusplus.tgz usr/
+tar czvf aflplusplus-${VERSION}.tgz usr/

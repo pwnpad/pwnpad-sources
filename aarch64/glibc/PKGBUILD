@@ -17,7 +17,7 @@ _extract_deb() {
 }
 
 prepare() {
-    ubuntu_ver="0ubuntu3"
+    ubuntu_ver="2ubuntu2"
     # Getting libc from Ubuntu servers
     wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-bin_${pkgver}-${ubuntu_ver}_arm64.deb"
     wget -nc "https://launchpad.net/ubuntu/+archive/primary/+files/libc-dev-bin_${pkgver}-${ubuntu_ver}_arm64.deb"

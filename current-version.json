@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.33c"
     },
     "angr": {
-      "version": "9.2.176",
-      "gitref": "refs/tags/v9.2.176",
-      "revision": "d8086e39e8b75bfbc736041ead7dfe2e25946bea",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.176"
+      "version": "9.2.185",
+      "gitref": "refs/tags/v9.2.185",
+      "revision": "c53b32c95decc017182dfbade422b6a466ccae46",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.185"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -18,9 +18,9 @@
       "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
     },
     "bloodhound": {
-      "version": "8.2.0",
-      "revision": "d946c56e2d57d8fd3be0adc775dda2450f0345a6",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.2.0"
+      "version": "8.3.1",
+      "revision": "f7bd9efe043cf8750b232fb1b34e5a1c9fec009a",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.3.1"
     },
     "donut": {
       "version": "2.0.0",
@@ -28,19 +28,19 @@
       "url": "https://github.com/MEhrn00/donut/releases/tag/v2.0.0"
     },
     "feroxbuster": {
-      "version": "2.12.0",
-      "gitref": "refs/tags/v2.12.0",
-      "revision": "449e30191544e38122abcc26b0f2b820ddbe3dcb",
-      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.12.0"
+      "version": "2.13.0",
+      "gitref": "refs/tags/v2.13.0",
+      "revision": "2f608c505fbadd9523f44feaf383a437664ded1e",
+      "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.13.0"
     },
     "glibc": {
-      "version": "2.42-0ubuntu3",
-      "url": "https://packages.ubuntu.com/questing/glibc"
+      "version": "2.42-2ubuntu2",
+      "url": "https://packages.ubuntu.com/resolute/glibc"
     },
     "hangover": {
-      "version": "10.14",
-      "gitref": "refs/tags/hangover-10.14",
-      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.14"
+      "version": "10.18",
+      "gitref": "refs/tags/hangover-10.18",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.18"
     },
     "john": {
       "version": "20250922.074751",
@@ -48,19 +48,19 @@
       "url": "https://github.com/openwall/john/commit/fca34f99970d1308055d0118c537457b50398a55"
     },
     "lib32-gcc-libs": {
-      "version": "15.2.1+r22+gc4e96a094636-1",
+      "version": "15.2.1+r301+gf24307422d1d-1",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
     },
     "lib32-glibc": {
-      "version": "2.42+r17+gd7274d718e6f-1",
+      "version": "2.42+r33+gde1fe81f4714-1",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-glibc/"
     },
     "lib64-gcc-libs": {
-      "version": "15.2.1+r22+gc4e96a094636-1",
+      "version": "15.2.1+r301+gf24307422d1d-1",
       "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
     },
     "lib64-glibc": {
-      "version": "2.42+r17+gd7274d718e6f-1",
+      "version": "2.42+r33+gde1fe81f4714-1",
       "url": "https://archlinux.org/packages/core/x86_64/glibc/"
     },
     "ligolo-ng": {
@@ -75,8 +75,8 @@
       "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.90"
     },
     "mingw-w64": {
-      "version": "12.0.0-5",
-      "url": "https://packages.ubuntu.com/questing/mingw-w64"
+      "version": "13.0.0-1",
+      "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
       "version": "10.9.4"
@@ -91,9 +91,9 @@
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "powershell": {
-      "version": "7.5.3",
-      "gitref": "refs/tags/v7.5.3",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.3"
+      "version": "7.5.4",
+      "gitref": "refs/tags/v7.5.4",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.4"
     },
     "qiling": {
       "version": "1.4.7",
@@ -101,9 +101,9 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.7"
     },
     "rsactftool": {
-      "version": "20250812.234513",
-      "revision": "b0b176fd4a18c2322600a25ab810adbf7a5dbab3",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/b0b176fd4a18c2322600a25ab810adbf7a5dbab3"
+      "version": "20251104.145305",
+      "revision": "9a4999642e9572238de7b356706fe981f02b089a",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/9a4999642e9572238de7b356706fe981f02b089a"
     },
     "sliver": {
       "version": "1.5.42",

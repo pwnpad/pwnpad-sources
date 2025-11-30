@@ -1,6 +1,6 @@
 pkgname=lib32-gcc-libs
 pkgver=15.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Runtime libraries shipped by GCC"
 arch=('aarch64')
 depends=('lib32-glibc')

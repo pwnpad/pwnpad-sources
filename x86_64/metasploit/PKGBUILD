@@ -102,10 +102,11 @@ EOF
 
   cat <<EOF > "${pkgdir}/usr/bin/msfrop"
 #!/bin/sh
+cd /opt/metasploit/vendor/bundle/ruby/3.4.0/bin
 GEM_HOME=/opt/metasploit/vendor/bundle/ruby/3.4.0 \
 GEM_PATH=/opt/metasploit/vendor/bundle/ruby/3.4.0 \
 RUBYLIB=/opt/metasploit/lib \
-ruby /opt/metasploit/vendor/bundle/ruby/3.4.0/bin/msfrop "\$@"
+ruby msfrop "\$@"
 EOF
 
   chmod +x "${pkgdir}/opt/${pkgname}/script-exploit"
