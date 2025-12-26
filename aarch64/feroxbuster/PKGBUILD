@@ -2,7 +2,7 @@
 # See COPYING for license details.
 
 pkgname=feroxbuster
-pkgver=v2.13.0
+pkgver=v2.13.1
 pkgrel=1
 pkgdesc='A fast, simple, recursive content discovery tool written in Rust.'
 arch=('x86_64' 'aarch64')
@@ -12,7 +12,7 @@ license=('MIT')
 depends=('openssl' 'pkgconf')
 makedepends=('git' 'cargo')
 source=("git+https://github.com/epi052/$pkgname.git#tag=${pkgver}")
-sha512sums=('cfc069efbc82e37119089f0da493e02589cfa344eaf2f49c31cb99cd2dd30071f93f6a2447a51fa724d5932f6d54b2c0c0b4df1082965c338c2c0ca7504f3291')
+sha512sums=('804f9b31a0c83a00bd7be05cec3f2e19f007f61f706d5e2a65035d7e224a5c8517ae2d81467993cbc16354fd52d2c745f52774568a98e82dae5e995c46296a8c')
 
 build() {
   cd $pkgname
