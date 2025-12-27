@@ -2,9 +2,9 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "4.34c",
-      "gitref": "refs/tags/v4.34c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.34c"
+      "version": "4.35c",
+      "gitref": "refs/tags/v4.35c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
       "version": "9.2.190",
@@ -50,6 +50,14 @@
     "lib32-gcc-libs": {
       "version": "15.2.1+r301+gf24307422d1d-1",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
+    },
+    "lib32-glibc": {
+      "version": "2.42+r33+gde1fe81f4714-1",
+      "url": "https://archlinux.org/packages/core/x86_64/lib32-glibc/"
+    },
+    "lib64-gcc-libs": {
+      "version": "15.2.1+r301+gf24307422d1d-1",
+      "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
     },
     "lib64-glibc": {
       "version": "2.42+r33+gde1fe81f4714-1",
