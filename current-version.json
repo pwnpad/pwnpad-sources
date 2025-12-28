@@ -2,9 +2,9 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "4.34c",
-      "gitref": "refs/tags/v4.34c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.34c"
+      "version": "4.35c",
+      "gitref": "refs/tags/v4.35c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
       "version": "9.2.190",
