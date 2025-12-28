@@ -43,9 +43,9 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.18"
     },
     "john": {
-      "version": "20251127.233635",
-      "revision": "7a0ec105fd4904e57cdd4c9e7eaead77c8dd264d",
-      "url": "https://github.com/openwall/john/commit/7a0ec105fd4904e57cdd4c9e7eaead77c8dd264d"
+      "version": "20251220.213132",
+      "revision": "913d158d77eca243bcaeadfd47b33bb0c48836f4",
+      "url": "https://github.com/openwall/john/commit/913d158d77eca243bcaeadfd47b33bb0c48836f4"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1+r301+gf24307422d1d-1",
@@ -101,9 +101,9 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.7"
     },
     "rsactftool": {
-      "version": "20251104.145305",
-      "revision": "9a4999642e9572238de7b356706fe981f02b089a",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/9a4999642e9572238de7b356706fe981f02b089a"
+      "version": "20251203.144603",
+      "revision": "370cb43fac1ed560425116cb3e8c56002ba67313",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
     },
     "sliver": {
       "version": "1.5.42",

@@ -38,9 +38,9 @@
       "url": "https://packages.ubuntu.com/resolute/glibc"
     },
     "hangover": {
-      "version": "11.0-rc3",
-      "gitref": "refs/tags/hangover-11.0-rc3",
-      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.0-rc3"
+      "version": "11.0-rc4",
+      "gitref": "refs/tags/hangover-11.0-rc4",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.0-rc4"
     },
     "john": {
       "version": "20251220.213132",
