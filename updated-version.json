@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.190",
-      "gitref": "refs/tags/v9.2.190",
-      "revision": "3da2954c3f76eba407148e6930e81ba1051ead5c",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.190"
+      "version": "9.2.191",
+      "gitref": "refs/tags/v9.2.191",
+      "revision": "a81aba16b281e1ff9fcf054f4b135981663060fc",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.191"
     },
     "autopsy": {
       "version": "4.22.1",
