@@ -69,10 +69,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.104",
-      "gitref": "refs/tags/6.4.104",
-      "revision": "9914b06ef609931233604afd6a08e0ae52307a5f",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.104"
+      "version": "6.4.105",
+      "gitref": "refs/tags/6.4.105",
+      "revision": "4b1dfe299a25c78ca113e4080a86c41c5b6e62d2",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.105"
     },
     "mingw-w64": {
       "version": "13.0.0-1",
