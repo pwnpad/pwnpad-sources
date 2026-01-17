@@ -130,7 +130,7 @@ source = "github"
 github = "RsaCtfTool/RsaCtfTool"
 
 [sliver]
-source = "gitlab"
-gitlab = "kalilinux/packages/sliver"
-use_max_tag = true
-prefix = "upstream/"
+source = "github"
+github = "BishopFox/sliver"
+use_latest_release = true
+prefix = "v"

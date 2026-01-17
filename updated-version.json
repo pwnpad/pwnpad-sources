@@ -33,6 +33,10 @@
       "revision": "aa8e1335801e91d98ce0d4fd148c2159a667a83b",
       "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.13.1"
     },
+    "glibc": {
+      "version": "2.42-2ubuntu2",
+      "url": "https://packages.ubuntu.com/resolute/glibc"
+    },
     "hangover": {
       "version": "11.0",
       "gitref": "refs/tags/hangover-11.0",
@@ -65,10 +69,14 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.107",
-      "gitref": "refs/tags/6.4.107",
-      "revision": "3f54ce1f1b2f2b0cf2a8fd051e927f429204cc0e",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.107"
+      "version": "6.4.108",
+      "gitref": "refs/tags/6.4.108",
+      "revision": "f813a749e3e470fd44d5594cc84687ddb8255e0e",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.108"
+    },
+    "mingw-w64": {
+      "version": "13.0.0",
+      "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
       "version": "10.11.1"
@@ -98,9 +106,9 @@
       "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
     },
     "sliver": {
-      "version": "1.5.42",
-      "revision": "cdcf9506e5535399c0af66d7b4e3864462af372a",
-      "url": "https://gitlab.com/kalilinux/packages/sliver/-/tags/upstream/1.5.42"
+      "version": "1.6.6",
+      "gitref": "refs/tags/v1.6.6",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.6"
     }
   }
 }
