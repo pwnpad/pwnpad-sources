@@ -1,5 +1,5 @@
 pkgname=sliver
-pkgver=1.5.42
+pkgver=1.6.6
 pkgrel=1
 pkgdesc="Sliver is a an opensource C2 framework designed by bishop fox"
 url="https://github.com/BishopFox/sliver"
@@ -8,21 +8,28 @@ optdepends=()
 license=('BSD-3-Clause')
 provides=("${pkgname}")
 install=
-source=("http://http.kali.org/kali/pool/main/s/sliver/sliver_${pkgver}-0kali1_arm64.deb")
-sha512sums=('7a01d515270a9cd26e623ca0b89f1e05ee7fbfe2e8f2800d042468d718363150475138c085fce9d6aabecbed87c356c2bab9d828fc12164cd7682771db941ac4')
+source=(
+    "https://github.com/BishopFox/sliver/releases/download/v${pkgver}/sliver-client_linux-arm64"
+    "https://github.com/BishopFox/sliver/releases/download/v${pkgver}/sliver-server_linux-arm64"
+)
+sha512sums=('df817d2fa55811f37099a7d4179eee49d58e36a61aff726340282540427b7531cbfaf712f299cb9f7ba0cdf0e7d25fa7d18f3eb9344bab8a4a112bf7548bd1a9'
+            'e11a7482b70cd94407eb6540fc213071a42a0cf3b6964b8a94a27fb008665307264b3d1637ee40dac73325b54169654325a1993fb84a1e0a90b4f56b428917c8')
 
-_extract_deb() {
-    local deb_file="$1"
-    local dir_name="${deb_file%.deb}"
+prepare() {
+    chmod +x ./sliver-client_linux-arm64
+    chmod +x ./sliver-server_linux-arm64
 
-    mkdir "${dir_name}"
-    ar -x --output "${dir_name}" "${deb_file}"
-    mkdir "${dir_name}/data"
-    tar -C "${dir_name}/data" -xvf "$dir_name"/data.tar.xz
+    ./sliver-client_linux-arm64 completion zsh > _sliver-client
+    ./sliver-server_linux-arm64 completion zsh > _sliver-server
 }
 
 package() {
-    _extract_deb "sliver_${pkgver}-0kali1_arm64.deb"
+    mkdir -p $pkgdir/usr/bin
+    mkdir -p $pkgdir/usr/share/zsh/site-functions
 
-    cp -r sliver_$pkgver-0kali1_arm64/data/* $pkgdir
+    install -Dm 755 sliver-client_linux-arm64 $pkgdir/usr/bin/sliver-client
+    install -Dm 755 sliver-server_linux-arm64 $pkgdir/usr/bin/sliver-server
+
+    install -Dm 644 _sliver-client $pkgdir/usr/share/zsh/site-functions/_sliver-client
+    install -Dm 644 _sliver-server $pkgdir/usr/share/zsh/site-functions/_sliver-server
 }

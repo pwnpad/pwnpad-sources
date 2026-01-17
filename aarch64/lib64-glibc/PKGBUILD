@@ -1,6 +1,6 @@
 pkgname=lib64-glibc
 pkgver=2.42
-pkgrel=2
+pkgrel=3
 pkgdesc="Runtime libraries shipped by GCC"
 arch=('aarch64')
 url="https://gcc.gnu.org"

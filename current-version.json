@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.192",
-      "gitref": "refs/tags/v9.2.192",
-      "revision": "d69a1e5dddb67ece2716da7dfdc0bc1b4763fd63",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.192"
+      "version": "9.2.193",
+      "gitref": "refs/tags/v9.2.193",
+      "revision": "eb61ec5ec5023fc504629cecb1ad68a28baf2079",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.193"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -38,9 +38,9 @@
       "url": "https://packages.ubuntu.com/resolute/glibc"
     },
     "hangover": {
-      "version": "10.18",
-      "gitref": "refs/tags/hangover-10.18",
-      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-10.18"
+      "version": "11.0",
+      "gitref": "refs/tags/hangover-11.0",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.0"
     },
     "john": {
       "version": "20251220.213132",
@@ -69,10 +69,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.106",
-      "gitref": "refs/tags/6.4.106",
-      "revision": "a8698e72f54049c520b47322b7d5e4df59110abc",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.106"
+      "version": "6.4.107",
+      "gitref": "refs/tags/6.4.107",
+      "revision": "3f54ce1f1b2f2b0cf2a8fd051e927f429204cc0e",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.107"
     },
     "mingw-w64": {
       "version": "13.0.0",
@@ -87,7 +87,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.0"
     },
     "ngrok": {
-      "version": "3.34.1",
+      "version": "3.35.0",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "powershell": {

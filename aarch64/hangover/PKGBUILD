@@ -1,5 +1,5 @@
 pkgname=hangover
-pkgver=10.18
+pkgver=11.0
 pkgrel=1
 pkgdesc="Hangover runs simple Win32 applications on arm64 Linux"
 arch=('aarch64')
@@ -21,13 +21,13 @@ _extract_deb() {
 
 prepare() {
     # Getting libc from Ubuntu servers
-    wget -nc "https://github.com/AndreRH/hangover/releases/download/hangover-${pkgver}/hangover_${pkgver}_ubuntu2504_plucky_arm64.tar"
+    wget -nc "https://github.com/AndreRH/hangover/releases/download/hangover-${pkgver}/hangover_${pkgver}_ubuntu2510_questing_arm64.tar"
 
     # Extracting files
-    tar -xvf "hangover_${pkgver}_ubuntu2504_plucky_arm64.tar"
+    tar -xvf "hangover_${pkgver}_ubuntu2510_questing_arm64.tar"
     _extract_deb "hangover-libarm64ecfex_${pkgver}_arm64.deb"
     _extract_deb "hangover-libwow64fex_${pkgver}_arm64.deb"
-    _extract_deb "hangover-wine_${pkgver}~plucky_arm64.deb"
+    _extract_deb "hangover-wine_${pkgver}~questing_arm64.deb"
     _extract_deb "hangover-wowbox64_${pkgver}_arm64.deb"
 
     # Make directory to put files in
@@ -36,7 +36,7 @@ prepare() {
     # Copying out only necessary files
     cp -r hangover-libarm64ecfex_${pkgver}_arm64/data/* ${pkgname}
     cp -r hangover-libwow64fex_${pkgver}_arm64/data/* ${pkgname}
-    cp -r hangover-wine_${pkgver}~plucky_arm64/data/* ${pkgname}
+    cp -r hangover-wine_${pkgver}~questing_arm64/data/* ${pkgname}
     cp -r hangover-wowbox64_${pkgver}_arm64/data/* ${pkgname}
 
     # Remove docs because who needs that
