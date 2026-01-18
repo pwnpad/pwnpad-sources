@@ -19,9 +19,10 @@ sha512sums=('3ec182c0dfe90988dd78a73b40535b01288a54a389c1ab467159dec785e56376937
 build() {
   cd $pkgname
 
-  virtualenv venv
+  python${_pyver} -m venv venv
   source venv/bin/activate
-  pip install pyinstaller . # it does not work with system pyinstaller
+  pip${_pyver} install pyinstaller pillow
+  pip${_pyver} install .
 
   pyinstaller netexec.spec
 
