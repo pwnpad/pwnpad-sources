@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.193",
-      "gitref": "refs/tags/v9.2.193",
-      "revision": "eb61ec5ec5023fc504629cecb1ad68a28baf2079",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.193"
+      "version": "9.2.194",
+      "gitref": "refs/tags/v9.2.194",
+      "revision": "b615f001149fefd4ab3a12af9aaa3d025e615831",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.194"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -69,10 +69,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.109",
-      "gitref": "refs/tags/6.4.109",
-      "revision": "f426053c4e593f65160c18e8d82e9582001a143c",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.109"
+      "version": "6.4.110",
+      "gitref": "refs/tags/6.4.110",
+      "revision": "a4e806019cee2a503fb8b17a4d128e47b70bdd50",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.110"
     },
     "mingw-w64": {
       "version": "13.0.0",
