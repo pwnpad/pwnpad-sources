@@ -22,6 +22,11 @@
       "revision": "e8670f8066e6655e315cfc5e77cd5c9acd5416d1",
       "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.4.2"
     },
+    "bloodyad": {
+      "version": "2.5.3",
+      "gitref": "refs/tags/v2.5.3",
+      "url": "https://github.com/CravateRouge/bloodyAD/releases/tag/v2.5.3"
+    },
     "donut": {
       "version": "2.0.0",
       "gitref": "refs/tags/v2.0.0",
@@ -94,6 +99,11 @@
       "version": "7.5.4",
       "gitref": "refs/tags/v7.5.4",
       "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.4"
+    },
+    "powerview": {
+      "version": "20260103.191935",
+      "revision": "f402a072570eb60d3b14d336027d645651016087",
+      "url": "https://github.com/aniqfakhrul/powerview.py/commit/f402a072570eb60d3b14d336027d645651016087"
     },
     "qiling": {
       "version": "1.4.7",

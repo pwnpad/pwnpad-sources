@@ -134,3 +134,14 @@ source = "github"
 github = "BishopFox/sliver"
 use_latest_release = true
 prefix = "v"
+
+[powerview]
+source = "github"
+github = "aniqfakhrul/powerview.py"
+use_release_name = true
+
+[bloodyad]
+source = "github"
+github = "CravateRouge/bloodyAD"
+use_latest_release = true
+prefix = "v"
