@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.194",
-      "gitref": "refs/tags/v9.2.194",
-      "revision": "b615f001149fefd4ab3a12af9aaa3d025e615831",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.194"
+      "version": "9.2.196",
+      "gitref": "refs/tags/v9.2.196",
+      "revision": "4f3aae9b2403fc59d5fb3cde9cf47bbfa81c5c14",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.196"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -18,9 +18,9 @@
       "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
     },
     "bloodhound": {
-      "version": "8.4.2",
-      "revision": "e8670f8066e6655e315cfc5e77cd5c9acd5416d1",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.4.2"
+      "version": "8.5.0",
+      "revision": "546148ef4d2adae9738829376a241e7d1faf4099",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.5.0"
     },
     "bloodyad": {
       "version": "2.5.3",
@@ -116,9 +116,9 @@
       "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
     },
     "sliver": {
-      "version": "1.6.6",
-      "gitref": "refs/tags/v1.6.6",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.6"
+      "version": "1.6.8",
+      "gitref": "refs/tags/v1.6.8",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.8"
     }
   }
 }
