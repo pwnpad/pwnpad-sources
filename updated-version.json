@@ -74,10 +74,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
     },
     "metasploit": {
-      "version": "6.4.110",
-      "gitref": "refs/tags/6.4.110",
-      "revision": "a4e806019cee2a503fb8b17a4d128e47b70bdd50",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.110"
+      "version": "6.4.111",
+      "gitref": "refs/tags/6.4.111",
+      "revision": "18bd2255b61119aa0b55b04ac2e7bf748d70c68b",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.111"
     },
     "mingw-w64": {
       "version": "13.0.0+bootstrap2",
@@ -116,9 +116,9 @@
       "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
     },
     "sliver": {
-      "version": "1.6.8",
-      "gitref": "refs/tags/v1.6.8",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.8"
+      "version": "1.6.9",
+      "gitref": "refs/tags/v1.6.9",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.9"
     }
   }
 }
