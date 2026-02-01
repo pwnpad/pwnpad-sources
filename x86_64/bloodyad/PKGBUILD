@@ -1,0 +1,40 @@
+# This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
+# See COPYING for license details.
+
+pkgname=bloodyad
+_pyver=3.14
+pkgver=2.5.3
+pkgrel=1
+pkgdesc='An Active Directory Privilege Escalation Framework.'
+arch=('any')
+groups=('blackarch' 'blackarch-exploitation' 'blackarch-windows')
+url='https://github.com/CravateRouge/bloodyAD'
+license=('GPL3')
+depends=('impacket')
+makedepends=('git')
+source=("git+https://github.com/CravateRouge/$pkgname.git#tag=v${pkgver}")
+sha512sums=('8eedcdf47358a45b7120aeec02f84264f0d45a81241542c0e9fae1484b63aa98ab55f5b792eb1543282c990480e944ef78ebe9d4de668d93d2259fbef3d48493')
+
+build() {
+    cd $pkgname
+
+    python${_pyver} -m venv venv
+    source venv/bin/activate
+    pip${_pyver} install pyinstaller
+    pip${_pyver} install .
+
+    pyinstaller --hidden-import unicrypto.backends.cryptography \
+                --hidden-import bloodyAD.cli_modules.add \
+                --hidden-import bloodyAD.cli_modules.get \
+                --hidden-import bloodyAD.cli_modules.remove \
+                --hidden-import bloodyAD.cli_modules.set \
+                --onefile bloodyAD.py
+
+    deactivate
+}
+
+package() {
+    cd $pkgname
+
+    install -Dm 755 ./dist/bloodyAD "$pkgdir/usr/bin/$pkgname"
+}

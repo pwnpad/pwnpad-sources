@@ -1,0 +1,43 @@
+pkgname=powerview
+pkgver=2025.1.1.r158.gf402a07
+_pyver=3.14
+pkgrel=1
+pkgdesc="Just another Powerview alternative but on steroids"
+arch=('any')
+url="https://github.com/aniqfakhrul/${pkgname}.py"
+license=('MIT')
+depends=('krb5')
+makedepends=('git')
+source=("git+https://github.com/aniqfakhrul/${pkgname}.py.git")
+sha512sums=('SKIP')
+
+pkgver() {
+    cd "${srcdir}/${pkgname}.py"
+    ( set -o pipefail
+        git describe --long --tag 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/^v//' ||
+        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    )
+}
+
+build() {
+  cd "${srcdir}/${pkgname}.py"
+
+  python${_pyver} -m venv venv
+  source venv/bin/activate
+  pip${_pyver} install .
+  pip${_pyver} install pyinstaller
+
+  pyinstaller --onefile --name powerview \
+              --collect-all impacket \
+              --collect-all powerview \
+              --hidden-import "impacket.examples.ntlmrelayx.attacks" \
+              powerview.py
+
+  deactivate
+}
+
+package() {
+  cd "${srcdir}/${pkgname}.py"
+
+  install -Dm755 dist/${pkgname} "${pkgdir}/usr/bin/${pkgname}"
+}
