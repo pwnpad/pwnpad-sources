@@ -1,0 +1,25 @@
+pkgname=odat
+pkgver=5.1.1
+pkgrel=1
+pkgdesc="Oracle Database Attacking Tool"
+arch=("any")
+depends=("libaio" "python-cx-oracle" "python-scapy" "python-colorlog" "python-termcolor" "python-passlib" "python-pycryptodome" "python-python-libnmap" "python-pyasyncore" "gmp" "oracle-instantclient")
+source=("git+https://github.com/quentinhardy/${pkgname}.git#branch=master-python3")
+options=('!strip')
+sha512sums=('SKIP')
+
+package() {
+    cd $pkgname
+
+    mkdir -p "$pkgdir/opt/${pkgname}"
+    mkdir -p "$pkgdir/usr/bin"
+
+    cp -a "${srcdir}/${pkgname}"/* "${pkgdir}/opt/${pkgname}"
+
+    cat <<EOF > "${pkgdir}/usr/bin/odat"
+#!/bin/sh
+/usr/bin/python3 -W ignore /opt/${pkgname}/odat.py "\$@"
+EOF
+
+    chmod +x "${pkgdir}/usr/bin/odat"
+}
