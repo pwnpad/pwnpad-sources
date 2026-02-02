@@ -145,3 +145,17 @@ source = "github"
 github = "CravateRouge/bloodyAD"
 use_latest_release = true
 prefix = "v"
+
+[oracle-instantclient]
+source = "regex"
+url = "https://www.oracle.com/database/technologies/instant-client/linux-arm-aarch64-downloads.html"
+regex = "Version (\\d{2}\\.\\d{1,2})"
+
+[python-cx-oracle]
+source = "pypi"
+pypi = "cx-Oracle"
+
+[odat]
+source = "github"
+github = "quentinhardy/odat"
+use_release_name = true
