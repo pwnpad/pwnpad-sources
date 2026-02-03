@@ -23,9 +23,9 @@
       "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.5.0"
     },
     "bloodyad": {
-      "version": "2.5.3",
-      "gitref": "refs/tags/v2.5.3",
-      "url": "https://github.com/CravateRouge/bloodyAD/releases/tag/v2.5.3"
+      "version": "2.5.4",
+      "gitref": "refs/tags/v2.5.4",
+      "url": "https://github.com/CravateRouge/bloodyAD/releases/tag/v2.5.4"
     },
     "donut": {
       "version": "2.0.0",
@@ -128,9 +128,9 @@
       "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
     },
     "sliver": {
-      "version": "1.6.9",
-      "gitref": "refs/tags/v1.6.9",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.9"
+      "version": "1.6.10",
+      "gitref": "refs/tags/v1.6.10",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.6.10"
     }
   }
 }

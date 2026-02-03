@@ -3,7 +3,7 @@
 
 pkgname=bloodyad
 _pyver=3.14
-pkgver=2.5.3
+pkgver=2.5.4
 pkgrel=1
 pkgdesc='An Active Directory Privilege Escalation Framework.'
 arch=('any')
@@ -13,7 +13,7 @@ license=('GPL3')
 depends=('impacket')
 makedepends=('git')
 source=("git+https://github.com/CravateRouge/$pkgname.git#tag=v${pkgver}")
-sha512sums=('8eedcdf47358a45b7120aeec02f84264f0d45a81241542c0e9fae1484b63aa98ab55f5b792eb1543282c990480e944ef78ebe9d4de668d93d2259fbef3d48493')
+sha512sums=('51bd398f63f174526a58678b9803e2f0dde8bdc6aa2f72582c8d0449ef1d50d7490a1d30594153226422ad0ea18b68c144bcfc43ecd9ee3c9d3eb9a45cb85916')
 
 build() {
     cd $pkgname
