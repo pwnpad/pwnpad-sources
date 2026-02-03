@@ -2,7 +2,7 @@
 
 pkgname=mingw-w64
 pkgver=13.0.0
-pkgrel=1
+pkgrel=3
 pkgdesc='Cross GCC for the MinGW-w64 cross-compiler'
 arch=('aarch64')
 url='https://gcc.gnu.org'
@@ -11,36 +11,37 @@ provides=('mingw-w64-gcc' 'mingw-w64-binutils')
 conflicts=('mingw-w64-gcc' 'mingw-w64-binutils')
 replaces=('mingw-w64-gcc' 'mingw-w64-binutils')
 source=(
+    "binutils-common_2.45.50.20260119-1ubuntu1_arm64.deb"
     "binutils-mingw-w64-i686_2.43.1-4ubuntu1+12_arm64.deb"
     "binutils-mingw-w64-x86-64_2.43.1-4ubuntu1+12_arm64.deb"
-    "g++-mingw-w64_13.2.0-6ubuntu1+26.1_all.deb"
-    "g++-mingw-w64-i686_13.2.0-6ubuntu1+26.1_all.deb"
     "g++-mingw-w64-i686-posix_13.2.0-6ubuntu1+26.1_arm64.deb"
     "g++-mingw-w64-i686-win32_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "g++-mingw-w64-x86-64_13.2.0-6ubuntu1+26.1_all.deb"
+    "g++-mingw-w64-i686_13.2.0-6ubuntu1+26.1_all.deb"
     "g++-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_arm64.deb"
     "g++-mingw-w64-x86-64-win32_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "gcc-mingw-w64_13.2.0-6ubuntu1+26.1_all.deb"
+    "g++-mingw-w64-x86-64_13.2.0-6ubuntu1+26.1_all.deb"
+    "g++-mingw-w64_13.2.0-6ubuntu1+26.1_all.deb"
     "gcc-mingw-w64-base_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "gcc-mingw-w64-i686_13.2.0-6ubuntu1+26.1_all.deb"
-    "gcc-mingw-w64-i686-posix_13.2.0-6ubuntu1+26.1_arm64.deb"
     "gcc-mingw-w64-i686-posix-runtime_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "gcc-mingw-w64-i686-win32_13.2.0-6ubuntu1+26.1_arm64.deb"
+    "gcc-mingw-w64-i686-posix_13.2.0-6ubuntu1+26.1_arm64.deb"
     "gcc-mingw-w64-i686-win32-runtime_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "gcc-mingw-w64-x86-64_13.2.0-6ubuntu1+26.1_all.deb"
-    "gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_arm64.deb"
+    "gcc-mingw-w64-i686-win32_13.2.0-6ubuntu1+26.1_arm64.deb"
+    "gcc-mingw-w64-i686_13.2.0-6ubuntu1+26.1_all.deb"
     "gcc-mingw-w64-x86-64-posix-runtime_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "gcc-mingw-w64-x86-64-win32_13.2.0-6ubuntu1+26.1_arm64.deb"
+    "gcc-mingw-w64-x86-64-posix_13.2.0-6ubuntu1+26.1_arm64.deb"
     "gcc-mingw-w64-x86-64-win32-runtime_13.2.0-6ubuntu1+26.1_arm64.deb"
-    "libisl23_0.27-1_arm64.deb"
+    "gcc-mingw-w64-x86-64-win32_13.2.0-6ubuntu1+26.1_arm64.deb"
+    "gcc-mingw-w64-x86-64_13.2.0-6ubuntu1+26.1_all.deb"
+    "gcc-mingw-w64_13.2.0-6ubuntu1+26.1_all.deb"
+    "libisl23_0.27-1build1_arm64.deb"
     "libmpc3_1.3.1-2_arm64.deb"
     "libmpfr6_4.2.2-2_arm64.deb"
-    "mingw-w64_12.0.0-3_all.deb"
-    "mingw-w64-common_12.0.0-3_all.deb"
-    "mingw-w64-i686-dev_12.0.0-3_all.deb"
-    "mingw-w64-x86-64-dev_12.0.0-3_all.deb"
+    "mingw-w64-common_13.0.0-1+bootstrap2_all.deb"
+    "mingw-w64-i686-dev_13.0.0-1+bootstrap2_all.deb"
+    "mingw-w64-x86-64-dev_13.0.0-1+bootstrap2_all.deb"
+    "mingw-w64_13.0.0-1+bootstrap2_all.deb"
 )
-sha512sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+sha512sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
 
 _extract_deb() {
     local deb_file="$1"
