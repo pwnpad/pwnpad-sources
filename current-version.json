@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.197",
-      "gitref": "refs/tags/v9.2.197",
-      "revision": "143632c27e0105fe2ed20ecdd24ecacc3a4bde0b",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.197"
+      "version": "9.2.199",
+      "gitref": "refs/tags/v9.2.199",
+      "revision": "5fad887e0f5ca67b14579916b7e7c7cac15c24ed",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.199"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -57,7 +57,7 @@
       "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
     },
     "lib32-glibc": {
-      "version": "2.42",
+      "version": "2.43",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-glibc/"
     },
     "lib64-gcc-libs": {
@@ -65,19 +65,19 @@
       "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
     },
     "lib64-glibc": {
-      "version": "2.42",
+      "version": "2.43",
       "url": "https://archlinux.org/packages/core/x86_64/glibc/"
     },
     "ligolo-ng": {
-      "version": "0.8.2",
-      "gitref": "refs/tags/v0.8.2",
-      "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.2"
+      "version": "0.8.3",
+      "gitref": "refs/tags/v0.8.3",
+      "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.112",
-      "gitref": "refs/tags/6.4.112",
-      "revision": "efd247626fb5a21d6d470c74e08221e41574f3fa",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.112"
+      "version": "6.4.114",
+      "gitref": "refs/tags/6.4.114",
+      "revision": "c68daec934fbc2f4a850071d9afac56d3cd780cb",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.114"
     },
     "mingw-w64": {
       "version": "13.0.0",
@@ -92,7 +92,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.0"
     },
     "ngrok": {
-      "version": "3.36.0",
+      "version": "3.36.1",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
@@ -128,9 +128,9 @@
       "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
     },
     "sliver": {
-      "version": "1.7.0",
-      "gitref": "refs/tags/v1.7.0",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.0"
+      "version": "1.7.1",
+      "gitref": "refs/tags/v1.7.1",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.1"
     }
   }
 }
