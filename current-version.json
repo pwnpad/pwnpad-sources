@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.199",
-      "gitref": "refs/tags/v9.2.199",
-      "revision": "5fad887e0f5ca67b14579916b7e7c7cac15c24ed",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.199"
+      "version": "9.2.203",
+      "gitref": "refs/tags/v9.2.203",
+      "revision": "8813817871eb38a27c8176473f40ce3bb341d888",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.203"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -48,9 +48,9 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.0"
     },
     "john": {
-      "version": "20260117.230224",
-      "revision": "7a62a41acca7044c9909be007ff654080b8032cc",
-      "url": "https://github.com/openwall/john/commit/7a62a41acca7044c9909be007ff654080b8032cc"
+      "version": "20260222.074156",
+      "revision": "d8f5b0138e6f9fe24ab453f886dcaa2abb2e5407",
+      "url": "https://github.com/openwall/john/commit/d8f5b0138e6f9fe24ab453f886dcaa2abb2e5407"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1",
@@ -74,10 +74,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.114",
-      "gitref": "refs/tags/6.4.114",
-      "revision": "c68daec934fbc2f4a850071d9afac56d3cd780cb",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.114"
+      "version": "6.4.116",
+      "gitref": "refs/tags/6.4.116",
+      "revision": "9f9e14336c7a39974ffb4e9696f5f2a4b4f620af",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.116"
     },
     "mingw-w64": {
       "version": "13.0.0",
@@ -87,9 +87,9 @@
       "version": "10.11.2"
     },
     "netexec": {
-      "version": "1.5.0",
-      "gitref": "refs/tags/v1.5.0",
-      "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.0"
+      "version": "1.5.1",
+      "gitref": "refs/tags/v1.5.1",
+      "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
       "version": "3.36.1",
@@ -109,9 +109,9 @@
       "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.4"
     },
     "powerview": {
-      "version": "20260103.191935",
-      "revision": "f402a072570eb60d3b14d336027d645651016087",
-      "url": "https://github.com/aniqfakhrul/powerview.py/commit/f402a072570eb60d3b14d336027d645651016087"
+      "version": "20260228.113348",
+      "revision": "a448f021aa6d54c3df02237230a32cf0c4a1c2e7",
+      "url": "https://github.com/aniqfakhrul/powerview.py/commit/a448f021aa6d54c3df02237230a32cf0c4a1c2e7"
     },
     "python-cx-oracle": {
       "version": "8.3.0",
@@ -123,14 +123,14 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.7"
     },
     "rsactftool": {
-      "version": "20251203.144603",
-      "revision": "370cb43fac1ed560425116cb3e8c56002ba67313",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/370cb43fac1ed560425116cb3e8c56002ba67313"
+      "version": "20260223.173919",
+      "revision": "b3a43759a8234da8ea555fcb65ae03903b94e30f",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/b3a43759a8234da8ea555fcb65ae03903b94e30f"
     },
     "sliver": {
-      "version": "1.7.1",
-      "gitref": "refs/tags/v1.7.1",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.1"
+      "version": "1.7.3",
+      "gitref": "refs/tags/v1.7.3",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.3"
     }
   }
 }
