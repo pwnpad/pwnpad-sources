@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.203",
-      "gitref": "refs/tags/v9.2.203",
-      "revision": "8813817871eb38a27c8176473f40ce3bb341d888",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.203"
+      "version": "9.2.204",
+      "gitref": "refs/tags/v9.2.204",
+      "revision": "42ff501a2b77b41460beeca609ce52ea829bb2a5",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.204"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -18,9 +18,9 @@
       "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
     },
     "bloodhound": {
-      "version": "8.7.0_rc3",
-      "revision": "434e71fbb4030e3f624f33592c3b7194f1b40277",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.7.0_rc3"
+      "version": "8.7.0",
+      "revision": "09f5d684e6e7b73b8821297c37948b710c181bd8",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.7.0"
     },
     "bloodyad": {
       "version": "2.5.4",
@@ -74,17 +74,17 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.116",
-      "gitref": "refs/tags/6.4.116",
-      "revision": "9f9e14336c7a39974ffb4e9696f5f2a4b4f620af",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.116"
+      "version": "6.4.119",
+      "gitref": "refs/tags/6.4.119",
+      "revision": "0b7ded71066c201c62d61a787744f9e2f1a811ee",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.119"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
       "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
-      "version": "10.11.2"
+      "version": "10.11.3"
     },
     "netexec": {
       "version": "1.5.1",
@@ -92,7 +92,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
-      "version": "3.36.1",
+      "version": "3.37.1",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
@@ -109,9 +109,9 @@
       "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.4"
     },
     "powerview": {
-      "version": "20260228.113348",
-      "revision": "a448f021aa6d54c3df02237230a32cf0c4a1c2e7",
-      "url": "https://github.com/aniqfakhrul/powerview.py/commit/a448f021aa6d54c3df02237230a32cf0c4a1c2e7"
+      "version": "20260304.105741",
+      "revision": "6091d18eec6c4cf4d657e091ffbc7ebe1a00885f",
+      "url": "https://github.com/aniqfakhrul/powerview.py/commit/6091d18eec6c4cf4d657e091ffbc7ebe1a00885f"
     },
     "python-cx-oracle": {
       "version": "8.3.0",
@@ -123,9 +123,9 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.7"
     },
     "rsactftool": {
-      "version": "20260223.173919",
-      "revision": "b3a43759a8234da8ea555fcb65ae03903b94e30f",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/b3a43759a8234da8ea555fcb65ae03903b94e30f"
+      "version": "20260302.170401",
+      "revision": "8f899292aeb1f6ffbe462db4796f87c6ce9d6d24",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/8f899292aeb1f6ffbe462db4796f87c6ce9d6d24"
     },
     "sliver": {
       "version": "1.7.3",
