@@ -7,10 +7,10 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.35c"
     },
     "angr": {
-      "version": "9.2.204",
-      "gitref": "refs/tags/v9.2.204",
-      "revision": "42ff501a2b77b41460beeca609ce52ea829bb2a5",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.204"
+      "version": "9.2.208",
+      "gitref": "refs/tags/v9.2.208",
+      "revision": "133bb9fd65bfbdcac8ca00942edcbb953d9b6246",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.208"
     },
     "autopsy": {
       "version": "4.22.1",
@@ -43,14 +43,14 @@
       "url": "https://packages.ubuntu.com/resolute/glibc"
     },
     "hangover": {
-      "version": "11.0",
-      "gitref": "refs/tags/hangover-11.0",
-      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.0"
+      "version": "11.4",
+      "gitref": "refs/tags/hangover-11.4",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.4"
     },
     "john": {
-      "version": "20260222.074156",
-      "revision": "d8f5b0138e6f9fe24ab453f886dcaa2abb2e5407",
-      "url": "https://github.com/openwall/john/commit/d8f5b0138e6f9fe24ab453f886dcaa2abb2e5407"
+      "version": "20260320.084859",
+      "revision": "b2cbb7da85c9652e1df1e37f2691647bd6bfc0de",
+      "url": "https://github.com/openwall/john/commit/b2cbb7da85c9652e1df1e37f2691647bd6bfc0de"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1",
@@ -74,10 +74,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.119",
-      "gitref": "refs/tags/6.4.119",
-      "revision": "0b7ded71066c201c62d61a787744f9e2f1a811ee",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.119"
+      "version": "6.4.125",
+      "gitref": "refs/tags/6.4.125",
+      "revision": "d3a1fdb1ed5e4c97c5da595f8069dfec0eaca171",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.125"
     },
     "mingw-w64": {
       "version": "13.0.0",
@@ -92,26 +92,26 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
-      "version": "3.37.1",
+      "version": "3.37.3",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
-      "version": "20220620.080948",
-      "revision": "24af4da8d50a55c05379dd495e8489dbd7573b5c",
-      "url": "https://github.com/quentinhardy/odat/commit/24af4da8d50a55c05379dd495e8489dbd7573b5c"
+      "version": "20260331.144323",
+      "revision": "11c5f251c7eebd74c02c5a4a91cb513fcf14b4fa",
+      "url": "https://github.com/quentinhardy/odat/commit/11c5f251c7eebd74c02c5a4a91cb513fcf14b4fa"
     },
     "oracle-instantclient": {
       "version": "23.26"
     },
     "powershell": {
-      "version": "7.5.4",
-      "gitref": "refs/tags/v7.5.4",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.4"
+      "version": "7.6.0",
+      "gitref": "refs/tags/v7.6.0",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.0"
     },
     "powerview": {
-      "version": "20260304.105741",
-      "revision": "6091d18eec6c4cf4d657e091ffbc7ebe1a00885f",
-      "url": "https://github.com/aniqfakhrul/powerview.py/commit/6091d18eec6c4cf4d657e091ffbc7ebe1a00885f"
+      "version": "20260310.200742",
+      "revision": "5d7d57d80b5388360613e6441bdaebcde7be03da",
+      "url": "https://github.com/aniqfakhrul/powerview.py/commit/5d7d57d80b5388360613e6441bdaebcde7be03da"
     },
     "python-cx-oracle": {
       "version": "8.3.0",
@@ -123,9 +123,9 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.7"
     },
     "rsactftool": {
-      "version": "20260302.170401",
-      "revision": "8f899292aeb1f6ffbe462db4796f87c6ce9d6d24",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/8f899292aeb1f6ffbe462db4796f87c6ce9d6d24"
+      "version": "20260321.181439",
+      "revision": "e261e73888b857c61c0b1877fbb484b9a06758b9",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/e261e73888b857c61c0b1877fbb484b9a06758b9"
     },
     "sliver": {
       "version": "1.7.3",

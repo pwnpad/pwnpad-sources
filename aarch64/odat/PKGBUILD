@@ -1,6 +1,6 @@
 pkgname=odat
 pkgver=5.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Oracle Database Attacking Tool"
 arch=("any")
 depends=("libaio" "python-cx-oracle" "python-scapy" "python-colorlog" "python-termcolor" "python-passlib" "python-pycryptodome" "python-python-libnmap" "python-pyasyncore" "gmp" "oracle-instantclient")
