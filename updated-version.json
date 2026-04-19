@@ -7,20 +7,20 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.40c"
     },
     "angr": {
-      "version": "9.2.209",
-      "gitref": "refs/tags/v9.2.209",
-      "revision": "64ca7d176963f9c763f2283c27083a18c5b8f909",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.209"
+      "version": "9.2.211",
+      "gitref": "refs/tags/v9.2.211",
+      "revision": "fd178473219f07b6a64ca649bb2668db6c50ce3b",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.211"
     },
     "autopsy": {
-      "version": "4.22.1",
-      "gitref": "refs/tags/autopsy-4.22.1",
-      "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.22.1"
+      "version": "4.23.0",
+      "gitref": "refs/tags/autopsy-4.23.0",
+      "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.23.0"
     },
     "bloodhound": {
-      "version": "8.9.1",
-      "revision": "e38eaa69a9ec482758400c4f0182542386679957",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/8.9.1"
+      "version": "9.0.0_rc4",
+      "revision": "8226030c3d875a29c3a670bdbf6f1630141a86ed",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.0.0_rc4"
     },
     "bloodyad": {
       "version": "2.5.4",
@@ -74,10 +74,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.127",
-      "gitref": "refs/tags/6.4.127",
-      "revision": "d6a7cee09ee5b4790389bdf30bfd972c0ffb95f1",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.127"
+      "version": "6.4.128",
+      "gitref": "refs/tags/6.4.128",
+      "revision": "7ea8df5679ba6cb46799115c0090511e448c7cd4",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.128"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
