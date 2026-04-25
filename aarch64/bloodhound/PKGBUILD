@@ -1,13 +1,13 @@
 pkgname=bloodhound
-pkgver=8.9.1
+pkgver=9.0.2
 pkgrel=1
 pkgdesc="Six Degrees of Domain Admin"
 url="https://github.com/SpecterOps/BloodHound"
 arch=('aarch64')
 depends=('neo4j-community' 'postgresql')
 license=('Apache-2.0')
-source=("http://kali.download/kali/pool/main/b/bloodhound/bloodhound_$pkgver-0kali1_arm64.deb")
-sha512sums=('cc280e7228ed124b1d842f3bded177402987e937c53f6048f1ac4bd750ff4c936a501a8c3e5e2a3b5bdc5314e3f0719bc4abf12ed924bd20e29512b82ec0ad84')
+source=("http://kali.download/kali/pool/main/b/bloodhound/bloodhound_$pkgver-0kali2_arm64.deb")
+sha512sums=('19fac8284a8e50a6c0081fe691d12c64b06c548d288c49d611be06a037f1ce9182b1ae34d6131eac45b7f9f5408eeb63b88fd472bb1a15a88964cc2650b059bc')
 
 _extract_deb() {
     local deb_file="$1"
@@ -20,7 +20,7 @@ _extract_deb() {
 }
 
 package() {
-    _extract_deb "bloodhound_$pkgver-0kali1_arm64.deb"
+    _extract_deb "bloodhound_$pkgver-0kali2_arm64.deb"
 
-    cp -a bloodhound_$pkgver-0kali1_arm64/data/* $pkgdir
+    cp -a bloodhound_$pkgver-0kali2_arm64/data/* $pkgdir
 }
