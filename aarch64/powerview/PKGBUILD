@@ -1,5 +1,5 @@
 pkgname=powerview
-pkgver=2026.2.1.r25.g299b050
+pkgver=2026.2.1.r27.g1dfc473
 _pyver=3.14
 pkgrel=1
 pkgdesc="Just another Powerview alternative but on steroids"

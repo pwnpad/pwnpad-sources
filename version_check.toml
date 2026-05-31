@@ -159,3 +159,8 @@ pypi = "cx-Oracle"
 source = "github"
 github = "quentinhardy/odat"
 use_release_name = true
+
+[pwndbg]
+source = "github"
+github = "pwndbg/pwndbg"
+use_latest_release = true

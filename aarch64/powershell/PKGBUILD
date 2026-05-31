@@ -1,12 +1,12 @@
 pkgname=powershell
-pkgver=7.6.1
+pkgver=7.6.2
 pkgrel=1
 pkgdesc="A cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework"
 license=('custom')
 arch=('aarch64')
 url="https://github.com/PowerShell/PowerShell"
 source=("https://github.com/PowerShell/PowerShell/releases/download/v${pkgver}/powershell-${pkgver}-linux-arm64.tar.gz")
-sha512sums=('f165e34db2fe6799583a6847871f30c1096404b3637306a2ec8a1e646569810f5f78eff2bddc37eff36e85755a86cff4b00a147b975a5eb020fb6f8b240223f3')
+sha512sums=('97b6e78208e1dd428b7d0786cc90a647b0f4d4cf939be2454a33f6c710fe5954fd0643befd4cecb69adba78eaf8ad453595d7413a58415e510c4136bb6856210')
 
 package() {
     mkdir -p "$pkgdir/opt/${pkgname}" "$pkgdir/usr/bin"

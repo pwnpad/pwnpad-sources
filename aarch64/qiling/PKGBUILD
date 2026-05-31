@@ -2,9 +2,9 @@
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=python-qiling
 
 pkgname=qiling
-_python_ver=3.12.11
+_python_ver=3.14.5
 _keystone_ver=0.9.2
-pkgver=1.4.7
+pkgver=1.4.10
 pkgrel=1
 pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'
@@ -13,7 +13,7 @@ license=('GPL2')
 makedepends=('git' 'pyenv' 'python-pip' 'python-virtualenv' 'cmake')
 source=("git+https://github.com/qilingframework/qiling.git#tag=${pkgver}"
         "https://files.pythonhosted.org/packages/source/k/keystone-engine/keystone-engine-${_keystone_ver}.tar.gz")
-sha512sums=('81535f16aeda39fb55ae0c2c851e20bf4a3a0be702268fd41496d916bdbdbeca83b7804cac4c1baf82b05fc50c2af02c1b3096cf0fcc9b6244e846ac2d859ccc'
+sha512sums=('ca3da680107c257dde5a55b136f049a9fb70b63becf6fa1608aa44fbb4af422e2971d1c5c5e95d887499304b94a076eefccad0f2aed3296cb6d9bb7cdb292c71'
             'e07a8559e27daf49cad3c5c50b415d8d40ae2c63681a220289246c45dd220337506735a668d2c31d1504f83bea9614ca56af8b775be05cfe2759137f29eb3606')
 
 prepare() {
@@ -24,6 +24,9 @@ prepare() {
 
     sed -i '21,29d' src/CMakeLists.txt
     sed -i '16,24d' src/llvm/CMakeLists.txt
+
+    sed -i '/#include <utility>/a #include <cstdint>' \
+        src/llvm/include/llvm/ADT/STLExtras.h
 }
 
 build() {
@@ -37,10 +40,11 @@ build() {
 
     $py_path -m venv --copies venv
 
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
+
     bash -c "
         source venv/bin/activate
         pip install --upgrade pip wheel
-
         pip install ../keystone-engine-${_keystone_ver}
         pip install .
     "
