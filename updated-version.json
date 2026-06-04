@@ -2,15 +2,15 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "4.40c",
-      "gitref": "refs/tags/v4.40c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.40c"
+      "version": "5.00c",
+      "gitref": "refs/tags/v5.00c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.00c"
     },
     "angr": {
-      "version": "9.2.219",
-      "gitref": "refs/tags/v9.2.219",
-      "revision": "900047a71f55b7bdeb649de666c1f367f1ed7106",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.219"
+      "version": "9.2.220",
+      "gitref": "refs/tags/v9.2.220",
+      "revision": "ca0a8dbe108ca0cb29135690fddd42d2c5e966a4",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.220"
     },
     "autopsy": {
       "version": "4.23.1",
@@ -48,9 +48,9 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.9"
     },
     "john": {
-      "version": "20260529.110756",
-      "revision": "dc0ebcbfe4618693d1ecdd37141d867f8b5f4eac",
-      "url": "https://github.com/openwall/john/commit/dc0ebcbfe4618693d1ecdd37141d867f8b5f4eac"
+      "version": "20260531.151628",
+      "revision": "776889036312637dd97584da68af196e2a2c93ea",
+      "url": "https://github.com/openwall/john/commit/776889036312637dd97584da68af196e2a2c93ea"
     },
     "lib32-gcc-libs": {
       "version": "16.1.1",
@@ -92,7 +92,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
-      "version": "3.39.5",
+      "version": "3.39.6",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
@@ -128,9 +128,9 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.10"
     },
     "rsactftool": {
-      "version": "20260521.143357",
-      "revision": "a5a060222bf89c35a1510a9d775b716ac0231010",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/a5a060222bf89c35a1510a9d775b716ac0231010"
+      "version": "20260603.164131",
+      "revision": "9454888747dc24d36a3f2938b31844a491a045ce",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/9454888747dc24d36a3f2938b31844a491a045ce"
     },
     "sliver": {
       "version": "1.7.3",
