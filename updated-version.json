@@ -6,11 +6,16 @@
       "gitref": "refs/tags/v5.00c",
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.00c"
     },
+    "aircrack-ng": {
+      "version": "20260603.142445",
+      "revision": "5a3b539e8faa272d058c659fa6c104ae930706c2",
+      "url": "https://github.com/pwnpad/aircrack-ng/commit/5a3b539e8faa272d058c659fa6c104ae930706c2"
+    },
     "angr": {
-      "version": "9.2.220",
-      "gitref": "refs/tags/v9.2.220",
-      "revision": "ca0a8dbe108ca0cb29135690fddd42d2c5e966a4",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.220"
+      "version": "9.2.221",
+      "gitref": "refs/tags/v9.2.221",
+      "revision": "5b8cc1d192693585a35be7f2bcbde801172dd7f7",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.221"
     },
     "autopsy": {
       "version": "4.23.1",

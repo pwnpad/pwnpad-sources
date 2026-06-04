@@ -164,3 +164,7 @@ use_release_name = true
 source = "github"
 github = "pwndbg/pwndbg"
 use_latest_release = true
+
+[aircrack-ng]
+source = "github"
+github = "pwnpad/aircrack-ng"
