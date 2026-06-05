@@ -16,11 +16,11 @@ github = "angr/angr"
 use_latest_tag = true
 prefix = "v"
 
-[autopsy]
-source = "github"
-github = "sleuthkit/autopsy"
-use_latest_release = true
-prefix = "autopsy-"
+# [autopsy]
+# source = "github"
+# github = "sleuthkit/autopsy"
+# use_latest_release = true
+# prefix = "autopsy-"
 
 [bloodhound]
 source = "gitlab"
@@ -56,11 +56,11 @@ source = "github"
 github = "openwall/john"
 use_release_name = true
 
-[lib32-gcc-libs]
-source = "archpkg"
-archpkg = "lib32-gcc-libs"
-from_pattern = "^(\\d+\\.\\d+\\.\\d+).+"
-to_pattern = "\\1"
+# [lib32-gcc-libs]
+# source = "archpkg"
+# archpkg = "lib32-gcc-libs"
+# from_pattern = "^(\\d+\\.\\d+\\.\\d+).+"
+# to_pattern = "\\1"
 
 [lib32-glibc]
 source = "archpkg"
@@ -68,11 +68,11 @@ archpkg = "lib32-glibc"
 from_pattern = "^(\\d+\\.\\d+).+"
 to_pattern = "\\1"
 
-[lib64-gcc-libs]
-source = "archpkg"
-archpkg = "gcc-libs"
-from_pattern = "^(\\d+\\.\\d+\\.\\d+).+"
-to_pattern = "\\1"
+# [lib64-gcc-libs]
+# source = "archpkg"
+# archpkg = "gcc-libs"
+# from_pattern = "^(\\d+\\.\\d+\\.\\d+).+"
+# to_pattern = "\\1"
 
 [lib64-glibc]
 source = "archpkg"

@@ -7,9 +7,9 @@
       "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.00c"
     },
     "aircrack-ng": {
-      "version": "20260603.142445",
-      "revision": "5a3b539e8faa272d058c659fa6c104ae930706c2",
-      "url": "https://github.com/pwnpad/aircrack-ng/commit/5a3b539e8faa272d058c659fa6c104ae930706c2"
+      "version": "20260605.233701",
+      "revision": "f33124ecdf0a53fe9f88fbb7be794e26949edda4",
+      "url": "https://github.com/pwnpad/aircrack-ng/commit/f33124ecdf0a53fe9f88fbb7be794e26949edda4"
     },
     "angr": {
       "version": "9.2.221",
@@ -17,15 +17,10 @@
       "revision": "5b8cc1d192693585a35be7f2bcbde801172dd7f7",
       "url": "https://github.com/angr/angr/releases/tag/v9.2.221"
     },
-    "autopsy": {
-      "version": "4.23.1",
-      "gitref": "refs/tags/autopsy-4.23.1",
-      "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.23.1"
-    },
     "bloodhound": {
-      "version": "9.1.0",
-      "revision": "b5b9c2d2b0475b1ec7581f8df89a413e4d359e69",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.1.0"
+      "version": "9.2.2",
+      "revision": "5d56df7c6c5e1c22c5767261f6c119bef649c414",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.2.2"
     },
     "bloodyad": {
       "version": "2.5.4",
@@ -57,17 +52,9 @@
       "revision": "776889036312637dd97584da68af196e2a2c93ea",
       "url": "https://github.com/openwall/john/commit/776889036312637dd97584da68af196e2a2c93ea"
     },
-    "lib32-gcc-libs": {
-      "version": "16.1.1",
-      "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
-    },
     "lib32-glibc": {
       "version": "2.43",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-glibc/"
-    },
-    "lib64-gcc-libs": {
-      "version": "16.1.1",
-      "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
     },
     "lib64-glibc": {
       "version": "2.43",
@@ -79,10 +66,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.135",
-      "gitref": "refs/tags/6.4.135",
-      "revision": "c7e92de717195ab71a51f71e2c97cbd7de646ab8",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.135"
+      "version": "6.4.136",
+      "gitref": "refs/tags/6.4.136",
+      "revision": "ba5a8f3a47cd2fd5ed72e375e24cce1102000471",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.136"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
@@ -133,9 +120,9 @@
       "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.10"
     },
     "rsactftool": {
-      "version": "20260603.164131",
-      "revision": "9454888747dc24d36a3f2938b31844a491a045ce",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/9454888747dc24d36a3f2938b31844a491a045ce"
+      "version": "20260605.120322",
+      "revision": "a6ac3d3290d1a8b10a451bf022640aa29163a351",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/a6ac3d3290d1a8b10a451bf022640aa29163a351"
     },
     "sliver": {
       "version": "1.7.3",
