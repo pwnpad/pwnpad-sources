@@ -6,7 +6,7 @@
 # https://gitlab.archlinux.org/archlinux/packaging/packages/metasploit/-/blob/main/PKGBUILD?ref_type=heads
 
 pkgname=metasploit
-pkgver=6.4.138
+pkgver=6.4.141
 pkgrel=1
 pkgdesc='Advanced open-source platform for developing, testing, and using exploit code'
 url='https://www.metasploit.com/'
@@ -26,7 +26,7 @@ depends=(
 )
 options=('!strip' '!debug' '!emptydirs')
 source=(git+https://github.com/rapid7/metasploit-framework.git#tag=${pkgver})
-sha512sums=('d625bbec72bc97699586669b307d2a64dfa78e41aa6aff51b31a263d1fa2510bfa0a4c4ce1b5a88fe04d64f9a7a7fe0c823fc2afa36f11a481210686af5eb819')
+sha512sums=('fc309914e663ce12a71b203fa78ca6d410165f5374c1e7576eeb2529e22bdbee32a3ef090f0d65521765e357b942448ce46f229f7ba05837b9f3474a43ee7679')
 
 prepare() {
   cd ${pkgname}-framework

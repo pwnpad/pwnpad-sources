@@ -2,9 +2,9 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "5.00c",
-      "gitref": "refs/tags/v5.00c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.00c"
+      "version": "5.01c",
+      "gitref": "refs/tags/v5.01c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.01c"
     },
     "aircrack-ng": {
       "version": "20260606.002753",
@@ -12,10 +12,10 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.2.221",
-      "gitref": "refs/tags/v9.2.221",
-      "revision": "5b8cc1d192693585a35be7f2bcbde801172dd7f7",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.221"
+      "version": "9.2.222",
+      "gitref": "refs/tags/v9.2.222",
+      "revision": "d329a31d799de16da761aebc2d565a3ed8209392",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.222"
     },
     "bloodhound": {
       "version": "9.2.2",
@@ -66,17 +66,17 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.138",
-      "gitref": "refs/tags/6.4.138",
-      "revision": "3c697125a820552a1d5f9e2a75c05c18dc9c53bb",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.138"
+      "version": "6.4.141",
+      "gitref": "refs/tags/6.4.141",
+      "revision": "1de94cc091d6546207f7042190629437df216068",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.141"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
       "url": "https://packages.ubuntu.com/stonking/mingw-w64"
     },
     "nessus": {
-      "version": "10.12.0"
+      "version": "10.12.1"
     },
     "netexec": {
       "version": "1.5.1",
@@ -84,7 +84,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
-      "version": "3.39.7",
+      "version": "3.39.8",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
@@ -96,9 +96,9 @@
       "version": "23.26"
     },
     "powershell": {
-      "version": "7.6.2",
-      "gitref": "refs/tags/v7.6.2",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.2"
+      "version": "7.6.3",
+      "gitref": "refs/tags/v7.6.3",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.3"
     },
     "powerview": {
       "version": "20260515.073828",
