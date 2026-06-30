@@ -2,7 +2,7 @@
 # See COPYING for license details.
 
 pkgname=aflplusplus
-pkgver=5.01c
+pkgver=5.02c
 pkgrel=1
 pkgdesc='American Fuzzing Lop fuzzer with community patches and additional features.'
 arch=('aarch64')
@@ -11,7 +11,7 @@ license=('Apache')
 depends=('bash' 'python')
 conflicts=('afl')
 source=("https://github.com/pwnpad/pwnpad-sources/releases/download/binaries/aflplusplus-${pkgver}-${arch}.tgz" "afl-qemu-switch")
-sha512sums=('cfdd1f3aef02c6dadf0f73f9bf87fbd3aee94e7139167205fe6aec678de8b3dc6f5146342b1ceefdf1838b0299437a295ae8ffb8dc8579e9abd1264823df769b'
+sha512sums=('4ed5b6498e21404a39921d9fa8090c07ac340e1cb4ded495d42758575f6a790be0e35d4362b45ae05841c9eda19d52b6e2b46da6f340044777aeffd618fdd575'
             'c8902a97d1d160bbcc54b87a518920e7993a5ec431f373c4d56f88726dfbaf9411bbd8d9b9c216bb55f2f077ebad339b119feb5a98b71e0d75932a211dd3bea3')
 
 build() {

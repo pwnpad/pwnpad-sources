@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION="5.00c"
+VERSION="5.02c"
 
 # Ubuntu build script
 # docker run --rm -it ubuntu:26.04

@@ -2,9 +2,9 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "5.00c",
-      "gitref": "refs/tags/v5.00c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.00c"
+      "version": "5.02c",
+      "gitref": "refs/tags/v5.02c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.02c"
     },
     "aircrack-ng": {
       "version": "20260606.002753",
