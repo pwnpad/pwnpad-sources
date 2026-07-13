@@ -12,15 +12,15 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.2.222",
-      "gitref": "refs/tags/v9.2.222",
-      "revision": "d329a31d799de16da761aebc2d565a3ed8209392",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.222"
+      "version": "9.2.223",
+      "gitref": "refs/tags/v9.2.223",
+      "revision": "976df9d15ff7843ac11e89ae20f0332626a3aac6",
+      "url": "https://github.com/angr/angr/releases/tag/v9.2.223"
     },
     "bloodhound": {
-      "version": "9.2.2",
-      "revision": "5d56df7c6c5e1c22c5767261f6c119bef649c414",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.2.2"
+      "version": "9.4.0_rc1",
+      "revision": "a966fd04b67e8a5d567193809efa9a9b054c07ee",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.4.0_rc1"
     },
     "bloodyad": {
       "version": "2.5.4",
@@ -48,9 +48,9 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.9"
     },
     "john": {
-      "version": "20260606.223812",
-      "revision": "309326510e585c7a1340dab2e475c2ebfa6295aa",
-      "url": "https://github.com/openwall/john/commit/309326510e585c7a1340dab2e475c2ebfa6295aa"
+      "version": "20260707.111316",
+      "revision": "b544069b36ac166fb0a2fb19d0dc144ca72da6bb",
+      "url": "https://github.com/openwall/john/commit/b544069b36ac166fb0a2fb19d0dc144ca72da6bb"
     },
     "lib32-glibc": {
       "version": "2.43",
@@ -66,10 +66,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
     },
     "metasploit": {
-      "version": "6.4.141",
-      "gitref": "refs/tags/6.4.141",
-      "revision": "1de94cc091d6546207f7042190629437df216068",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.141"
+      "version": "6.4.143",
+      "gitref": "refs/tags/6.4.143",
+      "revision": "3260b22e836d27c4fdbde16acb520cb8f84821d6",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.143"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
@@ -84,7 +84,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
-      "version": "3.39.8",
+      "version": "3.39.9",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
