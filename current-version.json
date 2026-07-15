@@ -12,10 +12,10 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.2.223",
-      "gitref": "refs/tags/v9.2.223",
-      "revision": "976df9d15ff7843ac11e89ae20f0332626a3aac6",
-      "url": "https://github.com/angr/angr/releases/tag/v9.2.223"
+      "version": "9.3.0",
+      "gitref": "refs/tags/v9.3.0",
+      "revision": "af0128d1f1696a49a5709146850049731ea4d9ea",
+      "url": "https://github.com/angr/angr/releases/tag/v9.3.0"
     },
     "autopsy": {
       "version": "4.23.0",
@@ -74,9 +74,9 @@
       "url": "https://archlinux.org/packages/core/x86_64/glibc/"
     },
     "ligolo-ng": {
-      "version": "0.8.3",
-      "gitref": "refs/tags/v0.8.3",
-      "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.8.3"
+      "version": "0.9",
+      "gitref": "refs/tags/v0.9",
+      "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9"
     },
     "metasploit": {
       "version": "6.4.143",
