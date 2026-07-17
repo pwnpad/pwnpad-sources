@@ -19,6 +19,7 @@
     },
     "bloodhound": {
       "version": "9.4.0_rc1",
+      "gitref": "refs/tags/upstream/9.4.0_rc1",
       "revision": "a966fd04b67e8a5d567193809efa9a9b054c07ee",
       "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.4.0_rc1"
     },
@@ -66,10 +67,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9"
     },
     "metasploit": {
-      "version": "6.4.143",
-      "gitref": "refs/tags/6.4.143",
-      "revision": "3260b22e836d27c4fdbde16acb520cb8f84821d6",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.143"
+      "version": "6.4.144",
+      "gitref": "refs/tags/6.4.144",
+      "revision": "0b61a186101ca5f06bfaccb9b0158484d80e205f",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.144"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
