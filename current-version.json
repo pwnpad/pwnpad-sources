@@ -79,17 +79,17 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9"
     },
     "metasploit": {
-      "version": "6.4.144",
-      "gitref": "refs/tags/6.4.144",
-      "revision": "0b61a186101ca5f06bfaccb9b0158484d80e205f",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.144"
+      "version": "6.4.146",
+      "gitref": "refs/tags/6.4.146",
+      "revision": "7c96e48b424d2c5870db8c02883bfe79b0f7d21e",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.146"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
       "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
-      "version": "10.12.1"
+      "version": "10.12.2"
     },
     "netexec": {
       "version": "1.5.1",
@@ -97,7 +97,7 @@
       "url": "https://github.com/Pennyw0rth/NetExec/releases/tag/v1.5.1"
     },
     "ngrok": {
-      "version": "3.39.9",
+      "version": "3.39.10",
       "url": "https://aur.archlinux.org/packages/ngrok"
     },
     "odat": {
