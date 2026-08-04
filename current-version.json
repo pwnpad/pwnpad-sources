@@ -12,10 +12,10 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.3.0",
-      "gitref": "refs/tags/v9.3.0",
-      "revision": "af0128d1f1696a49a5709146850049731ea4d9ea",
-      "url": "https://github.com/angr/angr/releases/tag/v9.3.0"
+      "version": "9.3.1",
+      "gitref": "refs/tags/v9.3.1",
+      "revision": "1b28d51bcb112a0834e377297571d24d6328da8a",
+      "url": "https://github.com/angr/angr/releases/tag/v9.3.1"
     },
     "autopsy": {
       "version": "4.23.0",
@@ -53,16 +53,16 @@
       "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.9"
     },
     "john": {
-      "version": "20260721.010516",
-      "revision": "94caf43756b1f13c7e3829ff848df344ea755cac",
-      "url": "https://github.com/openwall/john/commit/94caf43756b1f13c7e3829ff848df344ea755cac"
+      "version": "20260801.221948",
+      "revision": "9a336d800a091bec9650c29282485145f31c9ffc",
+      "url": "https://github.com/openwall/john/commit/9a336d800a091bec9650c29282485145f31c9ffc"
     },
     "lib32-gcc-libs": {
       "version": "15.2.1",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-gcc-libs/"
     },
     "lib32-glibc": {
-      "version": "2.43",
+      "version": "2.44",
       "url": "https://archlinux.org/packages/core/x86_64/lib32-glibc/"
     },
     "lib64-gcc-libs": {
@@ -70,7 +70,7 @@
       "url": "https://archlinux.org/packages/core/x86_64/gcc-libs/"
     },
     "lib64-glibc": {
-      "version": "2.43",
+      "version": "2.44",
       "url": "https://archlinux.org/packages/core/x86_64/glibc/"
     },
     "ligolo-ng": {
@@ -79,17 +79,17 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9"
     },
     "metasploit": {
-      "version": "6.4.146",
-      "gitref": "refs/tags/6.4.146",
-      "revision": "7c96e48b424d2c5870db8c02883bfe79b0f7d21e",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.4.146"
+      "version": "6.5.0",
+      "gitref": "refs/tags/6.5.0",
+      "revision": "00e217beb472b1eeca0adc324fca1078fa90c52a",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.0"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
       "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
-      "version": "10.12.2"
+      "version": "10.12.3"
     },
     "netexec": {
       "version": "1.5.1",
@@ -119,9 +119,9 @@
       "url": "https://github.com/aniqfakhrul/powerview.py/commit/1dfc473c98ccca686e3504af66a9c2f097fddbe9"
     },
     "pwndbg": {
-      "version": "2026.02.18",
-      "gitref": "refs/tags/2026.02.18",
-      "url": "https://github.com/pwndbg/pwndbg/releases/tag/2026.02.18"
+      "version": "2026.07.29",
+      "gitref": "refs/tags/2026.07.29",
+      "url": "https://github.com/pwndbg/pwndbg/releases/tag/2026.07.29"
     },
     "python-cx-oracle": {
       "version": "8.3.0",
