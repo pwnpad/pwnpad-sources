@@ -12,10 +12,10 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.3.1",
-      "gitref": "refs/tags/v9.3.1",
-      "revision": "1b28d51bcb112a0834e377297571d24d6328da8a",
-      "url": "https://github.com/angr/angr/releases/tag/v9.3.1"
+      "version": "9.3.2",
+      "gitref": "refs/tags/v9.3.2",
+      "revision": "7922f1bf6bf16b8a76237fff2d1cdf2902010d90",
+      "url": "https://github.com/angr/angr/releases/tag/v9.3.2"
     },
     "autopsy": {
       "version": "4.23.0",
@@ -28,9 +28,9 @@
       "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.2.2"
     },
     "bloodyad": {
-      "version": "2.5.4",
-      "gitref": "refs/tags/v2.5.4",
-      "url": "https://github.com/CravateRouge/bloodyAD/releases/tag/v2.5.4"
+      "version": "2.5.5",
+      "gitref": "refs/tags/v2.5.5",
+      "url": "https://github.com/CravateRouge/bloodyAD/releases/tag/v2.5.5"
     },
     "donut": {
       "version": "2.0.0",
@@ -79,10 +79,10 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9"
     },
     "metasploit": {
-      "version": "6.5.0",
-      "gitref": "refs/tags/6.5.0",
-      "revision": "00e217beb472b1eeca0adc324fca1078fa90c52a",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.0"
+      "version": "6.5.1",
+      "gitref": "refs/tags/6.5.1",
+      "revision": "77223f289965af330765014a89fa0ceee5318255",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.1"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
