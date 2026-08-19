@@ -1,0 +1,19 @@
+pkgname=autopsy
+pkgver=4.23.0
+pkgrel=1
+pkgdesc='Digital forensics platform and graphical interface to The Sleuth Kit® and other digital forensic tools'
+arch=('aarch64')
+url='http://www.sleuthkit.org/autopsy/'
+license=('Apache-2.0')
+_skver=4.15.0
+depends=("testdisk" "sleuthkit" "liberica-jdk-17-full-bin")
+source=("autopsy.zip" "autopsy.sh")
+sha512sums=('61aab0bbad9beffdedc6371cf170f5c34d3aa87e2b776e4214409063f73e5b45cb8ffb2013151e3c7b4b60c491d43cccef2893caa3b57ebe43a32fb84d983821'
+            '0bef213a56acf561e963dc9d731fb785698752794d505eec4fbc881a0f076c6bf6a2a97e2fdb9a0887145b1f583cba7abc0b669ff03ef4e9b2e7af445a99c3b8')
+
+package() {
+    mkdir -p "${pkgdir}/opt" "${pkgdir}/usr/local/bin"
+
+    cp -r autopsy/ "${pkgdir}/opt"
+    cp autopsy.sh "${pkgdir}/usr/local/bin/autopsy"
+}

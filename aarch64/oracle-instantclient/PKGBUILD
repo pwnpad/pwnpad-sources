@@ -1,0 +1,27 @@
+pkgname=oracle-instantclient
+pkgver=23.26
+pkgrel=1
+pkgdesc="Enables development and deployment of applications that connect to Oracle Database."
+url="https://www.oracle.com/asean/database/technologies/instant-client.html"
+arch=('aarch64')
+license=('custom')
+source=(
+    "https://download.oracle.com/otn_software/linux/instantclient/instantclient-basic-linux-arm64.zip"
+    "https://download.oracle.com/otn_software/linux/instantclient/instantclient-sqlplus-linux-arm64.zip"
+)
+sha512sums=('a790fc3839aed0fa00fe96a4560f21c82b997b42353f75124b1396d0c489eb32a022771140fdf54e9132a68ddd5620bf35e98f42876abb85c883cc982b6dcc88'
+            '4a5ba3094b7d98c025b052927d45d76d521c684363309ffd7ddc482dee9c5437b06f8ef3520f98204aba179130c572922ad0fb85bd7b0c9ba57fb2e123b8f571')
+
+package() {
+    mkdir -p "${pkgdir}/usr/bin"
+    mkdir -p "${pkgdir}/usr/lib"
+
+    install -Dm 755 "${srcdir}/instantclient_23_26"/*.so* "${pkgdir}/usr/lib"
+    install -Dm 644 "${srcdir}/instantclient_23_26"/*.jar "${pkgdir}/usr/lib"
+
+    install -Dm 755 "${srcdir}/instantclient_23_26"/adrci \
+                    "${srcdir}/instantclient_23_26"/genezi \
+                    "${srcdir}/instantclient_23_26"/sqlplus \
+                    "${srcdir}/instantclient_23_26"/uidrvci \
+                    "${pkgdir}/usr/bin"
+}

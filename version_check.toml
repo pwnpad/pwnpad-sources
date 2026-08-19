@@ -1,0 +1,176 @@
+[__config__]
+max_concurrency = 5
+keyfile = "keyfile.toml"
+oldver = "current-version.json"
+newver = "updated-version.json"
+
+[aflplusplus]
+source = "github"
+github = "AFLplusplus/AFLplusplus"
+use_latest_release = true
+prefix = "v"
+
+[angr]
+source = "github"
+github = "angr/angr"
+use_latest_tag = true
+prefix = "v"
+
+# [autopsy]
+# source = "github"
+# github = "sleuthkit/autopsy"
+# use_latest_release = true
+# prefix = "autopsy-"
+
+[bloodhound]
+source = "gitlab"
+gitlab = "kalilinux/packages/bloodhound"
+use_max_tag = true
+exclude_regex = "kali"
+prefix = "upstream/"
+
+[donut]
+source = "github"
+github = "MEhrn00/donut"
+use_latest_release = true
+prefix = "v"
+
+[feroxbuster]
+source = "github"
+github = "epi052/feroxbuster"
+use_max_tag = true
+prefix = "v"
+
+[glibc]
+source = "ubuntupkg"
+ubuntupkg = "glibc"
+
+[hangover]
+source = "github"
+github = "AndreRH/hangover"
+use_latest_release = true
+prefix = "hangover-"
+
+[john]
+source = "github"
+github = "openwall/john"
+use_release_name = true
+
+# [lib32-gcc-libs]
+# source = "archpkg"
+# archpkg = "lib32-gcc-libs"
+# from_pattern = "^(\\d+\\.\\d+\\.\\d+).+"
+# to_pattern = "\\1"
+
+[lib32-glibc]
+source = "archpkg"
+archpkg = "lib32-glibc"
+from_pattern = "^(\\d+\\.\\d+).+"
+to_pattern = "\\1"
+
+# [lib64-gcc-libs]
+# source = "archpkg"
+# archpkg = "gcc-libs"
+# from_pattern = "^(\\d+\\.\\d+\\.\\d+).+"
+# to_pattern = "\\1"
+
+[lib64-glibc]
+source = "archpkg"
+archpkg = "glibc"
+from_pattern = "^(\\d+\\.\\d+).+"
+to_pattern = "\\1"
+
+[ligolo-ng]
+source = "github"
+github = "nicocha30/ligolo-ng"
+use_latest_release = true
+prefix = "v"
+
+[metasploit]
+source = "github"
+github = "rapid7/metasploit-framework"
+use_latest_tag = true
+
+[mingw-w64]
+source = "ubuntupkg"
+ubuntupkg = "mingw-w64"
+from_pattern = "^(\\d+\\.\\d+\\.\\d+)-\\d+"
+to_pattern = "\\1"
+
+[nessus]
+source = "regex"
+url = "https://www.tenable.com/downloads/nessus?loginAttempted=true"
+regex = "Nessus - (\\d{1,2}\\.\\d{1,2}\\.\\d{1,2})"
+
+[netexec]
+source = "github"
+github = "Pennyw0rth/NetExec"
+use_latest_release = true
+prefix = "v"
+
+[ngrok]
+source = "aur"
+aur = "ngrok"
+from_pattern = "^(\\d+\\.\\d+\\.\\d+)-\\d+"
+to_pattern = "\\1"
+
+[powershell]
+source = "github"
+github = "PowerShell/PowerShell"
+use_latest_release = true
+prefix = "v"
+
+[qiling]
+source = "github"
+github = "qilingframework/qiling"
+use_latest_release = true
+
+[rsactftool]
+source = "github"
+github = "RsaCtfTool/RsaCtfTool"
+
+[sliver]
+source = "github"
+github = "BishopFox/sliver"
+use_latest_release = true
+prefix = "v"
+
+[powerview]
+source = "github"
+github = "aniqfakhrul/powerview.py"
+use_release_name = true
+
+[bloodyad]
+source = "github"
+github = "CravateRouge/bloodyAD"
+use_latest_release = true
+prefix = "v"
+
+[oracle-instantclient]
+source = "regex"
+url = "https://www.oracle.com/database/technologies/instant-client/linux-arm-aarch64-downloads.html"
+regex = "Version (\\d{2}\\.\\d{1,2})"
+
+[python-cx-oracle]
+source = "pypi"
+pypi = "cx-Oracle"
+
+[odat]
+source = "github"
+github = "quentinhardy/odat"
+use_release_name = true
+
+[pwndbg]
+source = "github"
+github = "pwndbg/pwndbg"
+use_latest_release = true
+
+[aircrack-ng]
+source = "github"
+github = "pwnpad/aircrack-ng"
+
+[joern]
+source = "github"
+github = "joernio/joern"
+use_latest_release = true
+prefix = "v"

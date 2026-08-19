@@ -1,0 +1,38 @@
+# Maintainer: Leonard Janis König < ljrk at ljrk dot org >
+# Maintainer: Noor Christensen <archlinux_AT_technopragmatics_DOT_org>
+pkgname=joern
+pkgver=4.0.604
+pkgrel=1
+pkgdesc="The Bug Hunter's Workbench"
+arch=('x86_64' 'aarch64')
+url='https://joern.io/'
+license=('Apache-2.0')
+depends=('java-runtime>=21')
+makedepends=('unzip')
+optdepends=(
+	'glibc: for csharpsrc2cpg frontend support (C# and .NET)'
+	'gcc-libs: for csharpsrc2cpg frontend support (C# and .NET)'
+	'zlib: for csharpsrc2cpg frontend support (C# and .NET)'
+)
+source_x86_64=("https://github.com/joernio/joern/releases/download/v${pkgver}/joern-cli-linux-x86_64.zip")
+source_aarch64=("https://github.com/joernio/joern/releases/download/v${pkgver}/joern-cli-linux-arm64.zip")
+sha256sums_x86_64=('SKIP')
+sha256sums_aarch64=('SKIP')
+
+package() {
+	case "$CARCH" in
+		x86_64)  zip_suffix="x86_64" ;;
+		aarch64) zip_suffix="arm64" ;;
+	esac
+
+	install -d "$pkgdir/opt/joern"
+	unzip -qo "$srcdir/joern-cli-linux-${zip_suffix}.zip" -d "$pkgdir/opt/joern"
+
+	install -d "$pkgdir/usr/bin"
+	local tool
+	for tool in joern joern-parse joern-export joern-flow joern-scan joern-slice joern-vectors \
+		joern-cpg2scpg abap2cpg c2cpg.sh csharpsrc2cpg ghidra2cpg gosrc2cpg javasrc2cpg \
+		jimple2cpg jssrc2cpg.sh kotlin2cpg php2cpg pysrc2cpg rubysrc2cpg rust2cpg swiftsrc2cpg.sh; do
+		ln -s "/opt/joern/joern-cli/$tool" "$pkgdir/usr/bin/$tool"
+	done
+}

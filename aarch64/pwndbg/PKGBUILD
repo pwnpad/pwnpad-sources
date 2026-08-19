@@ -1,0 +1,98 @@
+# Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
+pkgname=pwndbg
+pkgver=2026.07.29
+pkgrel=1
+pkgdesc='Makes debugging with GDB suck less'
+url='https://github.com/pwndbg/pwndbg'
+arch=(any)
+license=(MIT)
+
+depends=(
+  debuginfod
+  gdb
+  ipython
+  python
+  python-capstone
+  python-capstone6pwndbg
+  python-niche-elf
+  python-psutil
+  python-pt
+  python-ptrace
+  python-pwntools
+  python-pycparser
+  python-pyelftools
+  python-pygments
+  python-requests
+  python-rich
+  python-setuptools
+  python-sortedcontainers
+  python-tabulate
+  python-typing_extensions
+  python-unicorn
+  which
+)
+
+makedepends=(
+  python-build
+  python-hatchling
+  python-installer
+  python-poetry-core
+  python-wheel
+  python-pip
+  gcc
+  distcc
+)
+
+optdepends=(
+  'checksec: checksec command support'
+  'ropper: ropper command support'
+  'ropgadget: ropgadget command support'
+  'radare2: radare2 command support'
+  'rizin: rizin command support'
+  'one_gadget: command to find ROP one_gadget'
+)
+
+source=(
+  https://github.com/pwndbg/pwndbg/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+)
+
+sha512sums=('1373b0fb00e83b96549585c12f0f3e3850aa0f8a638a741ba1b90254c9e1cf5e8d76f4486ea5a39b6630ef47172e9a6e0527e8705ac7526c455de34e55e486a7')
+b2sums=('3f3687c02349a2ee4a7eaeab2c01d935522cd20867cf6e67866048c1cb4396999461a43d528a84b9f3445236d75c11631ff33eddbbd3d95f33ac9466d0ede3f3')
+
+prepare() {
+  cd ${pkgname}-${pkgver}
+  rm -rf profiling
+
+  sed -i 's/from capstone6pwndbg import CS_MODE_RISCVC/from capstone6pwndbg import CS_MODE_RISCV_C as CS_MODE_RISCVC/g' pwndbg/aglib/arch_mod.py
+}
+
+build() {
+  cd ${pkgname}-${pkgver}
+
+  # Build pwndbg wheel
+  python -m compileall *.py
+  python -O -m compileall *.py
+  python -m build --wheel --no-isolation
+
+  # Fetch decomp2dbg wheel (NO system install)
+  python -m pip wheel "decomp2dbg==3.14.*" -w wheelhouse
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+
+  # Install pwndbg
+  python -m installer --destdir="${pkgdir}" dist/*.whl
+
+  # Install decomp2dbg into SAME pkgdir (isolated from system Python)
+  python -m installer --destdir="${pkgdir}" wheelhouse/decomp2dbg-*.whl
+
+  # pwndbg data files
+  install -d "${pkgdir}/usr/share/pwndbg"
+  cp -r *.py __pycache__ "${pkgdir}/usr/share/pwndbg"
+
+  install -Dm 644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+  install -Dm 644 LICENSE.md -t "${pkgdir}/usr/share/licenses/${pkgname}"
+}
+
+# vim: ts=2 sw=2 et:

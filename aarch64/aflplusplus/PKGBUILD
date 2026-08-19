@@ -1,0 +1,24 @@
+# This file is part of BlackArch Linux ( https://www.blackarch.org/ ).
+# See COPYING for license details.
+
+pkgname=aflplusplus
+pkgver=5.02c
+pkgrel=1
+pkgdesc='American Fuzzing Lop fuzzer with community patches and additional features.'
+arch=('aarch64')
+url='https://aflplus.plus/'
+license=('Apache')
+depends=('bash' 'python')
+conflicts=('afl')
+source=("https://github.com/pwnpad/pwnpad-sources/releases/download/binaries/aflplusplus-${pkgver}-${arch}.tgz" "afl-qemu-switch")
+sha512sums=('4ed5b6498e21404a39921d9fa8090c07ac340e1cb4ded495d42758575f6a790be0e35d4362b45ae05841c9eda19d52b6e2b46da6f340044777aeffd618fdd575'
+            'c8902a97d1d160bbcc54b87a518920e7993a5ec431f373c4d56f88726dfbaf9411bbd8d9b9c216bb55f2f077ebad339b119feb5a98b71e0d75932a211dd3bea3')
+
+build() {
+    tar xzf aflplusplus-${pkgver}-${arch}.tgz
+}
+
+package() {
+    cp -a usr/ $pkgdir
+    cp afl-qemu-switch "$pkgdir/usr/bin"
+}

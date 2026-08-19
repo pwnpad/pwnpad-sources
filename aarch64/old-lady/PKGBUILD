@@ -1,0 +1,58 @@
+pkgname="old-lady"
+pkgver=9.4
+pkgrel=1
+pkgdesc="Old Lady Software"
+arch=('aarch64')
+license=('custom')
+makedepends=('nodejs' 'fakechroot')
+depends=(
+    'glib2'
+    'libgl'
+    'libx11'
+    'libxext'
+    'libxkbcommon'
+    'libxkbcommon-x11'
+    'libxrender'
+    'python-rpyc'
+    'qt5-base'
+    'xcb-util'
+    'xcb-util-cursor'
+    'xcb-util-image'
+    'xcb-util-keysyms'
+    'xcb-util-renderutil'
+    'xcb-util-wm'
+    )
+source=('old-lady.run' 'license.js')
+sha256sums=('edafadd057c92153fd25a3f46a0b4581b1e052d415d1762891e9b78831a04abe'
+            'f26b091db24ff3696743203923b4f81165fe230c6186574ac86803ccb2066079')
+options=('!strip')
+
+package() {
+    install -d "${pkgdir}"/opt/${pkgname}
+    install -d "${pkgdir}"/usr/bin
+    install -d "${pkgdir}"/tmp
+
+    cp "${srcdir}"/old-lady.run "${pkgdir}"/
+    chmod +x "${pkgdir}"/old-lady.run
+
+    fakechroot chroot "${pkgdir}" /old-lady.run --mode unattended --prefix "/opt/${pkgname}"
+    rm "${pkgdir}"/old-lady.run
+    rm -Rf "${pkgdir}"/{tmp,home}
+
+    rm "${pkgdir}"/opt/${pkgname}/{uninstall*,Uninstall*}
+
+    cp "${srcdir}"/license.js "${pkgdir}"/opt/${pkgname}
+    cd "${pkgdir}"/opt/${pkgname}
+    node ./license.js && rm ./license.js
+    cd -
+
+    ln -s /opt/${pkgname}/ida "${pkgdir}"/usr/bin/ida
+}
+
+post_install() {
+    /opt/${pkgname}/idapyswitch --auto-apply
+}
+
+post_upgrade() {
+    post_install
+}

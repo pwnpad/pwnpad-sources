@@ -1,0 +1,37 @@
+pkgname=angr
+pkgver=9.3.2
+pkgrel=1
+groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
+        'blackarch-reversing')
+pkgdesc='The next-generation binary analysis platform from UC Santa Barbaras Seclab.'
+arch=('x86_64' 'aarch64')
+url='https://pypi.org/project/angr/#files'
+license=('BSD')
+depends=('python' 'python-capstone' 'python-networkx' 'python-rpyc'
+         'python-progressbar' 'python-mulpyplexer' 'python-unicorn'
+         'python-cooldict' 'python-archinfo' 'python-pyvex' 'python-ana'
+         'python-claripy' 'python-cle' 'libffi' 'python-cachetools'
+         'python-pyelftools' 'python-cffi' 'python-psutil' 'python-dpkt'
+         'python-z3-solver' 'python-gitpython' 'python-sortedcontainers'
+         'python-pycparser' 'python-ailment' 'python-protobuf'
+         'python-itanium-demangler' 'python-cppheaderparser'
+         'python-sympy' 'python-nampa' 'python-setuptools-rust')
+makedepends=('git' 'python-setuptools' 'python-pip' 'python-wheel' 'python-grpcio-tools')
+source=("https://github.com/$pkgname/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
+sha512sums=('065c9828c365788e0ec04c5c1b9710e1dc91b7f680025b1b1a47397ffc09fe126193d9dead5f7c6dab55a6bccd7220f09ffb46ab6e0c4c292fa643f7f5db3598')
+
+prepare() {
+  cd "$pkgname-$pkgver"
+}
+
+build() {
+  cd "$pkgname-$pkgver"
+
+  python setup.py build
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+}

@@ -1,0 +1,35 @@
+pkgname=sliver
+pkgver=1.7.3
+pkgrel=1
+pkgdesc="Sliver is a an opensource C2 framework designed by bishop fox"
+url="https://github.com/BishopFox/sliver"
+arch=('aarch64')
+optdepends=()
+license=('BSD-3-Clause')
+provides=("${pkgname}")
+install=
+source=(
+    "https://github.com/BishopFox/sliver/releases/download/v${pkgver}/sliver-client_linux-arm64"
+    "https://github.com/BishopFox/sliver/releases/download/v${pkgver}/sliver-server_linux-arm64"
+)
+sha512sums=('b0c042e541d753797f6bb1a00cc45b789f46d1866bfbab790c8a5cb5cc958f226956ead5242f50c50a5ccec873f21a6383696448cb680635cb30263f7d6f46ef'
+            '61168f856699b62993cd2145ed8eaae28cfb276babc98260c95e02eac663e1e76d526a1ec2527c0d900c2209511b43f228be72f46de8ed38670571cde6123b22')
+
+prepare() {
+    chmod +x ./sliver-client_linux-arm64
+    chmod +x ./sliver-server_linux-arm64
+
+    ./sliver-client_linux-arm64 completion zsh > _sliver-client
+    ./sliver-server_linux-arm64 completion zsh > _sliver-server
+}
+
+package() {
+    mkdir -p $pkgdir/usr/bin
+    mkdir -p $pkgdir/usr/share/zsh/site-functions
+
+    install -Dm 755 sliver-client_linux-arm64 $pkgdir/usr/bin/sliver-client
+    install -Dm 755 sliver-server_linux-arm64 $pkgdir/usr/bin/sliver-server
+
+    install -Dm 644 _sliver-client $pkgdir/usr/share/zsh/site-functions/_sliver-client
+    install -Dm 644 _sliver-server $pkgdir/usr/share/zsh/site-functions/_sliver-server
+}
