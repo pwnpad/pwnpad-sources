@@ -1,0 +1,33 @@
+pkgname="birb-soot"
+pkgver=2026.3.3
+pkgrel=1
+pkgdesc="Birb Soot Software"
+arch=('any')
+license=('custom')
+depends=('jre21-openjdk')
+source=('burpsuite_pro.jar' 'loader.jar' 'prefs.tgz')
+noextract=('burpsuite_pro.jar' 'loader.jar' 'prefs.tgz')
+sha256sums=('2d7ed0c16b87bbd45e539f02494e843a40d22401d2490592167389709670f820'
+            'dcdf28acf360554a5a98d78f403c96ccea500be24b27d02b020e142820637c0a'
+            'a812c64c4e4086628ab6712f2c1f638a53dc5a5ca3001cef09cdb51e0616487a')
+
+package() {
+    install -d "${pkgdir}"/opt/${pkgname}
+    install -d "${pkgdir}"/usr/bin
+
+    cp "${srcdir}"/burpsuite_pro.jar "${pkgdir}"/opt/${pkgname}
+    cp "${srcdir}"/loader.jar "${pkgdir}"/opt/${pkgname}
+    cp "${srcdir}"/prefs.tgz "${pkgdir}"/opt/${pkgname}
+
+
+    cat << EOF > "${pkgdir}"/usr/bin/burp
+#!/bin/sh
+if [ ! -d \${HOME}/.java/.userPrefs/burp/ ]; then
+    mkdir -p \${HOME}/.java/.userPrefs
+    tar xzf /opt/${pkgname}/prefs.tgz -C \${HOME}/.java/.userPrefs
+fi
+
+/usr/lib/jvm/java-21-openjdk/bin/java --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED -javaagent:/opt/${pkgname}/loader.jar -noverify -jar /opt/${pkgname}/burpsuite_pro.jar | tail -n +8
+EOF
+    chmod +x "${pkgdir}"/usr/bin/burp
+}
