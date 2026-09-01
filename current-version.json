@@ -12,10 +12,11 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.3.2",
-      "gitref": "refs/tags/v9.3.2",
-      "revision": "7922f1bf6bf16b8a76237fff2d1cdf2902010d90",
-      "url": "https://github.com/angr/angr/releases/tag/v9.3.2"
+      "version": "9.3.3",
+      "gitref": "refs/tags/v9.3.3",
+      "revision": "8a2f254ce421d9a06a2444e9333009784651e9cf",
+      "url": "https://github.com/angr/angr/releases/tag/v9.3.3",
+      "revision_creation_time": "2026-08-19T18:36:49Z"
     },
     "autopsy": {
       "version": "4.23.0",
@@ -23,9 +24,12 @@
       "url": "https://github.com/sleuthkit/autopsy/releases/tag/autopsy-4.23.0"
     },
     "bloodhound": {
-      "version": "9.2.2",
-      "revision": "5d56df7c6c5e1c22c5767261f6c119bef649c414",
-      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.2.2"
+      "version": "9.6.0",
+      "gitref": "refs/tags/upstream/9.6.0",
+      "revision": "10792c6489453243de6fe8c3f47fc58a539f954b",
+      "url": "https://gitlab.com/kalilinux/packages/bloodhound/-/tags/upstream/9.6.0",
+      "creation_time": "2026-08-21T08:00:28.000Z",
+      "revision_creation_time": "2026-08-21T09:55:57.000+02:00"
     },
     "bloodyad": {
       "version": "2.5.5",
@@ -44,18 +48,20 @@
       "url": "https://github.com/epi052/feroxbuster/releases/tag/v2.13.1"
     },
     "glibc": {
-      "version": "2.43-2ubuntu2",
-      "url": "https://packages.ubuntu.com/resolute/glibc"
+      "version": "2.44-1ubuntu1",
+      "url": "https://packages.ubuntu.com/stonking/glibc"
     },
     "hangover": {
-      "version": "11.9",
-      "gitref": "refs/tags/hangover-11.9",
-      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.9"
+      "version": "11.16",
+      "gitref": "refs/tags/hangover-11.16",
+      "url": "https://github.com/AndreRH/hangover/releases/tag/hangover-11.16",
+      "creation_time": "2026-08-30T19:39:12Z"
     },
     "joern": {
-      "version": "4.0.604",
-      "gitref": "refs/tags/v4.0.604",
-      "url": "https://github.com/joernio/joern/releases/tag/v4.0.604"
+      "version": "4.0.614",
+      "gitref": "refs/tags/v4.0.614",
+      "url": "https://github.com/joernio/joern/releases/tag/v4.0.614",
+      "creation_time": "2026-08-28T11:39:17Z"
     },
     "john": {
       "version": "20260801.221948",
@@ -84,18 +90,18 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9.1"
     },
     "metasploit": {
-      "version": "6.5.2",
-      "gitref": "refs/tags/6.5.2",
-      "revision": "75120f414c183dcb05c5d99d04f2d62bf538555a",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.2",
-      "revision_creation_time": "2026-08-13T15:22:08Z"
+      "version": "6.5.3",
+      "gitref": "refs/tags/6.5.3",
+      "revision": "852d34c265298ab4fe8136d3b73e7639d61cd69e",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.3",
+      "revision_creation_time": "2026-08-27T11:26:57Z"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
       "url": "https://packages.ubuntu.com/resolute/mingw-w64"
     },
     "nessus": {
-      "version": "10.12.3"
+      "version": "10.12.4"
     },
     "netexec": {
       "version": "1.5.1",
@@ -144,9 +150,10 @@
       "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/af87bb487666b1bf3070e1bb058d97b78a342808"
     },
     "sliver": {
-      "version": "1.7.3",
-      "gitref": "refs/tags/v1.7.3",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.3"
+      "version": "1.7.6",
+      "gitref": "refs/tags/v1.7.6",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.6",
+      "creation_time": "2026-08-28T18:37:03Z"
     }
   }
 }

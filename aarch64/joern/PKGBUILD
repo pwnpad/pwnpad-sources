@@ -1,7 +1,7 @@
 # Maintainer: Leonard Janis König < ljrk at ljrk dot org >
 # Maintainer: Noor Christensen <archlinux_AT_technopragmatics_DOT_org>
 pkgname=joern
-pkgver=4.0.604
+pkgver=4.0.614
 pkgrel=1
 pkgdesc="The Bug Hunter's Workbench"
 arch=('x86_64' 'aarch64')
@@ -16,8 +16,8 @@ optdepends=(
 )
 source_x86_64=("https://github.com/joernio/joern/releases/download/v${pkgver}/joern-cli-linux-x86_64.zip")
 source_aarch64=("https://github.com/joernio/joern/releases/download/v${pkgver}/joern-cli-linux-arm64.zip")
-sha256sums_x86_64=('SKIP')
-sha256sums_aarch64=('SKIP')
+sha256sums_x86_64=('41e64471411e980f09c7934cec1162b95fb897cab47edd83c3e3dcf343c351d2')
+sha256sums_aarch64=('5f4c20e3b8daa0cdaef42f10b28b5c72d0352e27a5a8e69b96fc73a918d92d95')
 
 package() {
 	case "$CARCH" in
