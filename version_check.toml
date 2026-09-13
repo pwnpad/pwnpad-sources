@@ -124,6 +124,7 @@ prefix = "v"
 source = "github"
 github = "qilingframework/qiling"
 use_latest_release = true
+prefix = "v"
 
 [rsactftool]
 source = "github"

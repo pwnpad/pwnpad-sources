@@ -1,5 +1,5 @@
 pkgname=sliver
-pkgver=1.7.6
+pkgver=1.7.7
 pkgrel=1
 pkgdesc="Sliver is a an opensource C2 framework designed by bishop fox"
 url="https://github.com/BishopFox/sliver"
@@ -12,8 +12,8 @@ source=(
     "https://github.com/BishopFox/sliver/releases/download/v${pkgver}/sliver-client_linux-arm64"
     "https://github.com/BishopFox/sliver/releases/download/v${pkgver}/sliver-server_linux-arm64"
 )
-sha512sums=('2db33b686776294b0c899b82ebe95148bb20d711b53b60c88b862de7c4d37aca74ab77f3219d0d7f3b3d75927e0701f96c00e6f7dd18dc88cd7d07b574df0ad5'
-            '535f8aaa5d0a7f0046d7e1f57d44d764431c72886725db13b10802506488c274a1a2e153fc5565644a6ec6f51089a9aeae1df3c721bd1b2047d1937096518be6')
+sha512sums=('17fa686158e74106464a9d2dff94498a4b020e959e44484441fca1c74f667120af2dc831aa28f23059c3c72542ba403cfe383e19ce6e459722b1cd5411657e4d'
+            '2a0ab798065ea8af4e67f642a159728f1c64ef03666ee66ab9a7deebfef37762f2a17c8f61bf3a824f950fe329d4343b0a60fdcc4534157721444b91a3109286')
 
 prepare() {
     chmod +x ./sliver-client_linux-arm64

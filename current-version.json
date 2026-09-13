@@ -2,9 +2,10 @@
   "version": 2,
   "data": {
     "aflplusplus": {
-      "version": "5.02c",
-      "gitref": "refs/tags/v5.02c",
-      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.02c"
+      "version": "5.03c",
+      "gitref": "refs/tags/v5.03c",
+      "url": "https://github.com/AFLplusplus/AFLplusplus/releases/tag/v5.03c",
+      "creation_time": "2026-09-02T09:41:42Z"
     },
     "aircrack-ng": {
       "version": "20260606.002753",
@@ -12,11 +13,11 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.3.3",
-      "gitref": "refs/tags/v9.3.3",
-      "revision": "8a2f254ce421d9a06a2444e9333009784651e9cf",
-      "url": "https://github.com/angr/angr/releases/tag/v9.3.3",
-      "revision_creation_time": "2026-08-19T18:36:49Z"
+      "version": "9.3.4",
+      "gitref": "refs/tags/v9.3.4",
+      "revision": "a2ac48c21de430358a0a5e02ac3867148b27e620",
+      "url": "https://github.com/angr/angr/releases/tag/v9.3.4",
+      "revision_creation_time": "2026-09-02T20:02:39Z"
     },
     "autopsy": {
       "version": "4.23.0",
@@ -58,10 +59,10 @@
       "creation_time": "2026-08-30T19:39:12Z"
     },
     "joern": {
-      "version": "4.0.614",
-      "gitref": "refs/tags/v4.0.614",
-      "url": "https://github.com/joernio/joern/releases/tag/v4.0.614",
-      "creation_time": "2026-08-28T11:39:17Z"
+      "version": "4.0.627",
+      "gitref": "refs/tags/v4.0.627",
+      "url": "https://github.com/joernio/joern/releases/tag/v4.0.627",
+      "creation_time": "2026-09-12T09:00:17Z"
     },
     "john": {
       "version": "20260801.221948",
@@ -90,11 +91,11 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9.1"
     },
     "metasploit": {
-      "version": "6.5.3",
-      "gitref": "refs/tags/6.5.3",
-      "revision": "852d34c265298ab4fe8136d3b73e7639d61cd69e",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.3",
-      "revision_creation_time": "2026-08-27T11:26:57Z"
+      "version": "6.5.4",
+      "gitref": "refs/tags/6.5.4",
+      "revision": "a420e80358865eb463e39b713f52f2ee46957b60",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.4",
+      "revision_creation_time": "2026-09-10T16:28:27Z"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
@@ -121,14 +122,16 @@
       "version": "23.26"
     },
     "powershell": {
-      "version": "7.6.5",
-      "gitref": "refs/tags/v7.6.5",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.5"
+      "version": "7.6.6",
+      "gitref": "refs/tags/v7.6.6",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.6",
+      "creation_time": "2026-09-08T20:28:01Z"
     },
     "powerview": {
-      "version": "20260515.073828",
-      "revision": "1dfc473c98ccca686e3504af66a9c2f097fddbe9",
-      "url": "https://github.com/aniqfakhrul/powerview.py/commit/1dfc473c98ccca686e3504af66a9c2f097fddbe9"
+      "version": "20260903.052152",
+      "revision": "ea133da24ac9f51879f89a559c3fe575e3d1c801",
+      "url": "https://github.com/aniqfakhrul/powerview.py/commit/ea133da24ac9f51879f89a559c3fe575e3d1c801",
+      "revision_creation_time": "2026-09-03T05:21:52Z"
     },
     "pwndbg": {
       "version": "2026.07.29",
@@ -140,20 +143,22 @@
       "url": "https://pypi.org/project/cx-Oracle/8.3.0/"
     },
     "qiling": {
-      "version": "1.4.10",
-      "gitref": "refs/tags/1.4.10",
-      "url": "https://github.com/qilingframework/qiling/releases/tag/1.4.10"
+      "version": "1.4.11",
+      "gitref": "refs/tags/v1.4.11",
+      "url": "https://github.com/qilingframework/qiling/releases/tag/v1.4.11",
+      "creation_time": "2026-09-06T00:54:20Z"
     },
     "rsactftool": {
-      "version": "20260812.020114",
-      "revision": "af87bb487666b1bf3070e1bb058d97b78a342808",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/af87bb487666b1bf3070e1bb058d97b78a342808"
+      "version": "20260911.152457",
+      "revision": "4475e1dd4431883e73e1418ef8e5d80bc7155467",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/4475e1dd4431883e73e1418ef8e5d80bc7155467",
+      "revision_creation_time": "2026-09-11T15:24:57Z"
     },
     "sliver": {
-      "version": "1.7.6",
-      "gitref": "refs/tags/v1.7.6",
-      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.6",
-      "creation_time": "2026-08-28T18:37:03Z"
+      "version": "1.7.7",
+      "gitref": "refs/tags/v1.7.7",
+      "url": "https://github.com/BishopFox/sliver/releases/tag/v1.7.7",
+      "creation_time": "2026-09-03T17:53:42Z"
     }
   }
 }

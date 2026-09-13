@@ -4,16 +4,16 @@
 pkgname=qiling
 _python_ver=3.14.5
 _keystone_ver=0.9.2
-pkgver=1.4.10
+pkgver=1.4.11
 pkgrel=1
 pkgdesc="An advanced binary emulation framework"
 url='https://qiling.io/'
 arch=('any')
 license=('GPL2')
 makedepends=('git' 'pyenv' 'python-pip' 'python-virtualenv' 'cmake')
-source=("git+https://github.com/qilingframework/qiling.git#tag=${pkgver}"
+source=("git+https://github.com/qilingframework/qiling.git#tag=v${pkgver}"
         "https://files.pythonhosted.org/packages/source/k/keystone-engine/keystone-engine-${_keystone_ver}.tar.gz")
-sha512sums=('ca3da680107c257dde5a55b136f049a9fb70b63becf6fa1608aa44fbb4af422e2971d1c5c5e95d887499304b94a076eefccad0f2aed3296cb6d9bb7cdb292c71'
+sha512sums=('af23a13bd8abf27d02bf71b9fab5a5306a0e3f8f2a4eb43a66eebb353a936f0ee4b6cdd82c8a4de86479043e4f591a2ace4c9b4354a290086e0999271b9621e8'
             'e07a8559e27daf49cad3c5c50b415d8d40ae2c63681a220289246c45dd220337506735a668d2c31d1504f83bea9614ca56af8b775be05cfe2759137f29eb3606')
 
 prepare() {
