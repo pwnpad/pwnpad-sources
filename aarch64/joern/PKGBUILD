@@ -1,7 +1,7 @@
 # Maintainer: Leonard Janis König < ljrk at ljrk dot org >
 # Maintainer: Noor Christensen <archlinux_AT_technopragmatics_DOT_org>
 pkgname=joern
-pkgver=4.0.626
+pkgver=4.0.638
 pkgrel=1
 pkgdesc="The Bug Hunter's Workbench"
 arch=('x86_64' 'aarch64')
@@ -15,7 +15,7 @@ optdepends=(
 	'zlib: for csharpsrc2cpg frontend support (C# and .NET)'
 )
 source_aarch64=("https://github.com/joernio/joern/releases/download/v${pkgver}/joern-cli-linux-arm64.zip")
-sha256sums_aarch64=('416a831915d997f9cc0f4a67c84b428d34b0c20aeacbef0ab60742af8a4e465a')
+sha256sums_aarch64=('3ffaf959a7edd00b4b407b331b0b260a681286aeea9c485ac8e705e2be88b313')
 
 package() {
 	case "$CARCH" in

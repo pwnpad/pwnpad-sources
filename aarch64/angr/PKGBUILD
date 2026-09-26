@@ -1,31 +1,76 @@
 pkgname=angr
-pkgver=9.3.4
+pkgver=10.0.0
 pkgrel=1
 groups=('blackarch' 'blackarch-binary' 'blackarch-disassembler'
         'blackarch-reversing')
-pkgdesc='The next-generation binary analysis platform from UC Santa Barbaras Seclab.'
-arch=('x86_64' 'aarch64')
-url='https://pypi.org/project/angr/#files'
+pkgdesc='The next-generation binary analysis platform from UC Santa Barbara SecLab.'
+arch=('aarch64')
+url='https://pypi.org/project/angr/'
 license=('BSD')
+
 depends=('python' 'python-capstone' 'python-networkx' 'python-rpyc'
          'python-progressbar' 'python-mulpyplexer' 'python-unicorn'
-         'python-cooldict' 'python-archinfo' 'python-pyvex' 'python-ana'
-         'python-claripy' 'python-cle' 'libffi' 'python-cachetools'
-         'python-pyelftools' 'python-cffi' 'python-psutil' 'python-dpkt'
-         'python-z3-solver' 'python-gitpython' 'python-sortedcontainers'
-         'python-pycparser' 'python-ailment' 'python-protobuf'
-         'python-itanium-demangler' 'python-cppheaderparser'
-         'python-sympy' 'python-nampa' 'python-setuptools-rust')
-makedepends=('git' 'python-setuptools' 'python-pip' 'python-wheel' 'python-grpcio-tools')
+         'python-cooldict' 'python-ana' 'python-claripy'
+         'python-cle' 'libffi' 'python-cachetools' 'python-pyelftools'
+         'python-cffi' 'python-psutil' 'python-dpkt' 'python-gitpython'
+         'python-sortedcontainers' 'python-pycparser' 'python-ailment'
+         'python-protobuf' 'python-itanium-demangler'
+         'python-cppheaderparser' 'python-sympy' 'python-nampa'
+         'python-bitstring')
+
+makedepends=('git' 'python-build' 'python-installer' 'python-wheel'
+             'python-setuptools' 'python-setuptools-rust'
+             'python-grpcio-tools' 'rust')
+
+provides=('python-archinfo=10.0.0'
+          'python-pyvex=10.0.0'
+          'python-z3-solver=5.1.0.0')
+
+conflicts=('python-archinfo' 'python-pyvex' 'python-z3-solver')
+
 source=("https://github.com/$pkgname/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
-sha512sums=('fe6a3a05aa3bbe6f1103797934477ca44256d2840cc47d771927817763c7482cef9affccc72991665f1d20585d419da5f8ae3e1ff497c43f1ecb333d889251ea')
+
+source_aarch64=(
+  'https://files.pythonhosted.org/packages/58/6e/3857901b0352350fba2376f67c074108f97c54842fafcfbb2209f8ee5848/pyvex-10.0.0-cp312-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl'
+  'https://files.pythonhosted.org/packages/7b/23/d6832530cc0d47871faffda46a71d7719f099ff928f2478e24f30ec80fce/archinfo-10.0.0-py3-none-any.whl'
+  'https://files.pythonhosted.org/packages/ec/49/7db70c39fefde52eb5571ae709fa370260536439082d36b9ed1ab36bd1a0/z3_solver-5.1.0.0-py3-none-manylinux_2_38_aarch64.whl'
+)
+
+sha512sums=('0d437206e31b08778b182a865956a649866c95d5a27e7958775b8be092ee0efba39df20340a6123e5cfeaa9b1c4540fe7b007b9757d3b6ca2d6c3b268b7d795a')
+
+sha256sums_aarch64=(
+  'f21e43caead0e26f35b0e1f128a521b6be49461b3922816beb9bd77af174e3b8'
+  '4596fe35b1e611155a2299fc8b8c92d772a6d3c476b81fa6cdc4265c10c7bdbd'
+  '1dcfcccb4b027951d7adf267b5b236e7a67b8433cc358d802dcb0280151587bf'
+)
 
 prepare() {
   cd "$pkgname-$pkgver"
+
+  rm -rf build
+
+  mkdir -p "$srcdir/python-deps"
+
+  python -m installer \
+    --destdir="$srcdir/python-deps" \
+    "$srcdir"/pyvex-10.0.0-*.whl
+
+  python -m installer \
+    --destdir="$srcdir/python-deps" \
+    "$srcdir"/archinfo-10.0.0-*.whl
+
+  python -m installer \
+    --destdir="$srcdir/python-deps" \
+    "$srcdir"/z3_solver-5.1.0.0-*.whl
 }
 
 build() {
   cd "$pkgname-$pkgver"
+
+  local site
+  site="$(python -c 'import sysconfig; print(sysconfig.get_path("purelib"))')"
+
+  export PYTHONPATH="$srcdir/python-deps$site${PYTHONPATH:+:$PYTHONPATH}"
 
   python setup.py build
 }
@@ -33,5 +78,14 @@ build() {
 package() {
   cd "$pkgname-$pkgver"
 
-  python setup.py install --root="$pkgdir" --prefix=/usr -O1 --skip-build
+  python setup.py install \
+      --root="$pkgdir" \
+      --prefix=/usr \
+      -O1 \
+      --skip-build
+
+  cp -a "$srcdir/python-deps/." "$pkgdir/"
+
+  install -Dm644 LICENSE \
+      "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }

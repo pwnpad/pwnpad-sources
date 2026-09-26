@@ -13,11 +13,11 @@
       "url": "https://github.com/pwnpad/aircrack-ng/commit/860f794aa9be5372bbe12ddb652ddf829ac06b36"
     },
     "angr": {
-      "version": "9.3.4",
-      "gitref": "refs/tags/v9.3.4",
-      "revision": "a2ac48c21de430358a0a5e02ac3867148b27e620",
-      "url": "https://github.com/angr/angr/releases/tag/v9.3.4",
-      "revision_creation_time": "2026-09-02T20:02:39Z"
+      "version": "10.0.0",
+      "gitref": "refs/tags/v10.0.0",
+      "revision": "ae4ec6980a92126d13c7bb832f1b9be0d2030722",
+      "url": "https://github.com/angr/angr/releases/tag/v10.0.0",
+      "revision_creation_time": "2026-09-17T06:06:17Z"
     },
     "autopsy": {
       "version": "4.23.0",
@@ -59,10 +59,10 @@
       "creation_time": "2026-08-30T19:39:12Z"
     },
     "joern": {
-      "version": "4.0.627",
-      "gitref": "refs/tags/v4.0.627",
-      "url": "https://github.com/joernio/joern/releases/tag/v4.0.627",
-      "creation_time": "2026-09-12T09:00:17Z"
+      "version": "4.0.638",
+      "gitref": "refs/tags/v4.0.638",
+      "url": "https://github.com/joernio/joern/releases/tag/v4.0.638",
+      "creation_time": "2026-09-25T12:28:07Z"
     },
     "john": {
       "version": "20260801.221948",
@@ -91,11 +91,11 @@
       "url": "https://github.com/nicocha30/ligolo-ng/releases/tag/v0.9.1"
     },
     "metasploit": {
-      "version": "6.5.4",
-      "gitref": "refs/tags/6.5.4",
-      "revision": "a420e80358865eb463e39b713f52f2ee46957b60",
-      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.4",
-      "revision_creation_time": "2026-09-10T16:28:27Z"
+      "version": "6.5.5",
+      "gitref": "refs/tags/6.5.5",
+      "revision": "ec3cfbbffde08a5d22e060b545f3392a76acecb9",
+      "url": "https://github.com/rapid7/metasploit-framework/releases/tag/6.5.5",
+      "revision_creation_time": "2026-09-21T19:18:50Z"
     },
     "mingw-w64": {
       "version": "13.0.0ubuntu1",
@@ -134,9 +134,10 @@
       "revision_creation_time": "2026-09-03T05:21:52Z"
     },
     "pwndbg": {
-      "version": "2026.07.29",
-      "gitref": "refs/tags/2026.07.29",
-      "url": "https://github.com/pwndbg/pwndbg/releases/tag/2026.07.29"
+      "version": "2026.09.15",
+      "gitref": "refs/tags/2026.09.15",
+      "url": "https://github.com/pwndbg/pwndbg/releases/tag/2026.09.15",
+      "creation_time": "2026-09-20T12:08:49Z"
     },
     "python-cx-oracle": {
       "version": "8.3.0",
@@ -149,10 +150,10 @@
       "creation_time": "2026-09-06T00:54:20Z"
     },
     "rsactftool": {
-      "version": "20260911.152457",
-      "revision": "4475e1dd4431883e73e1418ef8e5d80bc7155467",
-      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/4475e1dd4431883e73e1418ef8e5d80bc7155467",
-      "revision_creation_time": "2026-09-11T15:24:57Z"
+      "version": "20260925.173000",
+      "revision": "fb8532a54227b61f99277bd09483a3570c02c8f8",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool/commit/fb8532a54227b61f99277bd09483a3570c02c8f8",
+      "revision_creation_time": "2026-09-25T17:30:00Z"
     },
     "sliver": {
       "version": "1.7.7",
